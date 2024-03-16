@@ -1,0 +1,42 @@
+{
+  "name": "rescript_server",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "author": "roeintheglasses",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "node src",
+    "dev": "nodemon ./src/index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "nodejs",
+    "fastify",
+    "typescript"
+  ],
+  "dependencies": {
+    "@langchain/anthropic": "^0.1.8",
+    "@langchain/google-genai": "^0.0.10",
+    "@langchain/openai": "^0.0.21",
+    "babel-plugin-transform-beautifier": "^0.1.0",
+    "fastify": "^4.26.2",
+    "fastify-blipp": "^4.0.0",
+    "fastify-plugin": "^4.5.1",
+    "fastify-swagger": "^5.2.0",
+    "gpt-3-encoder": "^1.1.4",
+    "langchain": "^0.1.28",
+    "webcrack": "^2.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^3.1.0",
+    "prettier": "^2.8.0"
+  }
+}
