@@ -2,15 +2,15 @@ import { Link } from "@nextui-org/link";
 
 export default function HomePage() {
   return (
-    <main className="min-h-[80vh] ">
+    <main className="min-h-[80vh]">
       <div className="flex flex-col gap-8 pb-8 md:gap-16 md:pb-16 xl:pb-24">
-        <div className="mx-auto mt-8 flex max-w-3xl flex-col items-center justify-center px-8 sm:mt-0 sm:min-h-screen sm:px-0">
+        <div className="sm:mt0 mx-auto mt-8 flex max-w-6xl flex-col items-center justify-center px-8 sm:min-h-[70vh] sm:px-0">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <Link
               href="https://github.com/"
               className="relative overflow-hidden rounded-full px-4 py-1.5 text-sm leading-6 text-zinc-400 ring-1 ring-zinc-100/10 duration-150 hover:ring-zinc-100/30"
             >
-              re-Script is Open Source on
+              re:Script is Open Source on
               <span className="font-semibold text-zinc-200">
                 &nbsp; GitHub <span aria-hidden="true">&rarr;</span>
               </span>
