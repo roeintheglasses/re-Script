@@ -13,7 +13,9 @@ export default function Nav() {
   return (
     <Navbar shouldHideOnScroll>
       <NavbarBrand>
-        <p className="font-bold text-inherit">re-Script</p>
+        <Link href="/" className="text-inherit">
+          <p className="text-2xl font-bold text-inherit">re:Script</p>
+        </Link>
       </NavbarBrand>
       <NavbarContent
         className="hidden gap-4 sm:flex"
