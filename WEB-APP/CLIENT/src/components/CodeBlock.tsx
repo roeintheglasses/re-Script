@@ -1,8 +1,8 @@
 "use client";
 import { javascript } from "@codemirror/lang-javascript";
-import { tokyoNightStorm } from "@uiw/codemirror-theme-tokyo-night-storm";
+import { dracula } from "@uiw/codemirror-theme-dracula";
 import CodeMirror from "@uiw/react-codemirror";
-import { FC, useEffect, useState } from "react";
+import { type FC, useEffect, useState } from "react";
 
 interface Props {
   code: string;
@@ -13,7 +13,9 @@ interface Props {
 export const CodeBlock: FC<Props> = ({
   code,
   editable = false,
-  onChange = () => {},
+  onChange = () => {
+    return;
+  },
 }) => {
   const [copyText, setCopyText] = useState<string>("Copy");
 
@@ -29,8 +31,8 @@ export const CodeBlock: FC<Props> = ({
     <div className="relative">
       <button
         className="absolute right-0 top-0 z-10 rounded bg-[#1A1B26] p-1 text-xs text-white hover:bg-[#2D2E3A] active:bg-[#2D2E3A]"
-        onClick={() => {
-          navigator.clipboard.writeText(code);
+        onClick={async () => {
+          await navigator.clipboard.writeText(code);
           setCopyText("Copied!");
         }}
       >
@@ -40,10 +42,12 @@ export const CodeBlock: FC<Props> = ({
       <CodeMirror
         editable={editable}
         value={code}
-        minHeight="500px"
+        minHeight="600px"
+        maxHeight="1200px"
         extensions={[javascript()]}
-        theme={tokyoNightStorm}
+        theme={dracula}
         onChange={(value) => onChange(value)}
+        className="rounded-md border-2 border-gray-500"
       />
     </div>
   );
