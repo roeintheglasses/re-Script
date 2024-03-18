@@ -21,7 +21,7 @@ const LLMs = [
 ];
 
 export default function HomePage() {
-  const [inputCode, setInputCode] = useState("test data");
+  const [inputCode, setInputCode] = useState("");
   const [loading, setLoading] = useState(false);
   const [outputCode, setOutputCode] = useState("");
   const [apiKey, setApiKey] = useState("");
