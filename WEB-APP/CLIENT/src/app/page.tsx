@@ -4,8 +4,8 @@ export default function HomePage() {
   return (
     <main className="min-h-[80vh]">
       <div className="flex flex-col gap-8 pb-8 md:gap-16 md:pb-16 xl:pb-24">
-        <div className="sm:mt0 mx-auto mt-8 flex max-w-6xl flex-col items-center justify-center px-8 sm:min-h-[70vh] sm:px-0">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+        <div className="mx-auto mt-8 flex min-h-[60vh] w-full max-w-6xl flex-col items-center justify-center px-8 sm:mt-0 sm:min-h-[70vh] sm:px-0">
+          <div className="mb-8 flex justify-center">
             <Link
               href="https://github.com/"
               className="relative overflow-hidden rounded-full px-4 py-1.5 text-sm leading-6 text-zinc-400 ring-1 ring-zinc-100/10 duration-150 hover:ring-zinc-100/30"
@@ -30,13 +30,13 @@ export default function HomePage() {
             <div className="mx-auto mt-8 flex flex-col justify-center gap-4 sm:max-w-lg sm:flex-row ">
               <Link
                 href="/unminify"
-                className="hover:drop-shadow-cta inline-block space-x-2 rounded px-4 py-1.5 text-base font-semibold leading-7 text-white ring-1 ring-zinc-600  duration-150 hover:bg-white hover:text-zinc-900 hover:ring-white sm:w-1/2 sm:text-center md:py-2"
+                className="hover:drop-shadow-cta inline-block space-x-2 rounded px-4 py-1.5 text-center text-base font-semibold leading-7 text-white ring-1 ring-zinc-600  duration-150 hover:bg-white hover:text-zinc-900 hover:ring-white sm:w-1/2 sm:text-center md:py-2"
               >
                 Try Now
               </Link>
               <Link
                 href="/share"
-                className="hover:drop-shadow-cta inline-block space-x-2 rounded bg-zinc-50  px-4 py-1.5 text-base font-semibold leading-7 text-zinc-800 ring-1 ring-transparent   transition-all duration-150 hover:bg-zinc-900/20 hover:text-zinc-100 hover:ring-zinc-600/80  sm:w-1/2 sm:text-center md:py-2"
+                className="hover:drop-shadow-cta inline-block space-x-2 rounded bg-zinc-50 px-4  py-1.5 text-center text-base font-semibold leading-7 text-zinc-800 ring-1 ring-transparent   transition-all duration-150 hover:bg-zinc-900/20 hover:text-zinc-100 hover:ring-zinc-600/80  sm:w-1/2 sm:text-center md:py-2"
               >
                 <span>Share</span>
                 <span aria-hidden="true">&rarr;</span>
