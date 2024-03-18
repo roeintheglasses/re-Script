@@ -3,10 +3,11 @@
 import { useState } from "react";
 import { Button } from "@nextui-org/button";
 import { MagnifyingGlass } from "react-loader-spinner";
-import { Select, SelectSection, SelectItem } from "@nextui-org/select";
+import { Select, SelectItem } from "@nextui-org/select";
 import { Input } from "@nextui-org/input";
 
 import { CodeBlock } from "@/components/CodeBlock";
+import { toast } from "sonner";
 
 const LLMs = [
   {
@@ -28,7 +29,22 @@ export default function HomePage() {
   const [model, setModel] = useState("");
 
   const handleTranslate = async () => {
+    if (!model) {
+      toast("Please select a model");
+      return;
+    }
+    if (!apiKey) {
+      toast("Please enter your API key");
+      return;
+    }
+
+    if (!inputCode) {
+      toast("Please enter some code to unminify");
+      return;
+    }
+
     setLoading(true);
+
     try {
       const res = await fetch("/api/unminify", {
         method: "POST",
@@ -57,6 +73,13 @@ export default function HomePage() {
       <div className="flex flex-col items-center justify-center gap-8 py-8 md:gap-16 md:pb-16 xl:pb-24">
         <div className="mt-10 flex max-w-4xl flex-col items-center justify-between gap-5 sm:flex-row">
           <Select
+            onChange={(e) => {
+              setModel(e.target.value);
+            }}
+            label="Select Model"
+            labelPlacement="outside"
+            radius="sm"
+            isRequired
             placeholder="Select Model"
             className="w-[250px] max-w-xl sm:w-auto"
             size="lg"
@@ -71,7 +94,10 @@ export default function HomePage() {
 
           <Input
             type="text"
+            isRequired
             variant="flat"
+            label="Enter your api key"
+            labelPlacement="outside"
             className="w-[250px] max-w-xl sm:w-auto"
             placeholder="Enter your api key"
             onValueChange={setApiKey}
