@@ -22,9 +22,10 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 leading-5 text-zinc-600 sm:text-center">
               re-Script is a free, open-source tool that uses AI to un-minify,
-              un-uglify, and un-obfuscate JavaScript code. It's designed to help
-              developers understand and debug minified code. Just paste your
-              minified code in the editor and click the button to un-minify it.
+              un-uglify, and un-obfuscate JavaScript code. It&apos;s designed to
+              help developers understand and debug minified code. Just paste
+              your minified code in the editor and click the button to un-minify
+              it.
             </p>
             <div className="mx-auto mt-8 flex flex-col justify-center gap-4 sm:max-w-lg sm:flex-row ">
               <Link

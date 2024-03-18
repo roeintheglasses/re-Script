@@ -1,12 +1,23 @@
 "use client";
 
 import { useState } from "react";
-import { CodeBlock } from "@/components/CodeBlock";
-import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
-import { Combobox } from "@/components/ui/combobox";
-
 import { MagnifyingGlass } from "react-loader-spinner";
+import { Select, SelectSection, SelectItem } from "@nextui-org/select";
+import { Input } from "@nextui-org/input";
+
+import { CodeBlock } from "@/components/CodeBlock";
+
+const LLMs = [
+  {
+    value: "openAI",
+    label: "GPT-4",
+  },
+  {
+    value: "claude",
+    label: "Claude-3",
+  },
+];
 
 export default function HomePage() {
   const [inputCode, setInputCode] = useState("test data");
@@ -14,7 +25,7 @@ export default function HomePage() {
   const [outputCode, setOutputCode] = useState("");
   const [apiKey, setApiKey] = useState("");
 
-  const [model, setModel] = useState(null);
+  const [model, setModel] = useState("");
 
   const handleTranslate = async () => {
     setLoading(true);
@@ -44,45 +55,56 @@ export default function HomePage() {
   return (
     <main className="min-h-[80vh] ">
       <div className="flex flex-col items-center justify-center gap-8 py-8 md:gap-16 md:pb-16 xl:pb-24">
-        <div className="mt-2 flex max-w-4xl items-center justify-between gap-x-5">
-          <div>
-            <Combobox onValueChange={setModel} />
-          </div>
+        <div className="mt-10 flex max-w-4xl flex-col items-center justify-between gap-5 sm:flex-row">
+          <Select
+            placeholder="Select Model"
+            className="w-[250px] max-w-xl sm:w-auto"
+            size="lg"
+            variant="flat"
+          >
+            {LLMs.map((llm) => (
+              <SelectItem key={llm.value} value={llm.value}>
+                {llm.label}
+              </SelectItem>
+            ))}
+          </Select>
 
           <Input
             type="text"
             variant="flat"
+            className="w-[250px] max-w-xl sm:w-auto"
             placeholder="Enter your api key"
             onValueChange={setApiKey}
-            size="md"
+            size="lg"
+            width={"300px"}
           />
 
           <div>
             <Button
               variant="flat"
+              className="w-[250px] max-w-xl sm:w-auto"
               onClick={handleTranslate}
               isLoading={loading}
+              size="lg"
             >
-              {loading ? "UnMinifying" : "UnMinify"}
+              {loading ? "processing" : "Submit"}
             </Button>
           </div>
         </div>
 
-        <div className="flex items-center justify-center">
-          <MagnifyingGlass
-            visible={loading}
-            height="80"
-            width="80"
-            ariaLabel="magnifying-glass-loading"
-            wrapperStyle={{}}
-            wrapperClass="magnifying-glass-wrapper"
-            glassColor="#c0efff"
-            color="#e15b64"
-          />
-        </div>
+        <MagnifyingGlass
+          visible={loading}
+          height="80"
+          width="80"
+          ariaLabel="magnifying-glass-loading"
+          wrapperStyle={{}}
+          wrapperClass="magnifying-glass-wrapper"
+          glassColor="#c0efff"
+          color="#e15b64"
+        />
 
-        <div className="mt-6 flex w-full max-w-[1200px] flex-col items-start justify-between sm:flex-row sm:space-x-4">
-          <div className="h-100 flex flex-col justify-center space-y-2 sm:w-2/4">
+        <div className="mt-6 flex w-full max-w-[1200px] flex-col items-center justify-between gap-x-2 sm:flex-row sm:items-start sm:gap-x-10">
+          <div className="flex h-full w-10/12 flex-col justify-center space-y-2 sm:w-2/4">
             <div className="text-center text-xl font-bold">Input</div>
 
             <CodeBlock
@@ -93,7 +115,7 @@ export default function HomePage() {
               }}
             />
           </div>
-          <div className="mt-8 flex h-full flex-col justify-center space-y-2 sm:mt-0 sm:w-2/4">
+          <div className="mt-8 flex h-full w-10/12 flex-col justify-center space-y-2 sm:mt-0 sm:w-2/4">
             <div className="text-center text-xl font-bold">Output</div>
 
             <CodeBlock code={outputCode} />
