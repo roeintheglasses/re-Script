@@ -7,7 +7,7 @@ export default function HomePage() {
         <div className="mx-auto mt-8 flex min-h-[60vh] w-full max-w-6xl flex-col items-center justify-center px-8 sm:mt-0 sm:min-h-[70vh] sm:px-0">
           <div className="mb-8 flex justify-center">
             <Link
-              href="https://github.com/"
+              href="https://github.com/roeintheglasses/re-Script"
               className="relative overflow-hidden rounded-full px-4 py-1.5 text-sm leading-6 text-zinc-400 ring-1 ring-zinc-100/10 duration-150 hover:ring-zinc-100/30"
             >
               re:Script is Open Source on
