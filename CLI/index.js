@@ -57,13 +57,13 @@ async function main() {
 
   ora("Re-minifying code...").start();
   const code = fs.readFileSync(fileLocation, "utf8");
-  const result = await rescript(code, model, apiKey);
+  const result = await rescript(code, model, apiKey, ora);
   const outFileLocation = fileLocation.replace(
     ".js",
     `_reScript${Date.now().toString().slice(0, 4)}.js`
   );
   fs.writeFileSync(outFileLocation, result);
-  ora("Code unminified successfully!").succeed().stop();
+  ora("Code unminified successfully!").succeed("Done").stop();
   process.exit(0);
 }
 
