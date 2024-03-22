@@ -11,27 +11,27 @@ import ora from "ora";
  * @param {string} code
  * @param {string} model
  * @param {string} apiKey
- * @param {ora} ora
+ * @param {ora} oraLoggerInstance
  * @returns
  */
-export default async function rescript(code, model, apiKey, ora) {
-  ora("Reversing Bundling process...");
+export default async function rescript(code, model, apiKey, oraLoggerInstance) {
+  oraLoggerInstance("Reversing Bundling process...");
   const crackedCodeInstance = await webcrack(code);
   const crackedCode = crackedCodeInstance.code;
 
-  ora("Injecting Babel plugins...");
+  oraLoggerInstance("Injecting Babel plugins...");
   const babelifiedCode = await babelTransform(crackedCode);
 
   let llmUpdatedCode = babelifiedCode;
 
-  ora("Using AI model to decode logic...");
+  oraLoggerInstance("Using AI model to decode logic...");
   if (model === "claude") {
     llmUpdatedCode = await AnthropicLLMModifier(babelifiedCode, apiKey);
   } else if (model === "openAI") {
     llmUpdatedCode = await OpenAILLMModifier(babelifiedCode, apiKey);
   } else if (model === "gemini") {
   }
-  ora("Formatting code...");
+  oraLoggerInstance("Formatting code...");
   const formattedCode = await prettier(llmUpdatedCode);
 
   return formattedCode;
