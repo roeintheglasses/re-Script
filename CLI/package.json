@@ -1,5 +1,5 @@
 {
-  "name": "re-script-cli",
+  "name": "re-script",
   "version": "1.0.0",
   "description": "cli tool for rescript engine",
   "main": "index.js",
@@ -17,8 +17,9 @@
   },
   "keywords": [
     "nodejs",
-    "fastify",
-    "typescript"
+    "unminify",
+    "reScript",
+    "langchain"
   ],
   "dependencies": {
     "@inquirer/prompts": "^4.3.0",
