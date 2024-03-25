@@ -57,6 +57,8 @@ async function main() {
 
   let apiKey = null;
 
+  //TODO: Add a check to validate first if ollama server is running locally or not
+
   if (model !== "ollamaMistral") {
     apiKey = await input({
       type: "input",
