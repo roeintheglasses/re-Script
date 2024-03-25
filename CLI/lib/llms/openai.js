@@ -49,7 +49,7 @@ async function OpenAiRenameUtility(code, apiKey) {
                 },
               },
             },
-            required: ["variablesToRename"],
+            required: ["variablesAndFunctionsToRename"],
           },
         },
       ],

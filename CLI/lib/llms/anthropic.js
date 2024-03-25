@@ -1,4 +1,3 @@
-import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { ChatAnthropicTools } from "@langchain/anthropic/experimental";
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
 
@@ -39,7 +38,7 @@ async function AnthropicRenameUtility(code, apiKey) {
                 },
               },
             },
-            required: ["variablesToRename"],
+            required: ["variablesAndFunctionsToRename"],
           },
         },
       },
@@ -82,6 +81,6 @@ function SanatiseOpenAiOutput(jsonResponse) {
   return jsonResponse.replace(/},\s*]/im, "}]");
 }
 
-export default async function OpenAILLMModifier(code, apiKey) {
+export default async function AnthropicLLMModifier(code, apiKey) {
   return await LLMCodeInitialiser(code, apiKey, AnthropicRenameUtility);
 }
