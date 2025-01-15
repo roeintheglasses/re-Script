@@ -1,0 +1,470 @@
+[
+  {
+    "name": "value",
+    "newName": "documentWrapper"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "performanceLogger"
+  },
+  {
+    "name": "executeCallbacks",
+    "newName": "flushTimeout"
+  },
+  {
+    "name": "createDeferred",
+    "newName": "deferredTaskSize"
+  },
+  {
+    "name": "events",
+    "newName": "eventQueue"
+  },
+  {
+    "name": "tasks",
+    "newName": "taskSize"
+  },
+  {
+    "name": "dispatchUnhandledRejection",
+    "newName": "unhandledRejectionQueue"
+  },
+  {
+    "name": "settlePromise",
+    "newName": "settledPromises"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolvedPromises"
+  },
+  {
+    "name": "handleAsync",
+    "newName": "asyncHandlers"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "thenableHandlers"
+  },
+  {
+    "name": "report",
+    "newName": "eventReport"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "timeoutSet"
+  },
+  {
+    "name": "tryCall",
+    "newName": "tryCalling"
+  },
+  {
+    "name": "sendBeacon",
+    "newName": "sendBeaconRequest"
+  },
+  {
+    "name": "isDone",
+    "newName": "finalizeLogging"
+  },
+  {
+    "name": "logError",
+    "newName": "logErrorHandler"
+  },
+  {
+    "name": "firstQuartileTime",
+    "newName": "firstQuartileEventHandler"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "thenableHandler"
+  },
+  {
+    "name": "createIterator",
+    "newName": "iteratorCreator"
+  },
+  {
+    "name": "totalAdBufferingTime",
+    "newName": "totalBufferingTime"
+  },
+  {
+    "name": "domain",
+    "newName": "adDomain"
+  },
+  {
+    "name": "path",
+    "newName": "adPath"
+  },
+  {
+    "name": "google_timing_params",
+    "newName": "googleTimingParams"
+  },
+  {
+    "name": "updateMaxSize",
+    "newName": "maxSizeUpdater"
+  },
+  {
+    "name": "sendImageRequestWithRetry",
+    "newName": "sendImageRequest"
+  },
+  {
+    "name": "getVisibilityChangeEventName",
+    "newName": "getVisibilityEventName"
+  },
+  {
+    "name": "addEventListenerWithNormalization",
+    "newName": "addNormalizedEventListener"
+  },
+  {
+    "name": "removeEventListenerWithNormalization",
+    "newName": "removeNormalizedEventListener"
+  },
+  {
+    "name": "flushData",
+    "newName": "flushEventData"
+  },
+  {
+    "name": "forEachElement",
+    "newName": "iterateOverElements"
+  },
+  {
+    "name": "getRumEventQueue",
+    "newName": "getRumQueue"
+  },
+  {
+    "name": "processEvent",
+    "newName": "processPerformanceEvent"
+  },
+  {
+    "name": "initPerformanceLogger",
+    "newName": "initializeLogger"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "extendPrototype"
+  },
+  {
+    "name": "PerformanceLogger",
+    "newName": "PerformanceEventLogger"
+  },
+  {
+    "name": "PerformanceMonitor",
+    "newName": "PerformanceEventMonitor"
+  },
+  {
+    "name": "getCurrentTimeWithPerformanceTiming",
+    "newName": "getCurrentPerformanceTime"
+  },
+  {
+    "name": "Math.roundRectangle",
+    "newName": "roundNumber"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "customEventInfo"
+  },
+  {
+    "name": "findEntry",
+    "newName": "eventLabel"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "eventDuration"
+  },
+  {
+    "name": "calculateEventDimensionLength",
+    "newName": "calculateEventSize"
+  },
+  {
+    "name": "recordEvent",
+    "newName": "storeEvent"
+  },
+  {
+    "name": "checkAndFlushIfNeeded",
+    "newName": "flushIfNeeded"
+  },
+  {
+    "name": "generateBeaconUrl",
+    "newName": "createBeaconUrl"
+  },
+  {
+    "name": "appendToUrl",
+    "newName": "appendParamsToUrl"
+  },
+  {
+    "name": "getIterator",
+    "newName": "createIterator"
+  },
+  {
+    "name": "logEventWithDimension",
+    "newName": "logDimensionedEvent"
+  },
+  {
+    "name": "setPerformanceMetric",
+    "newName": "setPerformanceMetric"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolvePendingPromises"
+  },
+  {
+    "name": "settlePromise",
+    "newName": "settlePendingPromises"
+  },
+  {
+    "name": "addMultipleKeyValues",
+    "newName": "addMultipleValues"
+  },
+  {
+    "name": "logError",
+    "newName": "logPerformanceError"
+  },
+  {
+    "name": "safeParseJSON",
+    "newName": "parseJSONSafely"
+  },
+  {
+    "name": "JsonStringifySafe",
+    "newName": "SafeJsonStringify"
+  },
+  {
+    "name": "serializeToJsonString",
+    "newName": "serializeJson"
+  },
+  {
+    "name": "escapeString",
+    "newName": "escapeJsonString"
+  },
+  {
+    "name": "ExperimentData",
+    "newName": "AdExperimentData"
+  },
+  {
+    "name": "getExperimentDataFromElement",
+    "newName": "fetchExperimentData"
+  },
+  {
+    "name": "loadExperimentData",
+    "newName": "initializeExperimentData"
+  },
+  {
+    "name": "resetAdStateController",
+    "newName": "resetAdState"
+  },
+  {
+    "name": "CookieManager",
+    "newName": "AdCookieManager"
+  },
+  {
+    "name": "areCookiesEnabled",
+    "newName": "checkCookiesEnabled"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "cookieManagerPrototype"
+  },
+  {
+    "name": "get",
+    "newName": "getCookie"
+  },
+  {
+    "name": "set",
+    "newName": "setCookie"
+  },
+  {
+    "name": "removeElement",
+    "newName": "removeCookie"
+  },
+  {
+    "name": "base64AlphabetVariants",
+    "newName": "getCookieKeys"
+  },
+  {
+    "name": "hasPlatform",
+    "newName": "getCookieValues"
+  },
+  {
+    "name": "isEmpty",
+    "newName": "isCookieEmpty"
+  },
+  {
+    "name": "clearAll",
+    "newName": "clearAllCookies"
+  },
+  {
+    "name": "getCookies",
+    "newName": "retrieveCookies"
+  },
+  {
+    "name": "evaluateCondition",
+    "newName": "evaluateAdCondition"
+  },
+  {
+    "name": "checkCookiesEnabled",
+    "newName": "isCookiesEnabled"
+  },
+  {
+    "name": "getCookieValue",
+    "newName": "fetchCookieValue"
+  },
+  {
+    "name": "setCookieValue",
+    "newName": "updateCookieValue"
+  },
+  {
+    "name": "executeCallback",
+    "newName": "executeAdCallback"
+  },
+  {
+    "name": "processConditions",
+    "newName": "evaluateAdConditions"
+  },
+  {
+    "name": "checkCondition",
+    "newName": "verifyAdCondition"
+  },
+  {
+    "name": "verifyCondition",
+    "newName": "isAdConditionValid"
+  },
+  {
+    "name": "StorageField",
+    "newName": "AdStorageField"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "handleFulfilledPromise"
+  },
+  {
+    "name": "findGlobalObject",
+    "newName": "globalObject"
+  },
+  {
+    "name": "ValueField",
+    "newName": "AdValueField"
+  },
+  {
+    "name": "getAdStateValue",
+    "newName": "fetchAdStateValue"
+  },
+  {
+    "name": "ConfigField",
+    "newName": "AdConfigField"
+  },
+  {
+    "name": "serializeConfig",
+    "newName": "serializeAdConfig"
+  },
+  {
+    "name": "conditionTypes",
+    "newName": "adConditionTypes"
+  },
+  {
+    "name": "AdRequest",
+    "newName": "AdRequestHandler"
+  },
+  {
+    "name": "sendAdRequest",
+    "newName": "dispatchAdRequest"
+  },
+  {
+    "name": "recordAdEvent",
+    "newName": "logAdEvent"
+  },
+  {
+    "name": "createAdEvent",
+    "newName": "generateAdEvent"
+  },
+  {
+    "name": "SessionStorage",
+    "newName": "AdSessionStorage"
+  },
+  {
+    "name": "fetchConditionValue",
+    "newName": "fetchAdConditionValue"
+  },
+  {
+    "name": "extractValue",
+    "newName": "extractAdValue"
+  },
+  {
+    "name": "getSessionStorageData",
+    "newName": "fetchSessionStorageData"
+  },
+  {
+    "name": "getConfigValue",
+    "newName": "fetchConfigValue"
+  },
+  {
+    "name": "resolveValue",
+    "newName": "resolveAdValue"
+  },
+  {
+    "name": "ConfigManager",
+    "newName": "AdConfigManager"
+  },
+  {
+    "name": "getBooleanConfig",
+    "newName": "fetchBooleanConfig"
+  },
+  {
+    "name": "getNumberConfig",
+    "newName": "fetchNumberConfig"
+  },
+  {
+    "name": "getStringConfig",
+    "newName": "fetchStringConfig"
+  },
+  {
+    "name": "getArrayConfig",
+    "newName": "fetchArrayConfig"
+  },
+  {
+    "name": "getComplexArrayConfig",
+    "newName": "fetchComplexArrayConfig"
+  },
+  {
+    "name": "getConfigs",
+    "newName": "retrieveConfigs"
+  },
+  {
+    "name": "updateConfigs",
+    "newName": "updateAdConfigs"
+  },
+  {
+    "name": "processAdRequests",
+    "newName": "handleAdRequests"
+  },
+  {
+    "name": "mergeAdData",
+    "newName": "mergeAdConfigs"
+  },
+  {
+    "name": "getAdIds",
+    "newName": "fetchAdIds"
+  },
+  {
+    "name": "addToAdQueue",
+    "newName": "enqueueAdRequest"
+  },
+  {
+    "name": "definePropertyIfNotExists",
+    "newName": "definePropertyIfAbsent"
+  },
+  {
+    "name": "getValueOrDefault",
+    "newName": "fetchValueOrDefault"
+  },
+  {
+    "name": "registerAdFunctions",
+    "newName": "registerAdHandlers"
+  },
+  {
+    "name": "registerDataHandlers",
+    "newName": "registerAdDataHandlers"
+  },
+  {
+    "name": "markInitializationDone",
+    "newName": "markInitComplete"
+  },
+  {
+    "name": "BaseClass",
+    "newName": "BaseEventClass"
+  }
+]

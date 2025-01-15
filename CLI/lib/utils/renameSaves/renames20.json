@@ -1,0 +1,310 @@
+[
+  {
+    "name": "Consents",
+    "newName": "checkConsents"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "context"
+  },
+  {
+    "name": "value",
+    "newName": "consentValues"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "consentValue"
+  },
+  {
+    "name": "table",
+    "newName": "URLHandler"
+  },
+  {
+    "name": "tasks",
+    "newName": "hostname"
+  },
+  {
+    "name": "isDone",
+    "newName": "username"
+  },
+  {
+    "name": "createDeferred",
+    "newName": "scheme"
+  },
+  {
+    "name": "settlePromise",
+    "newName": "port"
+  },
+  {
+    "name": "executeCallbacks",
+    "newName": "fragment"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "pathname"
+  },
+  {
+    "name": "handleAsync",
+    "newName": "isAsync"
+  },
+  {
+    "name": "setScheme",
+    "newName": "setScheme"
+  },
+  {
+    "name": "setPort",
+    "newName": "setPort"
+  },
+  {
+    "name": "setQueryParameters",
+    "newName": "setQueryParameters"
+  },
+  {
+    "name": "my",
+    "newName": "copyURLParameters"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "queryParameters"
+  },
+  {
+    "name": "dispatchUnhandledRejection",
+    "newName": "getFragment"
+  },
+  {
+    "name": "decodeURIConditionally",
+    "newName": "decodeURIConditionally"
+  },
+  {
+    "name": "encodeURIConditionally",
+    "newName": "encodeURIConditionally"
+  },
+  {
+    "name": "regexForHashSlashQuestionAt",
+    "newName": "regexForHashSlashQuestionAt"
+  },
+  {
+    "name": "regexForHashColonQuestion",
+    "newName": "regexForHashColonQuestion"
+  },
+  {
+    "name": "regexForHashQuestion",
+    "newName": "regexForHashQuestion"
+  },
+  {
+    "name": "regexForHashQuestionAt",
+    "newName": "regexForHashQuestionAt"
+  },
+  {
+    "name": "regexForHash",
+    "newName": "regexForHash"
+  },
+  {
+    "name": "URLParameters",
+    "newName": "URLParameters"
+  },
+  {
+    "name": "initializeURLParametersMap",
+    "newName": "initializeURLParametersMap"
+  },
+  {
+    "name": "setParameter",
+    "newName": "setParameter"
+  },
+  {
+    "name": "createOrProcessURL",
+    "newName": "createOrProcessURL"
+  },
+  {
+    "name": "includesString",
+    "newName": "includesString"
+  },
+  {
+    "name": "normalizeParameterKey",
+    "newName": "normalizeParameterKey"
+  },
+  {
+    "name": "setCaseSensitivity",
+    "newName": "setCaseSensitivity"
+  },
+  {
+    "name": "trustedDomainsList",
+    "newName": "trustedDomainsList"
+  },
+  {
+    "name": "matchesTrustedDomains",
+    "newName": "matchesTrustedDomains"
+  },
+  {
+    "name": "convertToHttpsIfApplicable",
+    "newName": "convertToHttpsIfApplicable"
+  },
+  {
+    "name": "isGCacheURL",
+    "newName": "isGCacheURL"
+  },
+  {
+    "name": "getGCacheURL",
+    "newName": "getGCacheURL"
+  },
+  {
+    "name": "openURLInNewWindow",
+    "newName": "openURLInNewWindow"
+  },
+  {
+    "name": "iterateAndExecute",
+    "newName": "iterateAndExecute"
+  },
+  {
+    "name": "IteratorWithCallback",
+    "newName": "IteratorWithCallback"
+  },
+  {
+    "name": "createTransformIterator",
+    "newName": "createTransformIterator"
+  },
+  {
+    "name": "unionSets",
+    "newName": "unionSets"
+  },
+  {
+    "name": "resizeObserversMap",
+    "newName": "resizeObserversMap"
+  },
+  {
+    "name": "ResizeObserverWrapper",
+    "newName": "ResizeObserverWrapper"
+  },
+  {
+    "name": "observeElementResizeWithTimeout",
+    "newName": "observeElementResizeWithTimeout"
+  },
+  {
+    "name": "observeElementResize",
+    "newName": "observeElementResize"
+  },
+  {
+    "name": "waitForElementResize",
+    "newName": "waitForElementResize"
+  },
+  {
+    "name": "disconnectResizeObservers",
+    "newName": "disconnectResizeObservers"
+  },
+  {
+    "name": "cleanupResizeObserver",
+    "newName": "cleanupResizeObserver"
+  },
+  {
+    "name": "ensureObjectProperty",
+    "newName": "ensureObjectProperty"
+  },
+  {
+    "name": "exportToGlobal",
+    "newName": "exportToGlobal"
+  },
+  {
+    "name": "verificationVendorsRegexMap",
+    "newName": "verificationVendorsRegexMap"
+  },
+  {
+    "name": "iOSVersionRegex",
+    "newName": "iOSVersionRegex"
+  },
+  {
+    "name": "androidVersionRegex",
+    "newName": "androidVersionRegex"
+  },
+  {
+    "name": "matchesUserAgentVersion",
+    "newName": "matchesUserAgentVersion"
+  },
+  {
+    "name": "isTouchEnabledDevice",
+    "newName": "isTouchEnabledDevice"
+  },
+  {
+    "name": "isIOSVersionAtLeast",
+    "newName": "isIOSVersionAtLeast"
+  },
+  {
+    "name": "hasPlaysInlineAttribute",
+    "newName": "hasPlaysInlineAttribute"
+  },
+  {
+    "name": "VideoPlaybackMonitor",
+    "newName": "VideoPlaybackMonitor"
+  },
+  {
+    "name": "getCurrentVideoTime",
+    "newName": "getCurrentVideoTime"
+  },
+  {
+    "name": "handleVideoPlaying",
+    "newName": "handleVideoPlaying"
+  },
+  {
+    "name": "trustedDomainsList",
+    "newName": "trustedDomainsList"
+  },
+  {
+    "name": "ocrRegex",
+    "newName": "ocrRegex"
+  },
+  {
+    "name": "isTrustedDomain",
+    "newName": "isTrustedDomain"
+  },
+  {
+    "name": "matchesRegex",
+    "newName": "matchesRegex"
+  },
+  {
+    "name": "parseQueryString",
+    "newName": "parseQueryString"
+  },
+  {
+    "name": "normalizeLanguageCode",
+    "newName": "normalizeLanguageCode"
+  },
+  {
+    "name": "Timer",
+    "newName": "Timer"
+  },
+  {
+    "name": "getRemainingTime",
+    "newName": "getRemainingTime"
+  },
+  {
+    "name": "UrlRequest",
+    "newName": "UrlRequest"
+  },
+  {
+    "name": "getErrorDescription",
+    "newName": "getErrorDescription"
+  },
+  {
+    "name": "CustomError",
+    "newName": "CustomError"
+  },
+  {
+    "name": "EventDispatcher",
+    "newName": "EventDispatcher"
+  },
+  {
+    "name": "singleElementArray",
+    "newName": "singleElementArray"
+  },
+  {
+    "name": "addListener",
+    "newName": "addListener"
+  },
+  {
+    "name": "removeListener",
+    "newName": "removeListener"
+  },
+  {
+    "name": "removeAllListeners",
+    "newName": "removeAllListeners"
+  }
+]

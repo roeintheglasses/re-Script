@@ -1,0 +1,558 @@
+[
+  {
+    "name": "ed",
+    "newName": "createAdDisplayOptions"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "adConfig"
+  },
+  {
+    "name": "value",
+    "newName": "isAutoAlign"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "adDisplayOptions"
+  },
+  {
+    "name": "AdDisplayOptions",
+    "newName": "AdRenderingSettings"
+  },
+  {
+    "name": "append",
+    "newName": "updateSettings"
+  },
+  {
+    "name": "shouldAutoAlign",
+    "newName": "autoAlign"
+  },
+  {
+    "name": "preferredBitrate",
+    "newName": "bitrate"
+  },
+  {
+    "name": "disableClickThrough",
+    "newName": "disableClickThrough"
+  },
+  {
+    "name": "disableUi",
+    "newName": "disableUi"
+  },
+  {
+    "name": "shouldEnablePreloading",
+    "newName": "enablePreloading"
+  },
+  {
+    "name": "supportedMimeTypes",
+    "newName": "mimeTypes"
+  },
+  {
+    "name": "startAdsAfterTime",
+    "newName": "adsStartTime"
+  },
+  {
+    "name": "shouldRestorePlaybackStateAfterAdBreak",
+    "newName": "restorePlaybackState"
+  },
+  {
+    "name": "videoLoadTimeout",
+    "newName": "videoTimeout"
+  },
+  {
+    "name": "customUiElements",
+    "newName": "uiElements"
+  },
+  {
+    "name": "shouldUseLearnMoreButton",
+    "newName": "learnMoreButton"
+  },
+  {
+    "name": "shouldStyleLinearAds",
+    "newName": "styleLinearAds"
+  },
+  {
+    "name": "shouldStyleNonLinearAds",
+    "newName": "styleNonLinearAds"
+  },
+  {
+    "name": "shouldUseDefaultVideoAdUi",
+    "newName": "defaultVideoAdUi"
+  },
+  {
+    "name": "defineNamespace",
+    "newName": "defineNamespace"
+  },
+  {
+    "name": "AdRequest",
+    "newName": "AdRequest"
+  },
+  {
+    "name": "getSingletonInstance",
+    "newName": "getInstance"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "initializeInstance"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "inheritPrototype"
+  },
+  {
+    "name": "AdResponse",
+    "newName": "AdResponse"
+  },
+  {
+    "name": "AdSlot",
+    "newName": "AdSlot"
+  },
+  {
+    "name": "AdSignal",
+    "newName": "AdSignal"
+  },
+  {
+    "name": "AdDimensions",
+    "newName": "AdDimensions"
+  },
+  {
+    "name": "getAdDimensions",
+    "newName": "getAdAttributes"
+  },
+  {
+    "name": "vf",
+    "newName": "validateAd"
+  },
+  {
+    "name": "QueryWrapper",
+    "newName": "QueryWrapper"
+  },
+  {
+    "name": "getRectangleWidth",
+    "newName": "getAdWidth"
+  },
+  {
+    "name": "getRectangleHeight",
+    "newName": "getAdHeight"
+  },
+  {
+    "name": "getNumericAdProperty",
+    "newName": "getAdPropertyNumeric"
+  },
+  {
+    "name": "AdDimensionsRegistry",
+    "newName": "AdDimensionsRegistry"
+  },
+  {
+    "name": "parseAndValidateArray",
+    "newName": "parseAndValidateArray"
+  },
+  {
+    "name": "findGlobalObject",
+    "newName": "findGlobalObject"
+  },
+  {
+    "name": "processAdResponse",
+    "newName": "processAdResponse"
+  },
+  {
+    "name": "isEmptyObject",
+    "newName": "isEmptyObject"
+  },
+  {
+    "name": "performanceApi",
+    "newName": "performanceApi"
+  },
+  {
+    "name": "bj",
+    "newName": "bj"
+  },
+  {
+    "name": "auctionNonce",
+    "newName": "auctionNonce"
+  },
+  {
+    "name": "getAdPropertyNumeric",
+    "newName": "getAdPropertyNumeric"
+  },
+  {
+    "name": "cj",
+    "newName": "cj"
+  },
+  {
+    "name": "getDeobfuscationId",
+    "newName": "getDeobfuscationId"
+  },
+  {
+    "name": "getBooleanAdProperty",
+    "newName": "getBooleanAdProperty"
+  },
+  {
+    "name": "parseData",
+    "newName": "parseData"
+  },
+  {
+    "name": "getIterator",
+    "newName": "getIterator"
+  },
+  {
+    "name": "resolveFunction",
+    "newName": "resolveFunction"
+  },
+  {
+    "name": "rejectFunction",
+    "newName": "rejectFunction"
+  },
+  {
+    "name": "dispatchUnhandledRejection",
+    "newName": "dispatchUnhandledRejection"
+  },
+  {
+    "name": "secureRandom",
+    "newName": "secureRandom"
+  },
+  {
+    "name": "fetchData",
+    "newName": "fetchData"
+  },
+  {
+    "name": "QueryPayload",
+    "newName": "QueryPayload"
+  },
+  {
+    "name": "entry",
+    "newName": "entry"
+  },
+  {
+    "name": "getTransformedElement",
+    "newName": "getTransformedElement"
+  },
+  {
+    "name": "parseNullableUInt32",
+    "newName": "parseNullableUInt32"
+  },
+  {
+    "name": "getAdPropertyNumericValue",
+    "newName": "getAdPropertyNumericValue"
+  },
+  {
+    "name": "getRawBitFlags",
+    "newName": "getRawBitFlags"
+  },
+  {
+    "name": "transformAndAddElement",
+    "newName": "transformAndAddElement"
+  },
+  {
+    "name": "getElementAtIndex",
+    "newName": "getElementAtIndex"
+  },
+  {
+    "name": "QueryHeader",
+    "newName": "QueryHeader"
+  },
+  {
+    "name": "createInstanceWithTemporaryData",
+    "newName": "createInstanceWithTemporaryData"
+  },
+  {
+    "name": "transformWithFlags",
+    "newName": "transformWithFlags"
+  },
+  {
+    "name": "updateElement",
+    "newName": "updateElement"
+  },
+  {
+    "name": "transformArrayElements",
+    "newName": "transformArrayElements"
+  },
+  {
+    "name": "stringOrNull",
+    "newName": "stringOrNull"
+  },
+  {
+    "name": "valuesOfObject",
+    "newName": "valuesOfObject"
+  },
+  {
+    "name": "parseNullableIntEnum",
+    "newName": "parseNullableIntEnum"
+  },
+  {
+    "name": "optionalString",
+    "newName": "optionalString"
+  },
+  {
+    "name": "parseNullableBoolean",
+    "newName": "parseNullableBoolean"
+  },
+  {
+    "name": "setAdPropertyFromString",
+    "newName": "setAdPropertyFromString"
+  },
+  {
+    "name": "serializeData",
+    "newName": "serializeData"
+  },
+  {
+    "name": "updateOrRemoveElement",
+    "newName": "updateOrRemoveElement"
+  },
+  {
+    "name": "convertToInt64",
+    "newName": "convertToInt64"
+  },
+  {
+    "name": "finalizeAdAttributes",
+    "newName": "finalizeAdAttributes"
+  },
+  {
+    "name": "uf",
+    "newName": "uf"
+  },
+  {
+    "name": "getAdPropertyStringFallback",
+    "newName": "getAdPropertyStringFallback"
+  },
+  {
+    "name": "getAdDimensions",
+    "newName": "getAdDimensions"
+  },
+  {
+    "name": "getBooleanAdProperty",
+    "newName": "getBooleanAdProperty"
+  },
+  {
+    "name": "transformElementAtIndex",
+    "newName": "transformElementAtIndex"
+  },
+  {
+    "name": "getStringOrEmpty",
+    "newName": "getStringOrEmpty"
+  },
+  {
+    "name": "isInterestGroupBuyerValid",
+    "newName": "isInterestGroupBuyerValid"
+  },
+  {
+    "name": "mapBuyerToBigInt",
+    "newName": "mapBuyerToBigInt"
+  },
+  {
+    "name": "AdAuctionManager",
+    "newName": "AdAuctionManager"
+  },
+  {
+    "name": "tryCall",
+    "newName": "tryCall"
+  },
+  {
+    "name": "initializeAdManager",
+    "newName": "initializeAdManager"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "setTimeoutWrapper"
+  },
+  {
+    "name": "runAdAuctionWithTimeout",
+    "newName": "runAdAuctionWithTimeout"
+  },
+  {
+    "name": "createTimerPromise",
+    "newName": "createTimerPromise"
+  },
+  {
+    "name": "AdEventObserver",
+    "newName": "AdEventObserver"
+  },
+  {
+    "name": "registerDisposable",
+    "newName": "registerDisposable"
+  },
+  {
+    "name": "loadOmsdkScript",
+    "newName": "loadOmsdkScript"
+  },
+  {
+    "name": "setupAdManagerWithConfig",
+    "newName": "setupAdManagerWithConfig"
+  },
+  {
+    "name": "handleAdManagerError",
+    "newName": "handleAdManagerError"
+  },
+  {
+    "name": "getContentWindow",
+    "newName": "getContentWindow"
+  },
+  {
+    "name": "markAsCompleted",
+    "newName": "markAsCompleted"
+  },
+  {
+    "name": "OmsdkSessionHandler",
+    "newName": "OmsdkSessionHandler"
+  },
+  {
+    "name": "registerSessionObservers",
+    "newName": "registerSessionObservers"
+  },
+  {
+    "name": "setSessionClient",
+    "newName": "setSessionClient"
+  },
+  {
+    "name": "enqueueMessage",
+    "newName": "enqueueMessage"
+  },
+  {
+    "name": "removeElement",
+    "newName": "removeElement"
+  },
+  {
+    "name": "EventDispatcher",
+    "newName": "EventDispatcher"
+  },
+  {
+    "name": "setAdManagerListener",
+    "newName": "setAdManagerListener"
+  },
+  {
+    "name": "initializeEventController",
+    "newName": "initializeEventController"
+  },
+  {
+    "name": "handleAutoPlay",
+    "newName": "handleAutoPlay"
+  },
+  {
+    "name": "resetPlaybackState",
+    "newName": "resetPlaybackState"
+  },
+  {
+    "name": "ExtendedAdDimensions",
+    "newName": "ExtendedAdDimensions"
+  },
+  {
+    "name": "MediaAdDimensions",
+    "newName": "MediaAdDimensions"
+  },
+  {
+    "name": "RectangleDimensions",
+    "newName": "RectangleDimensions"
+  },
+  {
+    "name": "resetVideoTracking",
+    "newName": "resetVideoTracking"
+  },
+  {
+    "name": "EventController",
+    "newName": "EventController"
+  },
+  {
+    "name": "Timer",
+    "newName": "Timer"
+  },
+  {
+    "name": "initializeAdManager",
+    "newName": "initializeAdManager"
+  },
+  {
+    "name": "AdManagerInitializer",
+    "newName": "AdManagerInitializer"
+  },
+  {
+    "name": "createIframeElement",
+    "newName": "createIframeElement"
+  },
+  {
+    "name": "getCompanionAdsService",
+    "newName": "getCompanionAdsService"
+  },
+  {
+    "name": "getWindowForDocument",
+    "newName": "getWindowForDocument"
+  },
+  {
+    "name": "extractSlotInfo",
+    "newName": "extractSlotInfo"
+  },
+  {
+    "name": "renderCompanionAds",
+    "newName": "renderCompanionAds"
+  },
+  {
+    "name": "getElementByIdOrDirect",
+    "newName": "getElementByIdOrDirect"
+  },
+  {
+    "name": "calculateInnerSize",
+    "newName": "calculateInnerSize"
+  },
+  {
+    "name": "writeSafeHtmlToDocument",
+    "newName": "writeSafeHtmlToDocument"
+  },
+  {
+    "name": "sanitizeInput",
+    "newName": "sanitizeInput"
+  },
+  {
+    "name": "setElementSafeHtml",
+    "newName": "setElementSafeHtml"
+  },
+  {
+    "name": "CustomEvent",
+    "newName": "CustomEvent"
+  },
+  {
+    "name": "MessagingHandler",
+    "newName": "MessagingHandler"
+  },
+  {
+    "name": "dispatchCustomEvent",
+    "newName": "dispatchCustomEvent"
+  },
+  {
+    "name": "setupMessagingChannel",
+    "newName": "setupMessagingChannel"
+  },
+  {
+    "name": "parseImaMessage",
+    "newName": "parseImaMessage"
+  },
+  {
+    "name": "markAsCompletedWrapper",
+    "newName": "markAsCompletedWrapper"
+  },
+  {
+    "name": "isGptPresent",
+    "newName": "isGptPresent"
+  },
+  {
+    "name": "getGoogleTagConsole",
+    "newName": "getGoogleTagConsole"
+  },
+  {
+    "name": "CrossDomainMessagingManager",
+    "newName": "CrossDomainMessagingManager"
+  },
+  {
+    "name": "urlRegex",
+    "newName": "urlRegex"
+  },
+  {
+    "name": "removeMessagingChannel",
+    "newName": "removeMessagingChannel"
+  },
+  {
+    "name": "formatString",
+    "newName": "formatString"
+  },
+  {
+    "name": "formatFunctions",
+    "newName": "formatFunctions"
+  }
+]

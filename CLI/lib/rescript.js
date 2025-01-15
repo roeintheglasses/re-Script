@@ -18,10 +18,10 @@ export default async function rescript(code, model, apiKey, spinner) {
   spinner.text = "Reversing Bundling process...";
   const crackedCodeInstance = await webcrack(code);
   const crackedCode = crackedCodeInstance.code;
-
+  console.log("CODE CRACKED");
   spinner.text = "Injecting Babel plugins...";
-  const babelifiedCode = await babelTransform(crackedCode);
-
+  const babelifiedCode = await babelTransform(code);
+  console.log("BABE TRANSFORMED, CODE READY FOR LLM");
   let llmUpdatedCode = babelifiedCode;
 
   spinner.color = "yellow";

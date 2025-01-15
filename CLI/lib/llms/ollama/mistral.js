@@ -48,7 +48,7 @@ async function OllamaMistralRenameUtility(code, apiKey = null) {
 
   const result = await ollamaMistralModel.invoke([
     new HumanMessage(
-      "You are a senior javascript programmer with experience in unminifying and deobfuscating code. Understand given code and rename all Javascript variables and functions to have descriptive names based on their usage in the code. Only give output in json format."
+      "You are a senior javascript programmer with experience in unminifying and deobfuscating code. Understand given code and rename all Javascript variables and functions to have descriptive names based on their usage in the code. This is the code if IMA SDK by google : IMA SDKs make it easy to integrate multimedia ads into your websites and apps. IMA SDKs can request ads from any VAST-compliant ad server and manage ad playback in your apps. Only give output in json format."
     ),
     new HumanMessage(code),
   ]);

@@ -1,0 +1,246 @@
+[
+  {
+    "name": "generatorWrapper",
+    "newName": "adGenerator"
+  },
+  {
+    "name": "value",
+    "newName": "adValue"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "adMap"
+  },
+  {
+    "name": "findEntry",
+    "newName": "adEntry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "adEntries"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "adCircularNode"
+  },
+  {
+    "name": "setFlag34",
+    "newName": "setAdFlag"
+  },
+  {
+    "name": "assertBoolean",
+    "newName": "validateBoolean"
+  },
+  {
+    "name": "parseBooleanOrNumber",
+    "newName": "parseAdBooleanOrNumber"
+  },
+  {
+    "name": "ensureString",
+    "newName": "validateString"
+  },
+  {
+    "name": "stringOrNull",
+    "newName": "parseAdStringOrNull"
+  },
+  {
+    "name": "getBitFlags",
+    "newName": "getAdBitFlags"
+  },
+  {
+    "name": "setRawBitFlags",
+    "newName": "setAdRawBitFlags"
+  },
+  {
+    "name": "noopFunction",
+    "newName": "emptyFunction"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "extendPrototype"
+  },
+  {
+    "name": "temporaryData",
+    "newName": "tempAdData"
+  },
+  {
+    "name": "booleanArrayCache",
+    "newName": "boolArrayCache"
+  },
+  {
+    "name": "zeroValueArrayCache",
+    "newName": "zeroArrayCache"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "onAdFulfilled"
+  },
+  {
+    "name": "polyfillCheckCache",
+    "newName": "polyfillCache"
+  },
+  {
+    "name": "requiresPolyfill",
+    "newName": "needsPolyfill"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "adTimeoutWrapper"
+  },
+  {
+    "name": "identityFunction",
+    "newName": "identity"
+  },
+  {
+    "name": "EnhancedMap",
+    "newName": "EnhancedAdMap"
+  },
+  {
+    "name": "EnsureMutable",
+    "newName": "ensureAdMutable"
+  },
+  {
+    "name": "TransformMapEntries",
+    "newName": "transformAdMapEntries"
+  },
+  {
+    "name": "TransformEntries",
+    "newName": "transformAdEntries"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "AdMap"
+  },
+  {
+    "name": "transformElement",
+    "newName": "transformAdElement"
+  },
+  {
+    "name": "transformElementContent",
+    "newName": "transformAdContent"
+  },
+  {
+    "name": "cloneOrTransform",
+    "newName": "cloneOrTransformAd"
+  },
+  {
+    "name": "transformWithFlags",
+    "newName": "transformAdWithFlags"
+  },
+  {
+    "name": "cloneIfNotFrozen",
+    "newName": "cloneAdIfNotFrozen"
+  },
+  {
+    "name": "checkFlags",
+    "newName": "checkAdFlags"
+  },
+  {
+    "name": "getTransformedElement",
+    "newName": "getTransformedAdElement"
+  },
+  {
+    "name": "getElementAtIndexWithDefault",
+    "newName": "getAdElementAtIndexWithDefault"
+  },
+  {
+    "name": "getElementAtIndex",
+    "newName": "getAdElementAtIndex"
+  },
+  {
+    "name": "updateElement",
+    "newName": "updateAdElement"
+  },
+  {
+    "name": "updateElementAtIndex",
+    "newName": "updateAdElementAtIndex"
+  },
+  {
+    "name": "transformArrayElements",
+    "newName": "transformAdArrayElements"
+  },
+  {
+    "name": "getArrayOrEmpty",
+    "newName": "getAdArrayOrEmpty"
+  },
+  {
+    "name": "updateFlags",
+    "newName": "updateAdFlags"
+  },
+  {
+    "name": "checkIfFrozen",
+    "newName": "checkAdIfFrozen"
+  },
+  {
+    "name": "transformAndAddElement",
+    "newName": "transformAndAddAdElement"
+  },
+  {
+    "name": "transformElementAtIndex",
+    "newName": "transformAdElementAtIndex"
+  },
+  {
+    "name": "transformAndReplaceArray",
+    "newName": "transformAndReplaceAdArray"
+  },
+  {
+    "name": "updateOrRemoveElement",
+    "newName": "updateOrRemoveAdElement"
+  },
+  {
+    "name": "replaceArrayIfNotArray",
+    "newName": "replaceAdArrayIfNotArray"
+  },
+  {
+    "name": "pf",
+    "newName": "processAd"
+  },
+  {
+    "name": "qf",
+    "newName": "queryAd"
+  },
+  {
+    "name": "rf",
+    "newName": "retrieveAd"
+  },
+  {
+    "name": "of",
+    "newName": "optimizeAd"
+  },
+  {
+    "name": "tf",
+    "newName": "transformField"
+  },
+  {
+    "name": "uf",
+    "newName": "updateField"
+  },
+  {
+    "name": "vf",
+    "newName": "validateField"
+  },
+  {
+    "name": "fetchData",
+    "newName": "fetchAdData"
+  },
+  {
+    "name": "xf",
+    "newName": "executeAdFunction"
+  },
+  {
+    "name": "parseData",
+    "newName": "parseAdData"
+  },
+  {
+    "name": "finalizeAdAttributes",
+    "newName": "finalizeAdFields"
+  },
+  {
+    "name": "Bf",
+    "newName": "beginAdProcessing"
+  },
+  {
+    "name": "Cf",
+    "newName": "completeAdProcessing"
+  }
+]

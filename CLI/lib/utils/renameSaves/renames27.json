@@ -1,0 +1,358 @@
+[
+  {
+    "name": "orEvent",
+    "newName": "triggerEvent"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "adRequest"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "cacheItem"
+  },
+  {
+    "name": "findEntry",
+    "newName": "regexPattern"
+  },
+  {
+    "name": "cacheManagerInstance",
+    "newName": "cacheInstance"
+  },
+  {
+    "name": "loadCacheItems",
+    "newName": "loadAdCache"
+  },
+  {
+    "name": "value",
+    "newName": "adRequestConfig"
+  },
+  {
+    "name": "AdRequestConfiguration",
+    "newName": "AdRequestConfig"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "i"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "cacheKey"
+  },
+  {
+    "name": "getIterator",
+    "newName": "getIterator"
+  },
+  {
+    "name": "removeElementAtIndex",
+    "newName": "cacheKey"
+  },
+  {
+    "name": "getCacheManagerInstance",
+    "newName": "getCacheInstance"
+  },
+  {
+    "name": "isDataPresent",
+    "newName": "isAdDataPresent"
+  },
+  {
+    "name": "evaluateCacheItemState",
+    "newName": "getCacheItemState"
+  },
+  {
+    "name": "setAdProperty",
+    "newName": "setAdProperty"
+  },
+  {
+    "name": "getAdPropertyValue",
+    "newName": "getAdProperty"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "logData"
+  },
+  {
+    "name": "logErrorEvent",
+    "newName": "logError"
+  },
+  {
+    "name": "createFunctionWithArguments",
+    "newName": "createAdErrorFunction"
+  },
+  {
+    "name": "updateElement",
+    "newName": "updateAdElement"
+  },
+  {
+    "name": "addElementToAd",
+    "newName": "addAdElement"
+  },
+  {
+    "name": "AdErrorResponse",
+    "newName": "AdError"
+  },
+  {
+    "name": "parseData",
+    "newName": "parseAdData"
+  },
+  {
+    "name": "base64Encode",
+    "newName": "encodeBase64"
+  },
+  {
+    "name": "Deferred",
+    "newName": "DeferredPromise"
+  },
+  {
+    "name": "InputError",
+    "newName": "AdInputError"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "inheritPrototype"
+  },
+  {
+    "name": "BasePromise",
+    "newName": "BasePromise"
+  },
+  {
+    "name": "DeferredWithResult",
+    "newName": "DeferredPromiseWithResult"
+  },
+  {
+    "name": "notifyListeners",
+    "newName": "notifyListeners"
+  },
+  {
+    "name": "globalObject",
+    "newName": "globalObject"
+  },
+  {
+    "name": "Result",
+    "newName": "PromiseResult"
+  },
+  {
+    "name": "resolveResult",
+    "newName": "resolvePromise"
+  },
+  {
+    "name": "resolveWithAnotherPromise",
+    "newName": "resolveWithAnotherPromise"
+  },
+  {
+    "name": "BaseResult",
+    "newName": "BaseResult"
+  },
+  {
+    "name": "SuccessResult",
+    "newName": "SuccessResult"
+  },
+  {
+    "name": "NullableSuccessResult",
+    "newName": "NullableSuccessResult"
+  },
+  {
+    "name": "Notification",
+    "newName": "Notification"
+  },
+  {
+    "name": "TaskManager",
+    "newName": "TaskManager"
+  },
+  {
+    "name": "addTask",
+    "newName": "addTask"
+  },
+  {
+    "name": "waitForTasks",
+    "newName": "waitForTasks"
+  },
+  {
+    "name": "Task",
+    "newName": "Task"
+  },
+  {
+    "name": "startTimer",
+    "newName": "startTimer"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "timeoutDuration"
+  },
+  {
+    "name": "handleIteratorResult",
+    "newName": "handleIteratorResult"
+  },
+  {
+    "name": "resetGeneratorState",
+    "newName": "resetGeneratorState"
+  },
+  {
+    "name": "getGeneratorException",
+    "newName": "getGeneratorException"
+  },
+  {
+    "name": "registerDisposable",
+    "newName": "registerDisposable"
+  },
+  {
+    "name": "tryCall",
+    "newName": "tryCall"
+  },
+  {
+    "name": "createResult",
+    "newName": "createPromiseResult"
+  },
+  {
+    "name": "createNotification",
+    "newName": "createNotificationPromise"
+  },
+  {
+    "name": "addSuccessResult",
+    "newName": "addSuccessResultPromise"
+  },
+  {
+    "name": "addNullableSuccessResult",
+    "newName": "addNullableSuccessResultPromise"
+  },
+  {
+    "name": "TaskGroup",
+    "newName": "TaskGroup"
+  },
+  {
+    "name": "addTaskToGroup",
+    "newName": "addTaskToGroup"
+  },
+  {
+    "name": "addAllTasksToGroup",
+    "newName": "addAllTasksToGroup"
+  },
+  {
+    "name": "startTaskGroup",
+    "newName": "startTaskGroup"
+  },
+  {
+    "name": "ParameterizedTask",
+    "newName": "ParameterizedTask"
+  },
+  {
+    "name": "NotificationTask",
+    "newName": "NotificationTask"
+  },
+  {
+    "name": "DataProcessingTask",
+    "newName": "DataProcessingTask"
+  },
+  {
+    "name": "StorageTask",
+    "newName": "StorageTask"
+  },
+  {
+    "name": "OutputTask",
+    "newName": "OutputTask"
+  },
+  {
+    "name": "FunctionCollectorTask",
+    "newName": "FunctionCollectorTask"
+  },
+  {
+    "name": "ValidationTask",
+    "newName": "ValidationTask"
+  },
+  {
+    "name": "StringLengthValidationTask",
+    "newName": "StringLengthValidationTask"
+  },
+  {
+    "name": "AdOutputManager",
+    "newName": "AdOutputManager"
+  },
+  {
+    "name": "waitForWindowLoad",
+    "newName": "waitForWindowLoad"
+  },
+  {
+    "name": "initializeAdComponents",
+    "newName": "initializeAdComponents"
+  },
+  {
+    "name": "AdCollector",
+    "newName": "AdCollector"
+  },
+  {
+    "name": "AdCollectorValidator",
+    "newName": "AdCollectorValidator"
+  },
+  {
+    "name": "reportError",
+    "newName": "reportError"
+  },
+  {
+    "name": "AdSignalManager",
+    "newName": "AdSignalManager"
+  },
+  {
+    "name": "AdSignalManagerProxy",
+    "newName": "AdSignalManagerProxy"
+  },
+  {
+    "name": "processAdSignals",
+    "newName": "processAdSignals"
+  },
+  {
+    "name": "isSignalProviderArray",
+    "newName": "isSignalProviderArray"
+  },
+  {
+    "name": "initializeSignalProviders",
+    "newName": "initializeSignalProviders"
+  },
+  {
+    "name": "collectAdData",
+    "newName": "collectAdData"
+  },
+  {
+    "name": "collectAdDataAsync",
+    "newName": "collectAdDataAsync"
+  },
+  {
+    "name": "getGoogleTag",
+    "newName": "getGoogleTag"
+  },
+  {
+    "name": "getLocalStorageSafe",
+    "newName": "getLocalStorageSafe"
+  },
+  {
+    "name": "collectLocalStorageAdData",
+    "newName": "collectLocalStorageAdData"
+  },
+  {
+    "name": "collectAdDataFromProviders",
+    "newName": "collectAdDataFromProviders"
+  },
+  {
+    "name": "emptyFunction",
+    "newName": "emptyFunction"
+  },
+  {
+    "name": "resolveSignalForWindow",
+    "newName": "resolveSignalForWindow"
+  },
+  {
+    "name": "resolveGmaQuerySignal",
+    "newName": "resolveGmaQuerySignal"
+  },
+  {
+    "name": "isGmaAvailable",
+    "newName": "isGmaAvailable"
+  },
+  {
+    "name": "getGmaSdk",
+    "newName": "getGmaSdk"
+  },
+  {
+    "name": "getGmaMessageHandlers",
+    "newName": "getGmaMessageHandlers"
+  }
+]

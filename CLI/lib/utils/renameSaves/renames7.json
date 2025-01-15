@@ -1,0 +1,582 @@
+[
+  {
+    "name": "entryIdCounter",
+    "newName": "entryCounter"
+  },
+  {
+    "name": "value",
+    "newName": "index"
+  },
+  {
+    "name": "key",
+    "newName": "entryKeys"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entryFound"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "customMap"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "generator"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "entryIterator"
+  },
+  {
+    "name": "serializeParameters",
+    "newName": "serializeParams"
+  },
+  {
+    "name": "calculateAvailableSpace",
+    "newName": "calcAvailableSpace"
+  },
+  {
+    "name": "ErrorLogger",
+    "newName": "ErrorLoggerClass"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "errorLoggerPrototype"
+  },
+  {
+    "name": "createSigned64",
+    "newName": "createSigned64Task"
+  },
+  {
+    "name": "parseBooleanOrNumber",
+    "newName": "parseBooleanOrNum"
+  },
+  {
+    "name": "numericStringRegex",
+    "newName": "setDeferred"
+  },
+  {
+    "name": "parseIntEnum",
+    "newName": "setTimeoutFlag"
+  },
+  {
+    "name": "hasBrands",
+    "newName": "executeWithBrands"
+  },
+  {
+    "name": "IteratorWithTransform",
+    "newName": "createIteratorWithTransform"
+  },
+  {
+    "name": "boundFunctionCall",
+    "newName": "boundFunctionCallHandler"
+  },
+  {
+    "name": "clearPerformanceMarks",
+    "newName": "clearPerfMarks"
+  },
+  {
+    "name": "ErrorDetails",
+    "newName": "ErrorDetailsClass"
+  },
+  {
+    "name": "formatErrorMessage",
+    "newName": "formatErrorMsg"
+  },
+  {
+    "name": "addKeyValuePair",
+    "newName": "addKeyValuePairToQuery"
+  },
+  {
+    "name": "isValidError",
+    "newName": "isErrorValid"
+  },
+  {
+    "name": "computeReferrerUrl",
+    "newName": "getReferrerUrl"
+  },
+  {
+    "name": "addParameter",
+    "newName": "addParamToQuery"
+  },
+  {
+    "name": "extractBaseUrl",
+    "newName": "getBaseUrl"
+  },
+  {
+    "name": "sendAdEvent",
+    "newName": "sendAdEventWithParams"
+  },
+  {
+    "name": "UrlQueryBuilder",
+    "newName": "QueryBuilder"
+  },
+  {
+    "name": "sendImageRequest",
+    "newName": "sendImage"
+  },
+  {
+    "name": "sendImageRequestWithRetry",
+    "newName": "retrySendImage"
+  },
+  {
+    "name": "createHtmlElement",
+    "newName": "createElement"
+  },
+  {
+    "name": "removeElement",
+    "newName": "removeArrayElement"
+  },
+  {
+    "name": "removeEventListenerWithNormalization",
+    "newName": "removeNormalizedEventListener"
+  },
+  {
+    "name": "addEventListenerWithNormalization",
+    "newName": "addNormalizedEventListener"
+  },
+  {
+    "name": "sendBeaconWithParams",
+    "newName": "sendBeaconRequest"
+  },
+  {
+    "name": "sendBeacon",
+    "newName": "sendBeaconRequestWithOptions"
+  },
+  {
+    "name": "serializeDataWithFilter",
+    "newName": "serializeData"
+  },
+  {
+    "name": "logErrorWithBeacon",
+    "newName": "logError"
+  },
+  {
+    "name": "getAdPropertyNumeric",
+    "newName": "getAdNumericProperty"
+  },
+  {
+    "name": "dispatchUnhandledRejection",
+    "newName": "dispatchRejection"
+  },
+  {
+    "name": "MessageBuilder",
+    "newName": "AdMessageBuilder"
+  },
+  {
+    "name": "updateOrRemoveElement",
+    "newName": "updateOrRemoveAdElement"
+  },
+  {
+    "name": "parseNullableIntEnum",
+    "newName": "parseIntEnumOrNull"
+  },
+  {
+    "name": "optionalString",
+    "newName": "getOptionalString"
+  },
+  {
+    "name": "getRawBitFlags",
+    "newName": "getBitFlags"
+  },
+  {
+    "name": "createInstanceWithTemporaryData",
+    "newName": "createTempInstance"
+  },
+  {
+    "name": "AdElement",
+    "newName": "AdElementClass"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "inheritFrom"
+  },
+  {
+    "name": "Message",
+    "newName": "AdMessage"
+  },
+  {
+    "name": "MessagePart",
+    "newName": "AdMessageParts"
+  },
+  {
+    "name": "MessageHeader",
+    "newName": "AdMessageHeader"
+  },
+  {
+    "name": "MessagePayload",
+    "newName": "AdMessagePayload"
+  },
+  {
+    "name": "MessageFooter",
+    "newName": "AdMessageFooter"
+  },
+  {
+    "name": "MessageSignature",
+    "newName": "AdMessageSignature"
+  },
+  {
+    "name": "MessageTimestamp",
+    "newName": "AdMessageTimestamp"
+  },
+  {
+    "name": "setMessageType",
+    "newName": "setAdMessageType"
+  },
+  {
+    "name": "setMessageId",
+    "newName": "setAdMessageId"
+  },
+  {
+    "name": "MessageBody",
+    "newName": "AdMessageBody"
+  },
+  {
+    "name": "MessageBodyTypes",
+    "newName": "AdMessageBodyTypes"
+  },
+  {
+    "name": "MessageWrapper",
+    "newName": "AdMessageWrapper"
+  },
+  {
+    "name": "wrapMessage",
+    "newName": "wrapAdMessage"
+  },
+  {
+    "name": "setWrapperType",
+    "newName": "setAdWrapperType"
+  },
+  {
+    "name": "setWrapperSignature",
+    "newName": "setAdWrapperSignature"
+  },
+  {
+    "name": "setWrapperTimestamp",
+    "newName": "setAdWrapperTimestamp"
+  },
+  {
+    "name": "setWrapperId",
+    "newName": "setAdWrapperId"
+  },
+  {
+    "name": "WrapperMetadata",
+    "newName": "AdWrapperMetadata"
+  },
+  {
+    "name": "MetadataTypes",
+    "newName": "AdMetadataTypes"
+  },
+  {
+    "name": "TagSession",
+    "newName": "AdTagSession"
+  },
+  {
+    "name": "TagSessionMetadata",
+    "newName": "AdTagSessionMetadata"
+  },
+  {
+    "name": "SessionTypes",
+    "newName": "AdSessionTypes"
+  },
+  {
+    "name": "SessionMetadataTypes",
+    "newName": "AdSessionMetadataTypes"
+  },
+  {
+    "name": "TagSessionBuilder",
+    "newName": "AdTagSessionBuilder"
+  },
+  {
+    "name": "getAdSessionCorrelator",
+    "newName": "getSessionCorrelator"
+  },
+  {
+    "name": "buildTagSession",
+    "newName": "buildAdTagSession"
+  },
+  {
+    "name": "TagSessionFields",
+    "newName": "AdTagSessionFields"
+  },
+  {
+    "name": "QueryMetadata",
+    "newName": "AdQueryMetadata"
+  },
+  {
+    "name": "QueryData",
+    "newName": "AdQueryData"
+  },
+  {
+    "name": "QueryPayload",
+    "newName": "AdQueryPayload"
+  },
+  {
+    "name": "getEscapedQueryIdVariantC",
+    "newName": "getQueryIdVariantC"
+  },
+  {
+    "name": "QueryHeader",
+    "newName": "AdQueryHeader"
+  },
+  {
+    "name": "QueryWrapper",
+    "newName": "AdQueryWrapper"
+  },
+  {
+    "name": "QueryService",
+    "newName": "AdQueryService"
+  },
+  {
+    "name": "QueryHandler",
+    "newName": "AdQueryHandler"
+  },
+  {
+    "name": "QueryProcessor",
+    "newName": "AdQueryProcessor"
+  },
+  {
+    "name": "ProcessQuery",
+    "newName": "AdProcessQuery"
+  },
+  {
+    "name": "setFlag34",
+    "newName": "setAdFlag34"
+  },
+  {
+    "name": "QueryMessageBuilder",
+    "newName": "AdQueryMessageBuilder"
+  },
+  {
+    "name": "QueryMessageProcessor",
+    "newName": "AdQueryMessageProcessor"
+  },
+  {
+    "name": "assertBoolean",
+    "newName": "assertAdBoolean"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "sendHttpRequest",
+    "newName": "sendAdHttpRequest"
+  },
+  {
+    "name": "AdEventLogger",
+    "newName": "AdEventLoggerClass"
+  },
+  {
+    "name": "flushAdEvents",
+    "newName": "flushEvents"
+  },
+  {
+    "name": "AdEventLoggerWithThrottling",
+    "newName": "AdEventLoggerWithThrottle"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "Rectangle"
+  },
+  {
+    "name": "getRectangleWidth",
+    "newName": "getWidth"
+  },
+  {
+    "name": "getRectangleHeight",
+    "newName": "getHeight"
+  },
+  {
+    "name": "createRectangle",
+    "newName": "createRectangleFromObject"
+  },
+  {
+    "name": "rectangleContains",
+    "newName": "containsRectangle"
+  },
+  {
+    "name": "expandRectangle",
+    "newName": "expandRect"
+  },
+  {
+    "name": "ceilRectangle",
+    "newName": "ceilRect"
+  },
+  {
+    "name": "floorRectangle",
+    "newName": "floorRect"
+  },
+  {
+    "name": "roundRectangle",
+    "newName": "roundRect"
+  },
+  {
+    "name": "translateRectangle",
+    "newName": "translateRect"
+  },
+  {
+    "name": "scaleRectangle",
+    "newName": "scaleRect"
+  },
+  {
+    "name": "RectangleDimensions",
+    "newName": "RectDimensions"
+  },
+  {
+    "name": "rectangleFromDimensions",
+    "newName": "createRectangleFromDimensions"
+  },
+  {
+    "name": "getRectangleSize",
+    "newName": "getRectSize"
+  },
+  {
+    "name": "getContextData",
+    "newName": "getAdContextData"
+  },
+  {
+    "name": "PersistentState",
+    "newName": "AdPersistentState"
+  },
+  {
+    "name": "generateCorrelator",
+    "newName": "generateAdCorrelator"
+  },
+  {
+    "name": "getCachedValueOrCompute",
+    "newName": "getCachedOrComputeValue"
+  },
+  {
+    "name": "getOrGenerateCorrelator",
+    "newName": "getOrGenerateAdCorrelator"
+  },
+  {
+    "name": "getMasterOrGlobalCorrelator",
+    "newName": "getMasterOrGlobalAdCorrelator"
+  },
+  {
+    "name": "masterPersistentState",
+    "newName": "masterAdPersistentState"
+  },
+  {
+    "name": "adFormatRegionMapping",
+    "newName": "adRegionMapping"
+  },
+  {
+    "name": "adRegionConfig",
+    "newName": "adRegionConfigMapping"
+  },
+  {
+    "name": "errorReportingUrl",
+    "newName": "errorReportingScriptUrl"
+  },
+  {
+    "name": "ErrorReporter",
+    "newName": "AdErrorReporter"
+  },
+  {
+    "name": "parseBooleanOrNumber",
+    "newName": "setTasks"
+  },
+  {
+    "name": "createSigned64",
+    "newName": "setEntryCounter"
+  },
+  {
+    "name": "numericStringRegex",
+    "newName": "setDeferredFlag"
+  },
+  {
+    "name": "parseIntEnum",
+    "newName": "setCreateDeferredFlag"
+  },
+  {
+    "name": "boundFunctionCall",
+    "newName": "handleError"
+  },
+  {
+    "name": "hasBrands",
+    "newName": "executeWithErrorHandling"
+  },
+  {
+    "name": "IteratorWithTransform",
+    "newName": "createErrorHandlingIterator"
+  },
+  {
+    "name": "getVisibilityStateCode",
+    "newName": "getVisibilityCode"
+  },
+  {
+    "name": "getVisibilityChangeEventName",
+    "newName": "getVisibilityChangeEvent"
+  },
+  {
+    "name": "getRumEventQueue",
+    "newName": "getRumQueue"
+  },
+  {
+    "name": "sanitizeInput",
+    "newName": "sanitizeHtmlInput"
+  },
+  {
+    "name": "appendToUrl",
+    "newName": "appendParamsToUrl"
+  },
+  {
+    "name": "PerformanceLogger",
+    "newName": "PerformanceLoggerClass"
+  },
+  {
+    "name": "flushData",
+    "newName": "flushLoggerData"
+  },
+  {
+    "name": "initPerformanceLogger",
+    "newName": "initializeLogger"
+  },
+  {
+    "name": "setPerformanceMetric",
+    "newName": "setLoggerMetric"
+  },
+  {
+    "name": "logEventWithDimension",
+    "newName": "logEventWithDimensionData"
+  },
+  {
+    "name": "calculateEventDimensionLength",
+    "newName": "calculateDimensionLength"
+  },
+  {
+    "name": "recordEvent",
+    "newName": "recordLoggerEvent"
+  },
+  {
+    "name": "checkAndFlushIfNeeded",
+    "newName": "checkAndFlushLogger"
+  },
+  {
+    "name": "generateBeaconUrl",
+    "newName": "generateBeaconRequestUrl"
+  },
+  {
+    "name": "processEvent",
+    "newName": "processLoggerEvent"
+  },
+  {
+    "name": "getSingletonInstance",
+    "newName": "getSingleton"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "initializeLoggerInstance"
+  },
+  {
+    "name": "settlePromise",
+    "newName": "setLoggerPromise"
+  },
+  {
+    "name": "addMultipleKeyValues",
+    "newName": "addMultipleParams"
+  }
+]

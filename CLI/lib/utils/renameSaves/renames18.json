@@ -1,0 +1,394 @@
+[
+  {
+    "name": "apper",
+    "newName": "errorHandler"
+  },
+  {
+    "name": "logError",
+    "newName": "logErrorFunction"
+  },
+  {
+    "name": "CancellationError",
+    "newName": "CancellationErrorClass"
+  },
+  {
+    "name": "Timer",
+    "newName": "TimerClass"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "timerPrototype"
+  },
+  {
+    "name": "setAsyncTimeout",
+    "newName": "asyncTimeoutFunction"
+  },
+  {
+    "name": "createTimerPromise",
+    "newName": "createTimerPromiseFunction"
+  },
+  {
+    "name": "getCurrentTimestamp",
+    "newName": "getCurrentTimestampFunction"
+  },
+  {
+    "name": "SimpleStore",
+    "newName": "SimpleStoreClass"
+  },
+  {
+    "name": "setBitFlag",
+    "newName": "setBitFlagFunction"
+  },
+  {
+    "name": "globalStore",
+    "newName": "globalStoreInstance"
+  },
+  {
+    "name": "GlobalStoreConstructor",
+    "newName": "GlobalStoreClass"
+  },
+  {
+    "name": "getGlobalStore",
+    "newName": "getGlobalStoreFunction"
+  },
+  {
+    "name": "registerGlobalValue",
+    "newName": "registerGlobalValueFunction"
+  },
+  {
+    "name": "GlobalValue",
+    "newName": "GlobalValueClass"
+  },
+  {
+    "name": "BooleanGlobalValue",
+    "newName": "BooleanGlobalValueClass"
+  },
+  {
+    "name": "RectGlobalValue",
+    "newName": "RectGlobalValueClass"
+  },
+  {
+    "name": "parseRectFromString",
+    "newName": "parseRectFromStringFunction"
+  },
+  {
+    "name": "calculateBoundingRect",
+    "newName": "calculateBoundingRectFunction"
+  },
+  {
+    "name": "getElementRectangle",
+    "newName": "getElementRectangleFunction"
+  },
+  {
+    "name": "calculateVisibilityMetrics",
+    "newName": "calculateVisibilityMetricsFunction"
+  },
+  {
+    "name": "VisibilityMetricsCollector",
+    "newName": "VisibilityMetricsCollectorClass"
+  },
+  {
+    "name": "collectAndSerializeVisibilityMetrics",
+    "newName": "collectAndSerializeVisibilityMetricsFunction"
+  },
+  {
+    "name": "AdSlot",
+    "newName": "AdSlotClass"
+  },
+  {
+    "name": "AdSize",
+    "newName": "AdSizeClass"
+  },
+  {
+    "name": "AdParameters",
+    "newName": "AdParametersClass"
+  },
+  {
+    "name": "Ad",
+    "newName": "AdClass"
+  },
+  {
+    "name": "AdEvent",
+    "newName": "AdEventClass"
+  },
+  {
+    "name": "setAdEventType",
+    "newName": "setAdEventTypeFunction"
+  },
+  {
+    "name": "setAdEventTimeStamp",
+    "newName": "setAdEventTimeStampFunction"
+  },
+  {
+    "name": "setAdEventAdData",
+    "newName": "setAdEventAdDataFunction"
+  },
+  {
+    "name": "AdRequest",
+    "newName": "AdRequestClass"
+  },
+  {
+    "name": "setAdRequestType",
+    "newName": "setAdRequestTypeFunction"
+  },
+  {
+    "name": "addAdToAdRequest",
+    "newName": "addAdToAdRequestFunction"
+  },
+  {
+    "name": "setAdRequestAdUnitPath",
+    "newName": "setAdRequestAdUnitPathFunction"
+  },
+  {
+    "name": "AdResponse",
+    "newName": "AdResponseClass"
+  },
+  {
+    "name": "AdBreak",
+    "newName": "AdBreakClass"
+  },
+  {
+    "name": "addAdRequestToAdBreak",
+    "newName": "addAdRequestToAdBreakFunction"
+  },
+  {
+    "name": "setAdBreakFillType",
+    "newName": "setAdBreakFillTypeFunction"
+  },
+  {
+    "name": "setAdBreakId",
+    "newName": "setAdBreakIdFunction"
+  },
+  {
+    "name": "AdSchedule",
+    "newName": "AdScheduleClass"
+  },
+  {
+    "name": "addAdBreakToAdSchedule",
+    "newName": "addAdBreakToAdScheduleFunction"
+  },
+  {
+    "name": "AdRule",
+    "newName": "AdRuleClass"
+  },
+  {
+    "name": "AdRuleParameters",
+    "newName": "AdRuleParametersClass"
+  },
+  {
+    "name": "AdBreakTemplate",
+    "newName": "AdBreakTemplateClass"
+  },
+  {
+    "name": "AdSpot",
+    "newName": "AdSpotClass"
+  },
+  {
+    "name": "getAdSpot",
+    "newName": "getAdSpotFunction"
+  },
+  {
+    "name": "AdError",
+    "newName": "AdErrorClass"
+  },
+  {
+    "name": "createAdError",
+    "newName": "createAdErrorFunction"
+  },
+  {
+    "name": "AdErrorResponse",
+    "newName": "AdErrorResponseClass"
+  },
+  {
+    "name": "createAdErrorResponse",
+    "newName": "createAdErrorResponseFunction"
+  },
+  {
+    "name": "setAdErrorResponseTimeStamp",
+    "newName": "setAdErrorResponseTimeStampFunction"
+  },
+  {
+    "name": "AdRequestConfiguration",
+    "newName": "AdRequestConfigurationClass"
+  },
+  {
+    "name": "RandomGenerator",
+    "newName": "RandomGeneratorClass"
+  },
+  {
+    "name": "initializeRandomGenerator",
+    "newName": "initializeRandomGeneratorFunction"
+  },
+  {
+    "name": "sendAdEvent",
+    "newName": "sendAdEventFunction"
+  },
+  {
+    "name": "AdExtension",
+    "newName": "AdExtensionClass"
+  },
+  {
+    "name": "AdExtensionParameters",
+    "newName": "AdExtensionParametersClass"
+  },
+  {
+    "name": "setAdExtensionParam",
+    "newName": "setAdExtensionParamFunction"
+  },
+  {
+    "name": "setAdExtensionValue",
+    "newName": "setAdExtensionValueFunction"
+  },
+  {
+    "name": "setAdExtensionOption",
+    "newName": "setAdExtensionOptionFunction"
+  },
+  {
+    "name": "finalizeAdExtension",
+    "newName": "finalizeAdExtensionFunction"
+  },
+  {
+    "name": "AdManifest",
+    "newName": "AdManifestClass"
+  },
+  {
+    "name": "AdManifestVersion",
+    "newName": "AdManifestVersionClass"
+  },
+  {
+    "name": "setAdManifestVersion",
+    "newName": "setAdManifestVersionFunction"
+  },
+  {
+    "name": "addAdManifestExtension",
+    "newName": "addAdManifestExtensionFunction"
+  },
+  {
+    "name": "addAdManifestTemplate",
+    "newName": "addAdManifestTemplateFunction"
+  },
+  {
+    "name": "setAdManifestId",
+    "newName": "setAdManifestIdFunction"
+  },
+  {
+    "name": "setAdManifestSequence",
+    "newName": "setAdManifestSequenceFunction"
+  },
+  {
+    "name": "setAdManifestAdBreakId",
+    "newName": "setAdManifestAdBreakIdFunction"
+  },
+  {
+    "name": "setAdManifestFallbackIndex",
+    "newName": "setAdManifestFallbackIndexFunction"
+  },
+  {
+    "name": "setAdManifestAdPolicy",
+    "newName": "setAdManifestAdPolicyFunction"
+  },
+  {
+    "name": "setAdManifestDuration",
+    "newName": "setAdManifestDurationFunction"
+  },
+  {
+    "name": "enableAdManifestSkippable",
+    "newName": "enableAdManifestSkippableFunction"
+  },
+  {
+    "name": "enableAdManifestVPAID",
+    "newName": "enableAdManifestVPAIDFunction"
+  },
+  {
+    "name": "setAdManifestCreativeType",
+    "newName": "setAdManifestCreativeTypeFunction"
+  },
+  {
+    "name": "setAdManifestWrapper",
+    "newName": "setAdManifestWrapperFunction"
+  },
+  {
+    "name": "setAdManifestLinear",
+    "newName": "setAdManifestLinearFunction"
+  },
+  {
+    "name": "setAdRequestParameter15",
+    "newName": "setAdRequestParameter15Function"
+  },
+  {
+    "name": "setAdRequestParameter16",
+    "newName": "setAdRequestParameter16Function"
+  },
+  {
+    "name": "setAdRequestParameter17",
+    "newName": "setAdRequestParameter17Function"
+  },
+  {
+    "name": "setAdRequestParameter18",
+    "newName": "setAdRequestParameter18Function"
+  },
+  {
+    "name": "setAdRequestParameter19",
+    "newName": "setAdRequestParameter19Function"
+  },
+  {
+    "name": "AdResponse",
+    "newName": "AdResponseClass"
+  },
+  {
+    "name": "BitStringReader",
+    "newName": "BitStringReaderClass"
+  },
+  {
+    "name": "decodePurposeRestrictions",
+    "newName": "decodePurposeRestrictionsFunction"
+  },
+  {
+    "name": "decodeVendor",
+    "newName": "decodeVendorFunction"
+  },
+  {
+    "name": "decodeVendorList",
+    "newName": "decodeVendorListFunction"
+  },
+  {
+    "name": "decodeVendorConsent",
+    "newName": "decodeVendorConsentFunction"
+  },
+  {
+    "name": "decodeRange",
+    "newName": "decodeRangeFunction"
+  },
+  {
+    "name": "decodeSingleVendor",
+    "newName": "decodeSingleVendorFunction"
+  },
+  {
+    "name": "readBits",
+    "newName": "readBitsFunction"
+  },
+  {
+    "name": "decodeAdBreak",
+    "newName": "decodeAdBreakFunction"
+  },
+  {
+    "name": "decodeAdRequest",
+    "newName": "decodeAdRequestFunction"
+  },
+  {
+    "name": "decodeAdResponse",
+    "newName": "decodeAdResponseFunction"
+  },
+  {
+    "name": "getAdResponseType",
+    "newName": "getAdResponseTypeFunction"
+  },
+  {
+    "name": "generateAdResponseMap",
+    "newName": "generateAdResponseMapFunction"
+  },
+  {
+    "name": "DefaultValueContainer",
+    "newName": "DefaultValueContainerClass"
+  }
+]

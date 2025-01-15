@@ -1,0 +1,386 @@
+[
+  {
+    "name": "CustomMap",
+    "newName": "customMap"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entryArray"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "entryIndex"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "argumentLength"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "entryId"
+  },
+  {
+    "name": "invokeEventCallback",
+    "newName": "invokeCallback"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "context"
+  },
+  {
+    "name": "value",
+    "newName": "task"
+  },
+  {
+    "name": "EventDispatcher",
+    "newName": "EventDispatcher"
+  },
+  {
+    "name": "tryCall",
+    "newName": "BaseClass"
+  },
+  {
+    "name": "registerDisposable",
+    "newName": "registerDisposable"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "inheritPrototype"
+  },
+  {
+    "name": "enqueueTask",
+    "newName": "enqueueTask"
+  },
+  {
+    "name": "setupVolumeChangeListener",
+    "newName": "setupVolumeChangeListener"
+  },
+  {
+    "name": "setupCueChangeHandler",
+    "newName": "setupCueChangeHandler"
+  },
+  {
+    "name": "createElementWithOptionalClassesAndAttributes",
+    "newName": "createElementWithAttributes"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolvePromise"
+  },
+  {
+    "name": "settlePromise",
+    "newName": "settlePromise"
+  },
+  {
+    "name": "videoMuteEvent",
+    "newName": "videoMuteEvent"
+  },
+  {
+    "name": "videoCaptionVisibilityEvent",
+    "newName": "videoCaptionVisibilityEvent"
+  },
+  {
+    "name": "initializeVideoElement",
+    "newName": "initializeVideoElement"
+  },
+  {
+    "name": "initializeCustomVideoElement",
+    "newName": "initializeCustomVideoElement"
+  },
+  {
+    "name": "processSrcAttribute",
+    "newName": "processSrcAttribute"
+  },
+  {
+    "name": "updateSrcAttribute",
+    "newName": "updateSrcAttribute"
+  },
+  {
+    "name": "updateDemuxedSources",
+    "newName": "updateDemuxedSources"
+  },
+  {
+    "name": "syncAttributeWithVideoElement",
+    "newName": "syncAttributeWithVideoElement"
+  },
+  {
+    "name": "removeTimeUpdateListener",
+    "newName": "removeTimeUpdateListener"
+  },
+  {
+    "name": "dispatchMediaError",
+    "newName": "dispatchMediaError"
+  },
+  {
+    "name": "proxyVideoProperties",
+    "newName": "proxyVideoProperties"
+  },
+  {
+    "name": "defineErrorProperty",
+    "newName": "defineErrorProperty"
+  },
+  {
+    "name": "resetVideoSize",
+    "newName": "resetVideoSize"
+  },
+  {
+    "name": "disconnectResizeObservers",
+    "newName": "disconnectResizeObservers"
+  },
+  {
+    "name": "loadVideoElement",
+    "newName": "loadVideoElement"
+  },
+  {
+    "name": "findTrackElement",
+    "newName": "findTrackElement"
+  },
+  {
+    "name": "setupMutationObserver",
+    "newName": "setupMutationObserver"
+  },
+  {
+    "name": "createCustomEvent",
+    "newName": "createCustomEvent"
+  },
+  {
+    "name": "addPageHideListener",
+    "newName": "addPageHideListener"
+  },
+  {
+    "name": "calculateAndReportResourceTiming",
+    "newName": "calculateAndReportResourceTiming"
+  },
+  {
+    "name": "reportVideoPlaybackQuality",
+    "newName": "reportVideoPlaybackQuality"
+  },
+  {
+    "name": "VideoPlaybackMonitor",
+    "newName": "VideoPlaybackMonitor"
+  },
+  {
+    "name": "applyStyleOrRemove",
+    "newName": "applyStyleOrRemove"
+  },
+  {
+    "name": "waitForElementResize",
+    "newName": "waitForElementResize"
+  },
+  {
+    "name": "createInstanceWithArguments",
+    "newName": "createInstanceWithArguments"
+  },
+  {
+    "name": "generateObjectURL",
+    "newName": "generateObjectURL"
+  },
+  {
+    "name": "isGCacheURL",
+    "newName": "isGCacheURL"
+  },
+  {
+    "name": "getGCacheURL",
+    "newName": "getGCacheURL"
+  },
+  {
+    "name": "getItagValue",
+    "newName": "getItagValue"
+  },
+  {
+    "name": "isSupportedVideoType",
+    "newName": "isSupportedVideoType"
+  },
+  {
+    "name": "getMediaSourceString",
+    "newName": "getMediaSourceString"
+  },
+  {
+    "name": "MediaSourceConfig",
+    "newName": "MediaSourceConfig"
+  },
+  {
+    "name": "MediaSourceManager",
+    "newName": "MediaSourceManager"
+  },
+  {
+    "name": "updateSegmentTrackers",
+    "newName": "updateSegmentTrackers"
+  },
+  {
+    "name": "initializeMraid",
+    "newName": "initializeMraid"
+  },
+  {
+    "name": "CB",
+    "newName": "CB"
+  },
+  {
+    "name": "AdEnvironmentConfig",
+    "newName": "AdEnvironmentConfig"
+  },
+  {
+    "name": "setupReportingObserver",
+    "newName": "setupReportingObserver"
+  },
+  {
+    "name": "handleHeavyAdIntervention",
+    "newName": "handleHeavyAdIntervention"
+  },
+  {
+    "name": "MediaErrorWrapper",
+    "newName": "MediaErrorWrapper"
+  },
+  {
+    "name": "MediaSrcNotSupportedError",
+    "newName": "MediaSrcNotSupportedError"
+  },
+  {
+    "name": "CustomVideoElement",
+    "newName": "CustomVideoElement"
+  },
+  {
+    "name": "loadVideoElement",
+    "newName": "loadVideoElement"
+  },
+  {
+    "name": "initializeVideoComponent",
+    "newName": "initializeVideoComponent"
+  },
+  {
+    "name": "AdLoader",
+    "newName": "AdLoader"
+  },
+  {
+    "name": "dispatchMediaSourceError",
+    "newName": "dispatchMediaSourceError"
+  },
+  {
+    "name": "handleChunkLoadError",
+    "newName": "handleChunkLoadError"
+  },
+  {
+    "name": "setupChunkLoaderEvents",
+    "newName": "setupChunkLoaderEvents"
+  },
+  {
+    "name": "handleAdRequestFailure",
+    "newName": "handleAdRequestFailure"
+  },
+  {
+    "name": "handleChunkLoadResponse",
+    "newName": "handleChunkLoadResponse"
+  },
+  {
+    "name": "processVideoAd",
+    "newName": "processVideoAd"
+  },
+  {
+    "name": "createBufferFromArrayResponse",
+    "newName": "createBufferFromArrayResponse"
+  },
+  {
+    "name": "processSourceBuffer",
+    "newName": "processSourceBuffer"
+  },
+  {
+    "name": "createAdRequestUrl",
+    "newName": "createAdRequestUrl"
+  },
+  {
+    "name": "processAdRequest",
+    "newName": "processAdRequest"
+  },
+  {
+    "name": "initializeMediaSource",
+    "newName": "initializeMediaSource"
+  },
+  {
+    "name": "uuidCharacters",
+    "newName": "uuidCharacters"
+  },
+  {
+    "name": "generateUUID",
+    "newName": "generateUUID"
+  },
+  {
+    "name": "CustomUri",
+    "newName": "CustomUri"
+  },
+  {
+    "name": "parseUriParameters",
+    "newName": "parseUriParameters"
+  },
+  {
+    "name": "getOrdParameter",
+    "newName": "getOrdParameter"
+  },
+  {
+    "name": "setOrdParameter",
+    "newName": "setOrdParameter"
+  },
+  {
+    "name": "buildUriString",
+    "newName": "buildUriString"
+  },
+  {
+    "name": "getUriParameters",
+    "newName": "getUriParameters"
+  },
+  {
+    "name": "decodeUriComponentWithSpace",
+    "newName": "decodeUriComponentWithSpace"
+  },
+  {
+    "name": "stringifyNullable",
+    "newName": "stringifyNullable"
+  },
+  {
+    "name": "isEmptyOrWhitespace",
+    "newName": "isEmptyOrWhitespace"
+  },
+  {
+    "name": "identityFunction",
+    "newName": "identityFunction"
+  },
+  {
+    "name": "createSafeHtmlFromTemplate",
+    "newName": "createSafeHtmlFromTemplate"
+  },
+  {
+    "name": "isDoubleClickAd",
+    "newName": "isDoubleClickAd"
+  },
+  {
+    "name": "isBidRequest",
+    "newName": "isBidRequest"
+  },
+  {
+    "name": "isGoogleAdsRequest",
+    "newName": "isGoogleAdsRequest"
+  },
+  {
+    "name": "isGampadRequest",
+    "newName": "isGampadRequest"
+  },
+  {
+    "name": "isAdvRequest",
+    "newName": "isAdvRequest"
+  },
+  {
+    "name": "updateMaxSize",
+    "newName": "updateMaxSize"
+  },
+  {
+    "name": "AdError",
+    "newName": "AdError"
+  },
+  {
+    "name": "carJsUrl",
+    "newName": "carJsUrl"
+  },
+  {
+    "name": "identifyAdServer",
+    "newName": "identifyAdServer"
+  }
+]

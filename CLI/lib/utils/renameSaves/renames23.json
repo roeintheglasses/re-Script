@@ -1,0 +1,422 @@
+[
+  {
+    "name": "createCircularNode",
+    "newName": "isCircularNode"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "customMap"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "entryIdList"
+  },
+  {
+    "name": "settlePromise",
+    "newName": "settleAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "adGeneratorWrapper"
+  },
+  {
+    "name": "value",
+    "newName": "currentValue"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entryFinder"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "entryIterator"
+  },
+  {
+    "name": "getBase64EncodedArray",
+    "newName": "getEncodedArray"
+  },
+  {
+    "name": "getTrustedTypesPolicy",
+    "newName": "getTypesPolicy"
+  },
+  {
+    "name": "includesBrand",
+    "newName": "includesBrandName"
+  },
+  {
+    "name": "source",
+    "newName": "sourceType"
+  },
+  {
+    "name": "startIndex",
+    "newName": "startIndexValue"
+  },
+  {
+    "name": "videoId",
+    "newName": "videoIdentifier"
+  },
+  {
+    "name": "HB",
+    "newName": "generateHash"
+  },
+  {
+    "name": "GB",
+    "newName": "getAdEntry"
+  },
+  {
+    "name": "AB",
+    "newName": "getAdDatabase"
+  },
+  {
+    "name": "deleteVideoChunk",
+    "newName": "removeVideoChunk"
+  },
+  {
+    "name": "VideoChunkLoader",
+    "newName": "AdVideoChunkLoader"
+  },
+  {
+    "name": "MediaElement",
+    "newName": "AdMediaElement"
+  },
+  {
+    "name": "handleAsync",
+    "newName": "asyncHandler"
+  },
+  {
+    "name": "logError",
+    "newName": "errorHandler"
+  },
+  {
+    "name": "uri",
+    "newName": "resourceUri"
+  },
+  {
+    "name": "isDone",
+    "newName": "isLoadComplete"
+  },
+  {
+    "name": "CB",
+    "newName": "createCacheInstance"
+  },
+  {
+    "name": "executeOrDelayUntilDisposed",
+    "newName": "executeOrDelay"
+  },
+  {
+    "name": "markAsCompletedWrapper",
+    "newName": "markAsCompleted"
+  },
+  {
+    "name": "initializeMraid",
+    "newName": "initializeAdMraid"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "inheritAdPrototype"
+  },
+  {
+    "name": "dispatchUnhandledRejection",
+    "newName": "dispatchRejection"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "isFulfilled"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "thenableHandler"
+  },
+  {
+    "name": "checkAndHandleLoadingState",
+    "newName": "checkAndHandleState"
+  },
+  {
+    "name": "wrapGeneratorToPromise",
+    "newName": "wrapToPromise"
+  },
+  {
+    "name": "generatorYield",
+    "newName": "yieldGenerator"
+  },
+  {
+    "name": "loadVideoChunk",
+    "newName": "loadAdVideoChunk"
+  },
+  {
+    "name": "Math.imul",
+    "newName": "mathMultiply"
+  },
+  {
+    "name": "loadVideoChunkFromCache",
+    "newName": "loadFromCache"
+  },
+  {
+    "name": "resetGeneratorState",
+    "newName": "resetState"
+  },
+  {
+    "name": "getGeneratorException",
+    "newName": "getException"
+  },
+  {
+    "name": "handleFallbackAndIncrementRetry",
+    "newName": "handleRetry"
+  },
+  {
+    "name": "UriParameterManager",
+    "newName": "uriManager"
+  },
+  {
+    "name": "setParameter",
+    "newName": "setUriParameter"
+  },
+  {
+    "name": "getParameterById",
+    "newName": "getUriParameter"
+  },
+  {
+    "name": "processVideoChunkData",
+    "newName": "processAdVideoData"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "getAdEnv"
+  },
+  {
+    "name": "loadingThresholds",
+    "newName": "adLoadingThresholds"
+  },
+  {
+    "name": "isMediaSourceSupported",
+    "newName": "checkMediaSourceSupport"
+  },
+  {
+    "name": "isSupportedVideoType",
+    "newName": "checkVideoSupport"
+  },
+  {
+    "name": "itagCodecMap",
+    "newName": "codecMap"
+  },
+  {
+    "name": "getMediaSourceString",
+    "newName": "getMediaSourceType"
+  },
+  {
+    "name": "LoadingStrategy",
+    "newName": "AdLoadingStrategy"
+  },
+  {
+    "name": "parsedIntegerTransformation",
+    "newName": "transformInteger"
+  },
+  {
+    "name": "SourceBufferManager",
+    "newName": "BufferManager"
+  },
+  {
+    "name": "executeBufferAppend",
+    "newName": "appendBuffer"
+  },
+  {
+    "name": "CacheVideoChunkStorage",
+    "newName": "VideoChunkCache"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "timeoutWrapper"
+  },
+  {
+    "name": "initializeMraid",
+    "newName": "initializeCache"
+  },
+  {
+    "name": "getUniqueId",
+    "newName": "cacheHasUniqueId"
+  },
+  {
+    "name": "closeCache",
+    "newName": "closeCacheStorage"
+  },
+  {
+    "name": "containsElement",
+    "newName": "cacheContainsElement"
+  },
+  {
+    "name": "isIpod",
+    "newName": "cacheIpod"
+  },
+  {
+    "name": "generateCacheKey",
+    "newName": "createCacheKey"
+  },
+  {
+    "name": "MediaSourceManager",
+    "newName": "AdMediaSourceManager"
+  },
+  {
+    "name": "AdEnvironmentConfig",
+    "newName": "AdEnvConfig"
+  },
+  {
+    "name": "setupSourceBuffers",
+    "newName": "initializeSourceBuffers"
+  },
+  {
+    "name": "initializeSegmentTrackers",
+    "newName": "initSegmentTrackers"
+  },
+  {
+    "name": "endAllSourceBuffers",
+    "newName": "endSourceBuffers"
+  },
+  {
+    "name": "updateSegmentTrackers",
+    "newName": "updateSegmentTrackers"
+  },
+  {
+    "name": "generateObjectURL",
+    "newName": "createObjectURL"
+  },
+  {
+    "name": "ByteArray",
+    "newName": "updateByteArray"
+  },
+  {
+    "name": "adRequestUrlPattern",
+    "newName": "adRequestPattern"
+  },
+  {
+    "name": "outstreamScriptPattern",
+    "newName": "outstreamScriptRegex"
+  },
+  {
+    "name": "outstreamStylePattern",
+    "newName": "outstreamStyleRegex"
+  },
+  {
+    "name": "fontRequestPattern",
+    "newName": "fontRequestRegex"
+  },
+  {
+    "name": "videoPlaybackUrlPattern",
+    "newName": "videoPlaybackRegex"
+  },
+  {
+    "name": "customElementsScriptPattern",
+    "newName": "customElementsRegex"
+  },
+  {
+    "name": "calculateAndReportResourceTiming",
+    "newName": "reportResourceTiming"
+  },
+  {
+    "name": "MediaSourceConfig",
+    "newName": "AdMediaSourceConfig"
+  },
+  {
+    "name": "reportVideoPlaybackQuality",
+    "newName": "reportPlaybackQuality"
+  },
+  {
+    "name": "EventName",
+    "newName": "AdEventName"
+  },
+  {
+    "name": "videoMuteEvent",
+    "newName": "muteEvent"
+  },
+  {
+    "name": "videoCaptionVisibilityEvent",
+    "newName": "captionVisibilityEvent"
+  },
+  {
+    "name": "EventDispatcher",
+    "newName": "AdEventDispatcher"
+  },
+  {
+    "name": "registerEvent",
+    "newName": "registerAdEvent"
+  },
+  {
+    "name": "unregisterEvent",
+    "newName": "unregisterAdEvent"
+  },
+  {
+    "name": "invokeEventCallback",
+    "newName": "executeEventCallback"
+  },
+  {
+    "name": "clearAll",
+    "newName": "clearAllEvents"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "getAdEnv"
+  },
+  {
+    "name": "EventDispatcherWrapper",
+    "newName": "AdEventDispatcherWrapper"
+  },
+  {
+    "name": "BaseComponent",
+    "newName": "AdBaseComponent"
+  },
+  {
+    "name": "bindComponentEvent",
+    "newName": "bindAdComponentEvent"
+  },
+  {
+    "name": "CaptionVisibilityComponent",
+    "newName": "AdCaptionVisibilityComponent"
+  },
+  {
+    "name": "BaseSDKComponent",
+    "newName": "AdSDKComponent"
+  },
+  {
+    "name": "placeholderForFutureFunction",
+    "newName": "setupAdPlaceholder"
+  },
+  {
+    "name": "setupCueChangeHandler",
+    "newName": "setupCueHandler"
+  },
+  {
+    "name": "endsWith",
+    "newName": "hideCaptions"
+  },
+  {
+    "name": "setupReportingObserver",
+    "newName": "setupObserver"
+  },
+  {
+    "name": "handleHeavyAdIntervention",
+    "newName": "handleHeavyAdIntervention"
+  },
+  {
+    "name": "videoAttributes",
+    "newName": "videoAttrs"
+  },
+  {
+    "name": "videoMethods",
+    "newName": "videoMethods"
+  },
+  {
+    "name": "mutationObserverConfig",
+    "newName": "observerConfig"
+  },
+  {
+    "name": "supportsClassFields",
+    "newName": "checkClassFields"
+  },
+  {
+    "name": "CustomHTMLElement",
+    "newName": "CustomHTMLComponent"
+  }
+]

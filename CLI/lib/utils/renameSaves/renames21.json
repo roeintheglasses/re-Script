@@ -1,0 +1,406 @@
+[
+  {
+    "name": "CustomMap",
+    "newName": "currentTimeMs"
+  },
+  {
+    "name": "value",
+    "newName": "threshold"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "inputString"
+  },
+  {
+    "name": "isEmptyOrWhitespace",
+    "newName": "isStringEmptyOrWhitespace"
+  },
+  {
+    "name": "stringifyNullable",
+    "newName": "convertToString"
+  },
+  {
+    "name": "isIE",
+    "newName": "isInternetExplorer"
+  },
+  {
+    "name": "table",
+    "newName": "URLParser"
+  },
+  {
+    "name": "ocrRegex",
+    "newName": "ocrPattern"
+  },
+  {
+    "name": "trustedDomainsList",
+    "newName": "trustedDomains"
+  },
+  {
+    "name": "handleAsync",
+    "newName": "isPlaybackStalled"
+  },
+  {
+    "name": "dispatchUnhandledRejection",
+    "newName": "lastCheckedTime"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "callback"
+  },
+  {
+    "name": "findEntry",
+    "newName": "keyValuePair"
+  },
+  {
+    "name": "trimString",
+    "newName": "trim"
+  },
+  {
+    "name": "parseQueryString",
+    "newName": "parseCommaSeparatedKeyValuePairs"
+  },
+  {
+    "name": "normalizeLanguageCode",
+    "newName": "normalizeLocale"
+  },
+  {
+    "name": "Timer",
+    "newName": "Timestamp"
+  },
+  {
+    "name": "resetAdStateController",
+    "newName": "resetTimestamp"
+  },
+  {
+    "name": "getRemainingTime",
+    "newName": "getTimeRemaining"
+  },
+  {
+    "name": "UrlRequest",
+    "newName": "HttpRequest"
+  },
+  {
+    "name": "getErrorDescription",
+    "newName": "getErrorMessage"
+  },
+  {
+    "name": "CustomError",
+    "newName": "ApplicationError"
+  },
+  {
+    "name": "EventDispatcher",
+    "newName": "EventManager"
+  },
+  {
+    "name": "addListener",
+    "newName": "registerEventListener"
+  },
+  {
+    "name": "removeListener",
+    "newName": "unregisterEventListener"
+  },
+  {
+    "name": "removeAllListeners",
+    "newName": "clearAllEventListeners"
+  },
+  {
+    "name": "compareValues",
+    "newName": "compareEventListeners"
+  },
+  {
+    "name": "tryCall",
+    "newName": "BaseClass"
+  },
+  {
+    "name": "singleElementArray",
+    "newName": "tempArray"
+  },
+  {
+    "name": "addPageHideListener",
+    "newName": "addEventListener"
+  },
+  {
+    "name": "Gu",
+    "newName": "getEventListener"
+  },
+  {
+    "name": "Iu",
+    "newName": "normalizeEventListener"
+  },
+  {
+    "name": "isObjectOrFunction",
+    "newName": "isFunctionOrObject"
+  },
+  {
+    "name": "isListenable",
+    "newName": "isEventTarget"
+  },
+  {
+    "name": "Pu",
+    "newName": "cleanupEventListener"
+  },
+  {
+    "name": "forEachInObject",
+    "newName": "iterateObjectProperties"
+  },
+  {
+    "name": "Singleton",
+    "newName": "SingletonClass"
+  },
+  {
+    "name": "getSingletonInstance",
+    "newName": "getInstance"
+  },
+  {
+    "name": "singletonInstance",
+    "newName": "singleton"
+  },
+  {
+    "name": "SingletonBase",
+    "newName": "SingletonBaseClass"
+  },
+  {
+    "name": "HttpRequest",
+    "newName": "HttpClient"
+  },
+  {
+    "name": "httpRegex",
+    "newName": "httpPattern"
+  },
+  {
+    "name": "contentTypesWithPayload",
+    "newName": "methodsWithPayload"
+  },
+  {
+    "name": "sendRequest",
+    "newName": "sendHttpRequest"
+  },
+  {
+    "name": "bindOrWrapFunction",
+    "newName": "bindFunction"
+  },
+  {
+    "name": "clearTimeoutIfSet",
+    "newName": "clearTimeoutIfExists"
+  },
+  {
+    "name": "definePropertyPolyfill",
+    "newName": "handleTimeout"
+  },
+  {
+    "name": "handleRequestError",
+    "newName": "handleHttpRequestError"
+  },
+  {
+    "name": "dispatchErrorEvents",
+    "newName": "triggerErrorEvents"
+  },
+  {
+    "name": "cleanupRequest",
+    "newName": "cleanupHttpRequest"
+  },
+  {
+    "name": "checkRequestStatus",
+    "newName": "checkHttpRequestStatus"
+  },
+  {
+    "name": "parseResponse",
+    "newName": "parseJsonResponse"
+  },
+  {
+    "name": "GetRequest",
+    "newName": "HttpGetRequest"
+  },
+  {
+    "name": "makeGetRequest",
+    "newName": "executeHttpGetRequest"
+  },
+  {
+    "name": "makeRequest",
+    "newName": "executeHttpRequest"
+  },
+  {
+    "name": "fetchWithRetry",
+    "newName": "fetchWithRetries"
+  },
+  {
+    "name": "createFetchRequestOptions",
+    "newName": "getFetchRequestOptions"
+  },
+  {
+    "name": "loadImage",
+    "newName": "loadTrackingImage"
+  },
+  {
+    "name": "sendGetRequest",
+    "newName": "sendHttpGetRequest"
+  },
+  {
+    "name": "EventTypes",
+    "newName": "MediaEventTypes"
+  },
+  {
+    "name": "MediaElement",
+    "newName": "MediaElementBase"
+  },
+  {
+    "name": "itagResolutionMap",
+    "newName": "itagResolutionMapping"
+  },
+  {
+    "name": "itagSupportsAutoplayMap",
+    "newName": "itagAutoplaySupportMapping"
+  },
+  {
+    "name": "itagFormatMap",
+    "newName": "itagFormatMapping"
+  },
+  {
+    "name": "itagCodecMap",
+    "newName": "itagCodecMapping"
+  },
+  {
+    "name": "videoFormatMappings",
+    "newName": "videoFormatMapping"
+  },
+  {
+    "name": "itagContainerMap",
+    "newName": "itagContainerMapping"
+  },
+  {
+    "name": "codecMappings",
+    "newName": "codecMapping"
+  },
+  {
+    "name": "codecMappingsInitialized",
+    "newName": "initializedCodecMapping"
+  },
+  {
+    "name": "itagRegex",
+    "newName": "itagPattern"
+  },
+  {
+    "name": "getItagValue",
+    "newName": "extractItagFromUrl"
+  },
+  {
+    "name": "getMediaSourceString",
+    "newName": "getMediaSourceType"
+  },
+  {
+    "name": "createCustomEvent",
+    "newName": "createEvent"
+  },
+  {
+    "name": "MediaSourceLoader",
+    "newName": "MediaSourceManager"
+  },
+  {
+    "name": "checkAndHandleMediaSourceState",
+    "newName": "checkMediaSourceState"
+  },
+  {
+    "name": "fetchMediaSegments",
+    "newName": "fetchMediaSourceSegments"
+  },
+  {
+    "name": "handleMediaSourceBuffer",
+    "newName": "processMediaSourceBuffer"
+  },
+  {
+    "name": "fetchAndProcessMedia",
+    "newName": "fetchAndProcessMediaSegments"
+  },
+  {
+    "name": "finalizeMediaBuffer",
+    "newName": "finalizeMediaSourceBuffer"
+  },
+  {
+    "name": "dispatchMediaProgressEvent",
+    "newName": "triggerMediaProgressEvent"
+  },
+  {
+    "name": "UriParameterManager",
+    "newName": "UriParamsManager"
+  },
+  {
+    "name": "parseUriParameters",
+    "newName": "parseUriParams"
+  },
+  {
+    "name": "getRangeStart",
+    "newName": "getUriRangeStart"
+  },
+  {
+    "name": "getParameterById",
+    "newName": "getUriParamById"
+  },
+  {
+    "name": "EmptyFunction",
+    "newName": "Noop"
+  },
+  {
+    "name": "trustedDomains",
+    "newName": "defaultTrustedDomains"
+  },
+  {
+    "name": "isSupportedEnvironment",
+    "newName": "checkSupportedEnvironment"
+  },
+  {
+    "name": "ErrorBase",
+    "newName": "BaseError"
+  },
+  {
+    "name": "ErrorCodes",
+    "newName": "ApplicationErrorCodes"
+  },
+  {
+    "name": "UnknownErrorCode",
+    "newName": "UnknownError"
+  },
+  {
+    "name": "NotFoundErrorCode",
+    "newName": "NotFoundError"
+  },
+  {
+    "name": "ConstraintErrorCode",
+    "newName": "ConstraintError"
+  },
+  {
+    "name": "DataErrorCode",
+    "newName": "DataError"
+  },
+  {
+    "name": "TransactionInactiveErrorCode",
+    "newName": "TransactionInactiveError"
+  },
+  {
+    "name": "AbortErrorCode",
+    "newName": "AbortError"
+  },
+  {
+    "name": "ReadOnlyErrorCode",
+    "newName": "ReadOnlyError"
+  },
+  {
+    "name": "TimeoutErrorCode",
+    "newName": "TimeoutError"
+  },
+  {
+    "name": "QuotaExceededErrorCode",
+    "newName": "QuotaExceededError"
+  },
+  {
+    "name": "InvalidAccessErrorCode",
+    "newName": "InvalidAccessError"
+  },
+  {
+    "name": "InvalidStateErrorCode",
+    "newName": "InvalidStateError"
+  },
+  {
+    "name": "getErrorFromName",
+    "newName": "getErrorCodeByName"
+  }
+]

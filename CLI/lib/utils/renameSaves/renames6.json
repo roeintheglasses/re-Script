@@ -1,0 +1,1278 @@
+[
+  {
+    "name": "trustedTypesPolicy",
+    "newName": "trustedTypesPolicyInstance"
+  },
+  {
+    "name": "getTrustedTypesPolicy",
+    "newName": "getTrustedTypesPolicyInstance"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "policyGenerator"
+  },
+  {
+    "name": "value",
+    "newName": "trustedTypes"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "error"
+  },
+  {
+    "name": "TrustedURL",
+    "newName": "TrustedResourceURL"
+  },
+  {
+    "name": "trustedURLMarker",
+    "newName": "trustedResourceURLMarker"
+  },
+  {
+    "name": "createTrustedURL",
+    "newName": "createTrustedResourceURL"
+  },
+  {
+    "name": "MediaSourceURL",
+    "newName": "MediaSourceObjectURL"
+  },
+  {
+    "name": "invalidClosureURL",
+    "newName": "invalidClosureResourceURL"
+  },
+  {
+    "name": "URLSchemeValidator",
+    "newName": "URLSchemeChecker"
+  },
+  {
+    "name": "createSchemeValidator",
+    "newName": "createURLSchemeChecker"
+  },
+  {
+    "name": "allowedURLSchemes",
+    "newName": "allowedURLSchemeCheckers"
+  },
+  {
+    "name": "createObjectURLWithValidation",
+    "newName": "createValidatedObjectURL"
+  },
+  {
+    "name": "safeURLPattern",
+    "newName": "safeURLRegex"
+  },
+  {
+    "name": "safeHTMLMarker",
+    "newName": "safeHTMLMarkerInstance"
+  },
+  {
+    "name": "SafeHTML",
+    "newName": "SafeHTMLString"
+  },
+  {
+    "name": "emptySafeHTML",
+    "newName": "emptySafeHTMLString"
+  },
+  {
+    "name": "safeStyleMarker",
+    "newName": "safeStyleMarkerInstance"
+  },
+  {
+    "name": "SafeHtml",
+    "newName": "SafeStyleString"
+  },
+  {
+    "name": "unwrapSafeHtml",
+    "newName": "unwrapSafeStyleString"
+  },
+  {
+    "name": "createSafeHtmlFromTemplate",
+    "newName": "createSafeHTMLFromTemplate"
+  },
+  {
+    "name": "createSafeStyleFromTemplate",
+    "newName": "createSafeStyleStringFromTemplate"
+  },
+  {
+    "name": "Coordinate",
+    "newName": "Point"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "x"
+  },
+  {
+    "name": "globalScope",
+    "newName": "y"
+  },
+  {
+    "name": "ceilRectangle",
+    "newName": "ceil"
+  },
+  {
+    "name": "floorRectangle",
+    "newName": "floor"
+  },
+  {
+    "name": "roundRectangle",
+    "newName": "round"
+  },
+  {
+    "name": "scaleRectangle",
+    "newName": "scale"
+  },
+  {
+    "name": "Size",
+    "newName": "Dimension"
+  },
+  {
+    "name": "areSizesEqual",
+    "newName": "areDimensionsEqual"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "dimensionPrototype"
+  },
+  {
+    "name": "aspectRatio",
+    "newName": "getAspectRatio"
+  },
+  {
+    "name": "isEmpty",
+    "newName": "isZero"
+  },
+  {
+    "name": "setElementSafeHtml",
+    "newName": "setElementSafeHTML"
+  },
+  {
+    "name": "setElementSrcFromTrustedUrl",
+    "newName": "setElementSrcFromTrustedResourceURL"
+  },
+  {
+    "name": "debugStringifyObject",
+    "newName": "debugStringify"
+  },
+  {
+    "name": "writeSafeHtmlToDocument",
+    "newName": "writeSafeHTML"
+  },
+  {
+    "name": "decodeUriComponentWithSpace",
+    "newName": "decodeURIComponentWithSpaces"
+  },
+  {
+    "name": "truncateString",
+    "newName": "truncate"
+  },
+  {
+    "name": "repeatString",
+    "newName": "repeat"
+  },
+  {
+    "name": "stringifyNullable",
+    "newName": "stringifyOrEmpty"
+  },
+  {
+    "name": "randomInt",
+    "newName": "randomInteger"
+  },
+  {
+    "name": "camelCaseFromDash",
+    "newName": "toCamelCase"
+  },
+  {
+    "name": "dashCaseFromCamel",
+    "newName": "toDashCase"
+  },
+  {
+    "name": "capitalizeFirstLetter",
+    "newName": "capitalize"
+  },
+  {
+    "name": "parseInteger",
+    "newName": "parseIntSafe"
+  },
+  {
+    "name": "getDomHelper",
+    "newName": "getDocumentHelper"
+  },
+  {
+    "name": "getElementByIdOrDirect",
+    "newName": "getElement"
+  },
+  {
+    "name": "setElementAttributes",
+    "newName": "setAttributes"
+  },
+  {
+    "name": "attributeMappings",
+    "newName": "attributeMap"
+  },
+  {
+    "name": "getViewportSize",
+    "newName": "getViewportDimensions"
+  },
+  {
+    "name": "getDocumentScrollCoordinate",
+    "newName": "getDocumentScrollPosition"
+  },
+  {
+    "name": "getWindowForDocument",
+    "newName": "getWindow"
+  },
+  {
+    "name": "createElementWithOptionalClassesAndAttributes",
+    "newName": "createElementWithClassesAndAttributes"
+  },
+  {
+    "name": "appendChildren",
+    "newName": "appendChildNodes"
+  },
+  {
+    "name": "createElement",
+    "newName": "createElementInDocument"
+  },
+  {
+    "name": "removeElement",
+    "newName": "removeNode"
+  },
+  {
+    "name": "getParentElement",
+    "newName": "getParentNode"
+  },
+  {
+    "name": "containsElement",
+    "newName": "containsNode"
+  },
+  {
+    "name": "getDocument",
+    "newName": "getNodeDocument"
+  },
+  {
+    "name": "getContentWindow",
+    "newName": "getIframeContentWindow"
+  },
+  {
+    "name": "findParentElement",
+    "newName": "findParentNode"
+  },
+  {
+    "name": "DocumentHelper",
+    "newName": "DOMHelper"
+  },
+  {
+    "name": "canHaveChildren",
+    "newName": "canContainChildren"
+  },
+  {
+    "name": "rectangleContains",
+    "newName": "containsNode"
+  },
+  {
+    "name": "isMobile",
+    "newName": "isMobileDevice"
+  },
+  {
+    "name": "isTablet",
+    "newName": "isTabletDevice"
+  },
+  {
+    "name": "urlRegex",
+    "newName": "urlPattern"
+  },
+  {
+    "name": "extractBaseUrl",
+    "newName": "getBaseURL"
+  },
+  {
+    "name": "parseQueryString",
+    "newName": "parseQueryParams"
+  },
+  {
+    "name": "searchDelimiterRegex",
+    "newName": "searchDelimiterPattern"
+  },
+  {
+    "name": "getParameterFromUrl",
+    "newName": "getQueryParam"
+  },
+  {
+    "name": "isAccessibleFrame",
+    "newName": "isAccessibleWindow"
+  },
+  {
+    "name": "iterateFrames",
+    "newName": "iterateParentFrames"
+  },
+  {
+    "name": "getTopMostAccessibleWindow",
+    "newName": "getTopAccessibleWindow"
+  },
+  {
+    "name": "getParentFrame",
+    "newName": "getParentWindow"
+  },
+  {
+    "name": "getTopFrame",
+    "newName": "getTopWindow"
+  },
+  {
+    "name": "secureRandom",
+    "newName": "secureRandomNumber"
+  },
+  {
+    "name": "forEachInObject",
+    "newName": "forEachProperty"
+  },
+  {
+    "name": "hashString",
+    "newName": "hash"
+  },
+  {
+    "name": "extractHostname",
+    "newName": "getHostname"
+  },
+  {
+    "name": "isSecureContext",
+    "newName": "isSecureProtocol"
+  },
+  {
+    "name": "hasFrameWithName",
+    "newName": "hasFrame"
+  },
+  {
+    "name": "findFrameByName",
+    "newName": "findFrame"
+  },
+  {
+    "name": "getDeviceType",
+    "newName": "getDeviceCategory"
+  },
+  {
+    "name": "generatePageViewId",
+    "newName": "generateUniquePageViewId"
+  },
+  {
+    "name": "createHtmlElement",
+    "newName": "createHTMLElement"
+  },
+  {
+    "name": "getTopAccessibleContext",
+    "newName": "getTopAccessibleWindow"
+  },
+  {
+    "name": "ampProjectUrlRegex",
+    "newName": "ampProjectURLPattern"
+  },
+  {
+    "name": "computeReferrerUrl",
+    "newName": "getReferrerURL"
+  },
+  {
+    "name": "collectAncestorOrigins",
+    "newName": "collectAncestorURLs"
+  },
+  {
+    "name": "AdUrlComponent",
+    "newName": "AdURLComponent"
+  },
+  {
+    "name": "UrlDepthInfo",
+    "newName": "URLDepthInfo"
+  },
+  {
+    "name": "deobfuscationId",
+    "newName": "debuggingId"
+  },
+  {
+    "name": "getDeobfuscationId",
+    "newName": "getDebuggingId"
+  },
+  {
+    "name": "getCurrentTimeWithPerformanceTiming",
+    "newName": "getCurrentTime"
+  },
+  {
+    "name": "getPerformanceNow",
+    "newName": "getPerformanceTime"
+  },
+  {
+    "name": "getPerformanceTimingAttribute",
+    "newName": "getPerformanceTimingValue"
+  },
+  {
+    "name": "getEarliestDomLoadingOrInteractiveTime",
+    "newName": "getEarliestDomEventTime"
+  },
+  {
+    "name": "PerformanceEvent",
+    "newName": "PerformanceMetric"
+  },
+  {
+    "name": "performanceApi",
+    "newName": "performanceAPI"
+  },
+  {
+    "name": "supportsPerformanceMarks",
+    "newName": "isPerformanceMarkSupported"
+  },
+  {
+    "name": "isDebugMode",
+    "newName": "isDebuggingEnabled"
+  },
+  {
+    "name": "PerformanceMonitor",
+    "newName": "PerformanceTracker"
+  },
+  {
+    "name": "clearPerformanceMarks",
+    "newName": "clearPerformanceMetrics"
+  },
+  {
+    "name": "UrlQueryBuilder",
+    "newName": "URLQueryBuilder"
+  },
+  {
+    "name": "createKeyValuePair",
+    "newName": "createKeyValueEntry"
+  },
+  {
+    "name": "serializeParameters",
+    "newName": "serializeParams"
+  },
+  {
+    "name": "encodeParameterValue",
+    "newName": "encodeParamValue"
+  },
+  {
+    "name": "addParameter",
+    "newName": "addQueryParam"
+  },
+  {
+    "name": "addKeyValuePair",
+    "newName": "addKeyValueEntry"
+  },
+  {
+    "name": "buildAdUrl",
+    "newName": "buildAdRequestURL"
+  },
+  {
+    "name": "calculateAvailableSpace",
+    "newName": "getMaxURLLength"
+  },
+  {
+    "name": "ErrorLogger",
+    "newName": "ErrorReporter"
+  },
+  {
+    "name": "handleAsync",
+    "newName": "reportingEndpoint"
+  },
+  {
+    "name": "isDone",
+    "newName": "errorContext"
+  },
+  {
+    "name": "createDeferred",
+    "newName": "isDeferred"
+  },
+  {
+    "name": "tasks",
+    "newName": "metaData"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "errorLoggerPrototype"
+  },
+  {
+    "name": "createSigned64",
+    "newName": "setMetaData"
+  },
+  {
+    "name": "parseBooleanOrNumber",
+    "newName": "setErrorContext"
+  },
+  {
+    "name": "numericStringRegex",
+    "newName": "setDeferred"
+  },
+  {
+    "name": "parseIntEnum",
+    "newName": "setReportingEnabled"
+  },
+  {
+    "name": "hasBrands",
+    "newName": "executeWithErrorHandling"
+  },
+  {
+    "name": "IteratorWithTransform",
+    "newName": "wrapFunctionWithErrorHandling"
+  },
+  {
+    "name": "boundFunctionCall",
+    "newName": "reportError"
+  },
+  {
+    "name": "formatErrorMessage",
+    "newName": "formatError"
+  },
+  {
+    "name": "sendImageRequestWithRetry",
+    "newName": "sendImageRequestWithRetryHandler"
+  },
+  {
+    "name": "sendImageRequest",
+    "newName": "sendImageRequestHandler"
+  },
+  {
+    "name": "sendBeaconWithParams",
+    "newName": "sendBeaconWithParameters"
+  },
+  {
+    "name": "sendBeacon",
+    "newName": "sendBeaconRequest"
+  },
+  {
+    "name": "serializeDataWithFilter",
+    "newName": "serializeFilteredData"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterate"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "node"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "idCounter"
+  },
+  {
+    "name": "key",
+    "newName": "propertyKey"
+  }
+]

@@ -1,0 +1,230 @@
+[
+  {
+    "name": "r",
+    "newName": "adManagerInstance"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "adInstance"
+  },
+  {
+    "name": "value",
+    "newName": "adData"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "configMap"
+  },
+  {
+    "name": "findEntry",
+    "newName": "adEntry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "adIterator"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "circularNode"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "entryCounter"
+  },
+  {
+    "name": "qf",
+    "newName": "createNode"
+  },
+  {
+    "name": "conditionTypes",
+    "newName": "conditionTypeList"
+  },
+  {
+    "name": "parseNullableInt",
+    "newName": "parseIntOrNull"
+  },
+  {
+    "name": "getTransformedElement",
+    "newName": "transformElement"
+  },
+  {
+    "name": "tf",
+    "newName": "transformNode"
+  },
+  {
+    "name": "vf",
+    "newName": "validateArray"
+  },
+  {
+    "name": "StorageField",
+    "newName": "storageField"
+  },
+  {
+    "name": "stringOrNull",
+    "newName": "stringOrNullValidator"
+  },
+  {
+    "name": "replaceArrayIfNotArray",
+    "newName": "replaceArray"
+  },
+  {
+    "name": "serializeConfig",
+    "newName": "serializeConfiguration"
+  },
+  {
+    "name": "getConfigs",
+    "newName": "fetchConfigurations"
+  },
+  {
+    "name": "forEachInObject",
+    "newName": "iterateObject"
+  },
+  {
+    "name": "rf",
+    "newName": "fetchCondition"
+  },
+  {
+    "name": "fetchConditionValue",
+    "newName": "getConditionValue"
+  },
+  {
+    "name": "getIterator",
+    "newName": "fetchIterator"
+  },
+  {
+    "name": "ConfigManager",
+    "newName": "ConfigurationManager"
+  },
+  {
+    "name": "WrapperMetadata",
+    "newName": "MetadataWrapper"
+  },
+  {
+    "name": "pf",
+    "newName": "populateMetadata"
+  },
+  {
+    "name": "MetadataTypes",
+    "newName": "metadataTypeList"
+  },
+  {
+    "name": "parseNullableIntEnum",
+    "newName": "parseEnumOrNull"
+  },
+  {
+    "name": "transformAndReplaceArray",
+    "newName": "transformReplaceArray"
+  },
+  {
+    "name": "parseInt32",
+    "newName": "parseInteger"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "timeoutWrapper"
+  },
+  {
+    "name": "TagSession",
+    "newName": "AdSession"
+  },
+  {
+    "name": "Cf",
+    "newName": "createConfig"
+  },
+  {
+    "name": "TagSessionBuilder",
+    "newName": "AdSessionBuilder"
+  },
+  {
+    "name": "Bf",
+    "newName": "buildConfig"
+  },
+  {
+    "name": "createAdEvent",
+    "newName": "triggerAdEvent"
+  },
+  {
+    "name": "modifyAdProperty",
+    "newName": "updateAdProperty"
+  },
+  {
+    "name": "getBooleanConfig",
+    "newName": "fetchBooleanConfig"
+  },
+  {
+    "name": "getNumberConfig",
+    "newName": "fetchNumberConfig"
+  },
+  {
+    "name": "getStringConfig",
+    "newName": "fetchStringConfig"
+  },
+  {
+    "name": "getArrayConfig",
+    "newName": "fetchArrayConfig"
+  },
+  {
+    "name": "getComplexArrayConfig",
+    "newName": "fetchComplexArrayConfig"
+  },
+  {
+    "name": "SessionStorage",
+    "newName": "SessionManager"
+  },
+  {
+    "name": "GeneratorExecutor",
+    "newName": "executor"
+  },
+  {
+    "name": "mainAdQueue",
+    "newName": "primaryAdQueue"
+  },
+  {
+    "name": "ExperimentData",
+    "newName": "ExperimentManager"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "promiseResolver"
+  },
+  {
+    "name": "settlePromise",
+    "newName": "resolvePromise"
+  },
+  {
+    "name": "getNumericAdProperty",
+    "newName": "fetchNumericAdProperty"
+  },
+  {
+    "name": "getFromGlobalScope",
+    "newName": "fetchFromGlobalScope"
+  },
+  {
+    "name": "verifyCondition",
+    "newName": "validateCondition"
+  },
+  {
+    "name": "fetchData",
+    "newName": "retrieveData"
+  },
+  {
+    "name": "MessageBody",
+    "newName": "AdMessage"
+  },
+  {
+    "name": "MessageBodyTypes",
+    "newName": "messageTypeList"
+  },
+  {
+    "name": "fetchSingletonInstance",
+    "newName": "getSingletonInstance"
+  },
+  {
+    "name": "getAdPropertyNumeric",
+    "newName": "fetchNumericProperty"
+  },
+  {
+    "name": "recordAdEvent",
+    "newName": "logAdEvent"
+  }
+]

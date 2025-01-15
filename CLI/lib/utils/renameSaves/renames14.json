@@ -1,0 +1,390 @@
+[
+  {
+    "name": "rrentEntry",
+    "newName": "currentAdEntry"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "adDataWrapper"
+  },
+  {
+    "name": "value",
+    "newName": "adData"
+  },
+  {
+    "name": "entry",
+    "newName": "adType"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "currentNode"
+  },
+  {
+    "name": "normalizeAdDuration",
+    "newName": "calculateAdDuration"
+  },
+  {
+    "name": "calculateTotalVisibility",
+    "newName": "computeTotalVisibility"
+  },
+  {
+    "name": "calculateMaxVisibility",
+    "newName": "computeMaxVisibility"
+  },
+  {
+    "name": "isAdTimeout",
+    "newName": "checkAdTimeout"
+  },
+  {
+    "name": "getAdPlaybackType",
+    "newName": "determineAdPlaybackType"
+  },
+  {
+    "name": "getAdBoundsArray",
+    "newName": "retrieveAdBoundsArray"
+  },
+  {
+    "name": "generateImpressionDataArray",
+    "newName": "createImpressionDataArray"
+  },
+  {
+    "name": "statusRetriever",
+    "newName": "fetchStatus"
+  },
+  {
+    "name": "reportRetriever",
+    "newName": "fetchReport"
+  },
+  {
+    "name": "calculateAverageVisibility",
+    "newName": "computeAverageVisibility"
+  },
+  {
+    "name": "resetVisibilityMetrics",
+    "newName": "clearVisibilityMetrics"
+  },
+  {
+    "name": "uniqueElements",
+    "newName": "removeDuplicateElements"
+  },
+  {
+    "name": "mapElements",
+    "newName": "mapArrayElements"
+  },
+  {
+    "name": "filterElements",
+    "newName": "filterArrayElements"
+  },
+  {
+    "name": "copyArray",
+    "newName": "duplicateArray"
+  },
+  {
+    "name": "extendObject",
+    "newName": "mergeObjects"
+  },
+  {
+    "name": "roundToPrecision",
+    "newName": "roundToDecimal"
+  },
+  {
+    "name": "accumulatePosition",
+    "newName": "sumPositions"
+  },
+  {
+    "name": "getAdEventByIndex",
+    "newName": "fetchAdEventByIndex"
+  },
+  {
+    "name": "getMaxVisibility",
+    "newName": "computeMaxVisibilityScore"
+  },
+  {
+    "name": "serializeAdStates",
+    "newName": "convertAdStatesToString"
+  },
+  {
+    "name": "getPerformanceData",
+    "newName": "retrievePerformanceData"
+  },
+  {
+    "name": "verifyRequest",
+    "newName": "validateRequest"
+  },
+  {
+    "name": "AdProcessor",
+    "newName": "AdHandler"
+  },
+  {
+    "name": "zeroReset",
+    "newName": "resetToZero"
+  },
+  {
+    "name": "checksum",
+    "newName": "calculateChecksum"
+  },
+  {
+    "name": "browserSize",
+    "newName": "retrieveBrowserSize"
+  },
+  {
+    "name": "assignSession",
+    "newName": "initializeSession"
+  },
+  {
+    "name": "addEventListenerWithCapture",
+    "newName": "addEventListenerWithCapturePhase"
+  },
+  {
+    "name": "incrementPropertyL",
+    "newName": "increasePropertyL"
+  },
+  {
+    "name": "incrementPropertyGInB",
+    "newName": "increasePropertyGInB"
+  },
+  {
+    "name": "incrementPropertyGInBRepeated",
+    "newName": "increasePropertyGInBRepeated"
+  },
+  {
+    "name": "incrementPropertyJ",
+    "newName": "increasePropertyJ"
+  },
+  {
+    "name": "incrementPropertyO",
+    "newName": "increasePropertyO"
+  },
+  {
+    "name": "screenDimensions",
+    "newName": "ScreenDimensions"
+  },
+  {
+    "name": "findAdContainerByNa",
+    "newName": "locateAdContainerByNa"
+  },
+  {
+    "name": "findAdContainerByNb",
+    "newName": "locateAdContainerByNb"
+  },
+  {
+    "name": "findAdContainerByNaAndType2",
+    "newName": "locateAdContainerByNaAndType2"
+  },
+  {
+    "name": "mergeAdContainerArrays",
+    "newName": "combineAdContainerArrays"
+  },
+  {
+    "name": "removeAdContainer",
+    "newName": "deleteAdContainer"
+  },
+  {
+    "name": "removeRelatedAdContainers",
+    "newName": "deleteRelatedAdContainers"
+  },
+  {
+    "name": "addUniqueAdContainers",
+    "newName": "insertUniqueAdContainers"
+  },
+  {
+    "name": "addBatchAdContainers",
+    "newName": "insertBatchAdContainers"
+  },
+  {
+    "name": "globalAdContainersManager",
+    "newName": "adContainersManager"
+  },
+  {
+    "name": "AdInitializationState",
+    "newName": "AdStateInitializer"
+  },
+  {
+    "name": "initializeAdContainer",
+    "newName": "setupAdContainer"
+  },
+  {
+    "name": "AdLoader",
+    "newName": "AdRequestLoader"
+  },
+  {
+    "name": "AdCreator",
+    "newName": "AdRequestCreator"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "extendPrototype"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "timeoutWrapper"
+  },
+  {
+    "name": "registerAdComponent",
+    "newName": "addAdComponent"
+  },
+  {
+    "name": "filterAndLinkAdContainers",
+    "newName": "filterAndConnectAdContainers"
+  },
+  {
+    "name": "intersectionObserverOptions",
+    "newName": "observerOptions"
+  },
+  {
+    "name": "AdVisibilityMonitor",
+    "newName": "AdVisibilityObserver"
+  },
+  {
+    "name": "accumulatePosition",
+    "newName": "sumPositions"
+  },
+  {
+    "name": "setupAdVisibilityMonitoring",
+    "newName": "initializeAdVisibilityMonitoring"
+  },
+  {
+    "name": "getIntersectionObserverRecords",
+    "newName": "fetchObserverRecords"
+  },
+  {
+    "name": "handleVisibilityChange",
+    "newName": "processVisibilityChange"
+  },
+  {
+    "name": "getMostRecentEntry",
+    "newName": "fetchMostRecentEntry"
+  },
+  {
+    "name": "convertRectToBox",
+    "newName": "transformRectToBox"
+  },
+  {
+    "name": "translateRectangle",
+    "newName": "translateRect"
+  },
+  {
+    "name": "logError",
+    "newName": "logErrorDetails"
+  },
+  {
+    "name": "activateAdController",
+    "newName": "enableAdController"
+  },
+  {
+    "name": "AdVisibilityProvider",
+    "newName": "AdVisibilityProvider"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "fetchAdEnvironment"
+  },
+  {
+    "name": "getAdEnvironmentInstance",
+    "newName": "fetchAdEnvironmentInstance"
+  },
+  {
+    "name": "GeoLocationProvider",
+    "newName": "GeoLocationProvider"
+  },
+  {
+    "name": "getGeoFlag",
+    "newName": "fetchGeoFlag"
+  },
+  {
+    "name": "EmptyClass",
+    "newName": "PlaceholderClass"
+  },
+  {
+    "name": "initAdRequestManager",
+    "newName": "initializeAdRequestManager"
+  },
+  {
+    "name": "startSampling",
+    "newName": "initiateSampling"
+  },
+  {
+    "name": "resetGlobalState",
+    "newName": "clearGlobalState"
+  },
+  {
+    "name": "processSamples",
+    "newName": "handleSamples"
+  },
+  {
+    "name": "setupSamplingEvent",
+    "newName": "initializeSamplingEvent"
+  },
+  {
+    "name": "processAllSamples",
+    "newName": "handleAllSamples"
+  },
+  {
+    "name": "generateTargetingValues",
+    "newName": "createTargetingValues"
+  },
+  {
+    "name": "initializeErrorHandling",
+    "newName": "setupErrorHandling"
+  },
+  {
+    "name": "generateUrlParams",
+    "newName": "createUrlParams"
+  },
+  {
+    "name": "extractVersion",
+    "newName": "fetchVersion"
+  },
+  {
+    "name": "determineSdkType",
+    "newName": "identifySdkType"
+  },
+  {
+    "name": "sdkType",
+    "newName": "sdkIdentifier"
+  },
+  {
+    "name": "sdkVersion",
+    "newName": "sdkReleaseVersion"
+  },
+  {
+    "name": "generateErrorObject",
+    "newName": "createErrorObject"
+  },
+  {
+    "name": "isCustomMetricViewable",
+    "newName": "checkCustomMetricViewability"
+  },
+  {
+    "name": "getMetricType",
+    "newName": "fetchMetricType"
+  },
+  {
+    "name": "metricNames",
+    "newName": "metricIdentifiers"
+  },
+  {
+    "name": "metricValidators",
+    "newName": "metricValidations"
+  },
+  {
+    "name": "ProfileMetrics",
+    "newName": "PerformanceMetrics"
+  },
+  {
+    "name": "parseCustomMetrics",
+    "newName": "interpretCustomMetrics"
+  },
+  {
+    "name": "calculateMetricValue",
+    "newName": "computeMetricValue"
+  },
+  {
+    "name": "CustomMetric",
+    "newName": "AdCustomMetric"
+  },
+  {
+    "name": "yearResetter",
+    "newName": "YearResetter"
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "adEventReporterPrototype"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "adEventData"
+  },
+  {
+    "name": "value",
+    "newName": "adEventValue"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "adEventCustomMap"
+  },
+  {
+    "name": "trackAdEventByType",
+    "newName": "handleAdEventByType"
+  },
+  {
+    "name": "validateAdProperties",
+    "newName": "checkAdProperties"
+  },
+  {
+    "name": "convertAdPropertiesToMillis",
+    "newName": "convertAdPropertiesToMilliseconds"
+  },
+  {
+    "name": "initializeAdSdk",
+    "newName": "initializeAdSdkInfo"
+  },
+  {
+    "name": "createAdElement",
+    "newName": "createAdContainer"
+  },
+  {
+    "name": "AdEventReporter",
+    "newName": "AdEventLogger"
+  },
+  {
+    "name": "AdManager",
+    "newName": "AdManagerClass"
+  },
+  {
+    "name": "AudioAudibleEvent",
+    "newName": "AudibleAudioEvent"
+  },
+  {
+    "name": "AudioMeasurableEvent",
+    "newName": "MeasurableAudioEvent"
+  },
+  {
+    "name": "AudioEventProcessor",
+    "newName": "AudioEventHandler"
+  },
+  {
+    "name": "AdEventValidator",
+    "newName": "AdEventVerifier"
+  },
+  {
+    "name": "sendVastAdEvent",
+    "newName": "sendVastAdHandler"
+  },
+  {
+    "name": "publicSendVastEvent",
+    "newName": "sendPublicVastEvent"
+  }
+]

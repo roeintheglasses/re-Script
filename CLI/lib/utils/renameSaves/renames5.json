@@ -1,0 +1,426 @@
+[
+  {
+    "name": "rateEntries",
+    "newName": "getSingletonInstance"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "circularNode"
+  },
+  {
+    "name": "getRawBitFlags",
+    "newName": "getBitFlags"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "entries"
+  },
+  {
+    "name": "throwIfFlag2",
+    "newName": "validateFlag"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "customMap"
+  },
+  {
+    "name": "of",
+    "newName": "findInEntries"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "updateElementAtIndex",
+    "newName": "updateEntryAtIndex"
+  },
+  {
+    "name": "value",
+    "newName": "newValue"
+  },
+  {
+    "name": "qf",
+    "newName": "compareEntries"
+  },
+  {
+    "name": "rf",
+    "newName": "getEntry"
+  },
+  {
+    "name": "tf",
+    "newName": "cloneEntry"
+  },
+  {
+    "name": "StorageField",
+    "newName": "storageField"
+  },
+  {
+    "name": "cloneIfNotFrozen",
+    "newName": "cloneEntryIfNotFrozen"
+  },
+  {
+    "name": "createObjectOrUndefined",
+    "newName": "createObject"
+  },
+  {
+    "name": "uf",
+    "newName": "createOrUpdateEntry"
+  },
+  {
+    "name": "vf",
+    "newName": "getOrCreateEntry"
+  },
+  {
+    "name": "fetchData",
+    "newName": "fetchEntryData"
+  },
+  {
+    "name": "xf",
+    "newName": "processEntries"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "entryCounter"
+  },
+  {
+    "name": "key",
+    "newName": "entryKey"
+  },
+  {
+    "name": "entry",
+    "newName": "currentEntry"
+  },
+  {
+    "name": "toggleBitFlag",
+    "newName": "toggleFlag"
+  },
+  {
+    "name": "setRawBitFlags",
+    "newName": "setBitFlags"
+  },
+  {
+    "name": "checkIfFrozen",
+    "newName": "isFrozen"
+  },
+  {
+    "name": "toArray",
+    "newName": "convertToArray"
+  },
+  {
+    "name": "updateFlagsForFrozenObjects",
+    "newName": "updateFlagsForFrozen"
+  },
+  {
+    "name": "finalizeFlagsUpdate",
+    "newName": "finalizeFlagUpdates"
+  },
+  {
+    "name": "parseData",
+    "newName": "parseEntryData"
+  },
+  {
+    "name": "pf",
+    "newName": "processEntry"
+  },
+  {
+    "name": "TagSessionFields",
+    "newName": "tagFields"
+  },
+  {
+    "name": "Cf",
+    "newName": "updateEntryData"
+  },
+  {
+    "name": "sanitizeAdElementData",
+    "newName": "sanitizeData"
+  },
+  {
+    "name": "undefinedVariable1",
+    "newName": "isUndefined1"
+  },
+  {
+    "name": "processElements",
+    "newName": "processEntryElements"
+  },
+  {
+    "name": "transformElementContent",
+    "newName": "transformContent"
+  },
+  {
+    "name": "unknownVariable",
+    "newName": "isUnknown"
+  },
+  {
+    "name": "emptyObject1",
+    "newName": "emptyObject"
+  },
+  {
+    "name": "sanitizeAdElementData",
+    "newName": "sanitizeData"
+  },
+  {
+    "name": "objectTransformationFallback",
+    "newName": "fallbackTransformation"
+  },
+  {
+    "name": "objectTransformationInstance",
+    "newName": "objectTransformation"
+  },
+  {
+    "name": "arrayTransformationInstance",
+    "newName": "arrayTransformation"
+  },
+  {
+    "name": "applyTransformations",
+    "newName": "applyEntryTransformations"
+  },
+  {
+    "name": "initializeTransformations",
+    "newName": "initializeEntryTransformations"
+  },
+  {
+    "name": "transformationsSymbol",
+    "newName": "entryTransformationsSymbol"
+  },
+  {
+    "name": "cleanupSymbol",
+    "newName": "entryCleanupSymbol"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "timeoutWrapper"
+  },
+  {
+    "name": "trustedTypesPolicy",
+    "newName": "typesPolicy"
+  },
+  {
+    "name": "getTrustedTypesPolicy",
+    "newName": "getTypesPolicy"
+  },
+  {
+    "name": "trustedURLMarker",
+    "newName": "urlMarker"
+  },
+  {
+    "name": "createTrustedURL",
+    "newName": "createURL"
+  },
+  {
+    "name": "invalidClosureURL",
+    "newName": "invalidURL"
+  },
+  {
+    "name": "URLSchemeValidator",
+    "newName": "schemeValidator"
+  },
+  {
+    "name": "createSchemeValidator",
+    "newName": "createValidator"
+  },
+  {
+    "name": "allowedURLSchemes",
+    "newName": "urlSchemes"
+  },
+  {
+    "name": "createObjectURLWithValidation",
+    "newName": "createValidatedURL"
+  },
+  {
+    "name": "safeURLPattern",
+    "newName": "urlPattern"
+  },
+  {
+    "name": "safeHTMLMarker",
+    "newName": "htmlMarker"
+  },
+  {
+    "name": "SafeHTML",
+    "newName": "safeHTML"
+  },
+  {
+    "name": "emptySafeHTML",
+    "newName": "emptyHTML"
+  },
+  {
+    "name": "safeStyleMarker",
+    "newName": "styleMarker"
+  },
+  {
+    "name": "SafeHtml",
+    "newName": "safeHtml"
+  },
+  {
+    "name": "unwrapSafeHtml",
+    "newName": "unwrapHtml"
+  },
+  {
+    "name": "createSafeHtmlFromTemplate",
+    "newName": "createHtmlFromTemplate"
+  },
+  {
+    "name": "createSafeStyleFromTemplate",
+    "newName": "createStyleFromTemplate"
+  },
+  {
+    "name": "Coordinate",
+    "newName": "CoordinateClass"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "inheritProto"
+  },
+  {
+    "name": "globalScope",
+    "newName": "globalContext"
+  },
+  {
+    "name": "Size",
+    "newName": "SizeClass"
+  },
+  {
+    "name": "areSizesEqual",
+    "newName": "compareSizes"
+  },
+  {
+    "name": "setElementSafeHtml",
+    "newName": "setElementHtml"
+  },
+  {
+    "name": "setElementSrcFromTrustedUrl",
+    "newName": "setElementSrc"
+  },
+  {
+    "name": "debugStringifyObject",
+    "newName": "debugStringify"
+  },
+  {
+    "name": "writeSafeHtmlToDocument",
+    "newName": "writeHtmlToDoc"
+  },
+  {
+    "name": "AdElement",
+    "newName": "AdElementClass"
+  },
+  {
+    "name": "serializeData",
+    "newName": "serializeEntryData"
+  },
+  {
+    "name": "ErrorLogger",
+    "newName": "Logger"
+  },
+  {
+    "name": "ErrorDetails",
+    "newName": "ErrorInfo"
+  },
+  {
+    "name": "isValidError",
+    "newName": "validateError"
+  },
+  {
+    "name": "noopFunction",
+    "newName": "noop"
+  },
+  {
+    "name": "once",
+    "newName": "runOnce"
+  },
+  {
+    "name": "clearFunction",
+    "newName": "clearFunc"
+  },
+  {
+    "name": "debounceFunction",
+    "newName": "debounce"
+  },
+  {
+    "name": "supportsPassive",
+    "newName": "checkPassiveSupport"
+  },
+  {
+    "name": "normalizeEventOptions",
+    "newName": "normalizeOptions"
+  },
+  {
+    "name": "addEventListenerWithNormalization",
+    "newName": "addNormalizedEventListener"
+  },
+  {
+    "name": "removeEventListenerWithNormalization",
+    "newName": "removeNormalizedEventListener"
+  },
+  {
+    "name": "forEachInObject",
+    "newName": "forEachObject"
+  },
+  {
+    "name": "filterObject",
+    "newName": "filterObj"
+  },
+  {
+    "name": "everyInObject",
+    "newName": "everyObj"
+  },
+  {
+    "name": "valuesOfObject",
+    "newName": "getObjectValues"
+  },
+  {
+    "name": "keysOfObject",
+    "newName": "getObjectKeys"
+  },
+  {
+    "name": "getObjectPathValue",
+    "newName": "getPathValue"
+  },
+  {
+    "name": "hasOwnPropertySafe",
+    "newName": "hasProperty"
+  },
+  {
+    "name": "containsValue",
+    "newName": "containsVal"
+  },
+  {
+    "name": "findKeyInObject",
+    "newName": "findKey"
+  },
+  {
+    "name": "isEmptyObject",
+    "newName": "isEmptyObj"
+  },
+  {
+    "name": "clearObject",
+    "newName": "clearObj"
+  },
+  {
+    "name": "getObjectPropertyOrDefault",
+    "newName": "getPropertyOrDefault"
+  },
+  {
+    "name": "commonObjectKeys",
+    "newName": "commonKeys"
+  },
+  {
+    "name": "extendObject",
+    "newName": "extendObj"
+  },
+  {
+    "name": "getTrustedTypesPolicy",
+    "newName": "getTypesPolicy"
+  },
+  {
+    "name": "getRawBitFlags",
+    "newName": "getBitFlags"
+  },
+  {
+    "name": "updateElementAtIndex",
+    "newName": "updateEntryAtIndex"
+  },
+  {
+    "name": "createObjectOrUndefined",
+    "newName": "createObject"
+  }
+]

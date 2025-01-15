@@ -1,0 +1,438 @@
+[
+  {
+    "name": "ance",
+    "newName": "onFulfilled"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "extendPrototype"
+  },
+  {
+    "name": "AdResponse",
+    "newName": "AdResponseClass"
+  },
+  {
+    "name": "AdElement",
+    "newName": "BaseAdElement"
+  },
+  {
+    "name": "baseCharCode",
+    "newName": "baseCharacterCode"
+  },
+  {
+    "name": "vendorIds",
+    "newName": "vendorIdentifiers"
+  },
+  {
+    "name": "valuesOfObject",
+    "newName": "getObjectValues"
+  },
+  {
+    "name": "purposeIds",
+    "newName": "purposeIdentifiers"
+  },
+  {
+    "name": "BitStringReader",
+    "newName": "BitStringReaderClass"
+  },
+  {
+    "name": "decodePurposeRestrictions",
+    "newName": "decodePurposeRestrictionsFunction"
+  },
+  {
+    "name": "readBits",
+    "newName": "readBitsFunction"
+  },
+  {
+    "name": "AdManifest",
+    "newName": "AdManifestClass"
+  },
+  {
+    "name": "setAdPropertyFromString",
+    "newName": "setAdPropertyFromStringFunction"
+  },
+  {
+    "name": "modifyAdProperty",
+    "newName": "modifyAdPropertyFunction"
+  },
+  {
+    "name": "decodeVendor",
+    "newName": "decodeVendorFunction"
+  },
+  {
+    "name": "decodeVendorList",
+    "newName": "decodeVendorListFunction"
+  },
+  {
+    "name": "decodeRange",
+    "newName": "decodeRangeFunction"
+  },
+  {
+    "name": "decodeSingleVendor",
+    "newName": "decodeSingleVendorFunction"
+  },
+  {
+    "name": "decodeVendorConsent",
+    "newName": "decodeVendorConsentFunction"
+  },
+  {
+    "name": "parseNullableIntEnum",
+    "newName": "parseNullableIntEnumFunction"
+  },
+  {
+    "name": "transformAndReplaceArray",
+    "newName": "transformAndReplaceArrayFunction"
+  },
+  {
+    "name": "parseInt32",
+    "newName": "parseInt32Function"
+  },
+  {
+    "name": "AdExtension",
+    "newName": "AdExtensionClass"
+  },
+  {
+    "name": "updateOrRemoveElement",
+    "newName": "updateOrRemoveElementFunction"
+  },
+  {
+    "name": "decodeAdBreak",
+    "newName": "decodeAdBreakFunction"
+  },
+  {
+    "name": "getBase64EncodedArray",
+    "newName": "getBase64EncodedArrayFunction"
+  },
+  {
+    "name": "setAdExtensionValue",
+    "newName": "setAdExtensionValueFunction"
+  },
+  {
+    "name": "setAdExtensionParam",
+    "newName": "setAdExtensionParamFunction"
+  },
+  {
+    "name": "AdExtensionParameters",
+    "newName": "AdExtensionParametersClass"
+  },
+  {
+    "name": "finalizeAdExtension",
+    "newName": "finalizeAdExtensionFunction"
+  },
+  {
+    "name": "setAdExtensionOption",
+    "newName": "setAdExtensionOptionFunction"
+  },
+  {
+    "name": "decodeAdRequest",
+    "newName": "decodeAdRequestFunction"
+  },
+  {
+    "name": "setAdRequestParameter19",
+    "newName": "setAdRequestParameter19Function"
+  },
+  {
+    "name": "setAdRequestParameter18",
+    "newName": "setAdRequestParameter18Function"
+  },
+  {
+    "name": "setAdRequestParameter17",
+    "newName": "setAdRequestParameter17Function"
+  },
+  {
+    "name": "setAdRequestParameter16",
+    "newName": "setAdRequestParameter16Function"
+  },
+  {
+    "name": "setAdRequestParameter15",
+    "newName": "setAdRequestParameter15Function"
+  },
+  {
+    "name": "setAdManifestLinear",
+    "newName": "setAdManifestLinearFunction"
+  },
+  {
+    "name": "setAdManifestWrapper",
+    "newName": "setAdManifestWrapperFunction"
+  },
+  {
+    "name": "setAdManifestCreativeType",
+    "newName": "setAdManifestCreativeTypeFunction"
+  },
+  {
+    "name": "enableAdManifestVPAID",
+    "newName": "enableAdManifestVPAIDFunction"
+  },
+  {
+    "name": "enableAdManifestSkippable",
+    "newName": "enableAdManifestSkippableFunction"
+  },
+  {
+    "name": "setAdManifestDuration",
+    "newName": "setAdManifestDurationFunction"
+  },
+  {
+    "name": "setAdManifestAdPolicy",
+    "newName": "setAdManifestAdPolicyFunction"
+  },
+  {
+    "name": "setAdManifestFallbackIndex",
+    "newName": "setAdManifestFallbackIndexFunction"
+  },
+  {
+    "name": "setAdManifestAdBreakId",
+    "newName": "setAdManifestAdBreakIdFunction"
+  },
+  {
+    "name": "setAdManifestSequence",
+    "newName": "setAdManifestSequenceFunction"
+  },
+  {
+    "name": "setAdManifestId",
+    "newName": "setAdManifestIdFunction"
+  },
+  {
+    "name": "addAdManifestTemplate",
+    "newName": "addAdManifestTemplateFunction"
+  },
+  {
+    "name": "addAdManifestExtension",
+    "newName": "addAdManifestExtensionFunction"
+  },
+  {
+    "name": "setAdManifestVersion",
+    "newName": "setAdManifestVersionFunction"
+  },
+  {
+    "name": "AdManifestVersion",
+    "newName": "AdManifestVersionClass"
+  },
+  {
+    "name": "decodeAdResponse",
+    "newName": "decodeAdResponseFunction"
+  },
+  {
+    "name": "getAdResponseType",
+    "newName": "getAdResponseTypeFunction"
+  },
+  {
+    "name": "generateAdResponseMap",
+    "newName": "generateAdResponseMapFunction"
+  },
+  {
+    "name": "DefaultValueContainer",
+    "newName": "DefaultValueContainerClass"
+  },
+  {
+    "name": "CustomClass",
+    "newName": "CustomClassInstance"
+  },
+  {
+    "name": "replaceArrayIfNotArray",
+    "newName": "replaceArrayIfNotArrayFunction"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "onFulfilledFunction"
+  },
+  {
+    "name": "urlSchemeRegex",
+    "newName": "urlSchemeRegexPattern"
+  },
+  {
+    "name": "adAttributesList",
+    "newName": "adAttributesListArray"
+  },
+  {
+    "name": "AdDimensions",
+    "newName": "AdDimensionsClass"
+  },
+  {
+    "name": "ExtendedAdDimensions",
+    "newName": "ExtendedAdDimensionsClass"
+  },
+  {
+    "name": "MediaAdDimensions",
+    "newName": "MediaAdDimensionsClass"
+  },
+  {
+    "name": "createInstanceWithArguments",
+    "newName": "createInstanceWithArgumentsFunction"
+  },
+  {
+    "name": "MessageHandler",
+    "newName": "MessageHandlerClass"
+  },
+  {
+    "name": "tryCall",
+    "newName": "tryCallFunction"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "getAdEnvironmentFunction"
+  },
+  {
+    "name": "removeEventListenerWithNormalization",
+    "newName": "removeEventListenerWithNormalizationFunction"
+  },
+  {
+    "name": "findFrameByName",
+    "newName": "findFrameByNameFunction"
+  },
+  {
+    "name": "invokeCallerMethod",
+    "newName": "invokeCallerMethodFunction"
+  },
+  {
+    "name": "setupMessageListener",
+    "newName": "setupMessageListenerFunction"
+  },
+  {
+    "name": "addEventListenerWithNormalization",
+    "newName": "addEventListenerWithNormalizationFunction"
+  },
+  {
+    "name": "addEventListenerWrapper",
+    "newName": "addEventListenerWrapperFunction"
+  },
+  {
+    "name": "removeEventListenerWrapper",
+    "newName": "removeEventListenerWrapperFunction"
+  },
+  {
+    "name": "getDataWithCallbackWrapper",
+    "newName": "getDataWithCallbackWrapperFunction"
+  },
+  {
+    "name": "addEventListenerCommand",
+    "newName": "addEventListenerCommandObject"
+  },
+  {
+    "name": "removeEventListenerCommand",
+    "newName": "removeEventListenerCommandObject"
+  },
+  {
+    "name": "getDataWithCallbackCommand",
+    "newName": "getDataWithCallbackCommandObject"
+  },
+  {
+    "name": "parseMessagePayload",
+    "newName": "parseMessagePayloadFunction"
+  },
+  {
+    "name": "SignalStatusManager",
+    "newName": "SignalStatusManagerClass"
+  },
+  {
+    "name": "clearFunction",
+    "newName": "clearFunctionFunction"
+  },
+  {
+    "name": "signalStatusReadyErrorListenerTimeout",
+    "newName": "signalStatusReadyErrorListenerTimeoutObject"
+  },
+  {
+    "name": "invokeCallerMethod",
+    "newName": "invokeCallerMethodFunction"
+  },
+  {
+    "name": "signalStatusReadyErrorUnavailable",
+    "newName": "signalStatusReadyErrorUnavailableObject"
+  },
+  {
+    "name": "signalStatusReadyErrorRemoveListener",
+    "newName": "signalStatusReadyErrorRemoveListenerObject"
+  },
+  {
+    "name": "validateSignalData",
+    "newName": "validateSignalDataFunction"
+  },
+  {
+    "name": "ConsentStatusManager",
+    "newName": "ConsentStatusManagerClass"
+  },
+  {
+    "name": "isTcfApiFunctionAvailable",
+    "newName": "isTcfApiFunctionAvailableFunction"
+  },
+  {
+    "name": "waitForConsentWithTimeout",
+    "newName": "waitForConsentWithTimeoutFunction"
+  },
+  {
+    "name": "invokeTcfApi",
+    "newName": "invokeTcfApiFunction"
+  },
+  {
+    "name": "checkPublisherRestrictions",
+    "newName": "checkPublisherRestrictionsFunction"
+  },
+  {
+    "name": "checkConsentFor",
+    "newName": "checkConsentForFunction"
+  },
+  {
+    "name": "createElementWithAttributes",
+    "newName": "createElementWithAttributesFunction"
+  },
+  {
+    "name": "setupMessageEventListener",
+    "newName": "setupMessageEventListenerFunction"
+  },
+  {
+    "name": "isGdprConsentGiven",
+    "newName": "isGdprConsentGivenFunction"
+  },
+  {
+    "name": "checkSpecialFeatureConsents",
+    "newName": "checkSpecialFeatureConsentsFunction"
+  },
+  {
+    "name": "createCustomClassInstance",
+    "newName": "createCustomClassInstanceFunction"
+  },
+  {
+    "name": "table",
+    "newName": "tableClass"
+  },
+  {
+    "name": "urlRegex",
+    "newName": "urlRegexPattern"
+  },
+  {
+    "name": "setScheme",
+    "newName": "setSchemeFunction"
+  },
+  {
+    "name": "setPort",
+    "newName": "setPortFunction"
+  },
+  {
+    "name": "my",
+    "newName": "myFunction"
+  },
+  {
+    "name": "setQueryParameters",
+    "newName": "setQueryParametersFunction"
+  },
+  {
+    "name": "URLParameters",
+    "newName": "URLParametersClass"
+  },
+  {
+    "name": "setCaseSensitivity",
+    "newName": "setCaseSensitivityFunction"
+  },
+  {
+    "name": "setParameter",
+    "newName": "setParameterFunction"
+  },
+  {
+    "name": "decodeURIConditionally",
+    "newName": "decodeURIConditionallyFunction"
+  },
+  {
+    "name": "encodeURIConditionally",
+    "newName": "encodeURIConditionallyFunction"
+  }
+]

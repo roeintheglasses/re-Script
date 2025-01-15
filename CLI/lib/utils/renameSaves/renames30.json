@@ -1,0 +1,318 @@
+[
+  {
+    "name": "generatorWrapper",
+    "newName": "adEvent"
+  },
+  {
+    "name": "value",
+    "newName": "adData"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "adMap"
+  },
+  {
+    "name": "findEntry",
+    "newName": "adEntry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "adIterator"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "adNode"
+  },
+  {
+    "name": "CustomEvent",
+    "newName": "AdCustomEvent"
+  },
+  {
+    "name": "MessagingHandler",
+    "newName": "AdMessagingHandler"
+  },
+  {
+    "name": "dispatchCustomEvent",
+    "newName": "triggerCustomEvent"
+  },
+  {
+    "name": "setupMessagingChannel",
+    "newName": "initializeMessagingChannel"
+  },
+  {
+    "name": "isGptPresent",
+    "newName": "checkGptPresence"
+  },
+  {
+    "name": "getGoogleTagConsole",
+    "newName": "fetchGoogleTagConsole"
+  },
+  {
+    "name": "CrossDomainMessagingManager",
+    "newName": "AdCrossDomainMessagingManager"
+  },
+  {
+    "name": "removeMessagingChannel",
+    "newName": "deleteMessagingChannel"
+  },
+  {
+    "name": "formatString",
+    "newName": "formatAdString"
+  },
+  {
+    "name": "formatFunctions",
+    "newName": "adFormatFunctions"
+  },
+  {
+    "name": "getAllowedFeatures",
+    "newName": "fetchAllowedFeatures"
+  },
+  {
+    "name": "AdLoader",
+    "newName": "AdContentLoader"
+  },
+  {
+    "name": "getConnectionInstance",
+    "newName": "fetchConnectionInstance"
+  },
+  {
+    "name": "isIpad",
+    "newName": "checkIpadDevice"
+  },
+  {
+    "name": "createIterator",
+    "newName": "initializeIterator"
+  },
+  {
+    "name": "createTouchList",
+    "newName": "generateTouchList"
+  },
+  {
+    "name": "definePropertyPolyfill",
+    "newName": "applyPropertyPolyfill"
+  },
+  {
+    "name": "totalAdBufferingTime",
+    "newName": "calculateAdBufferingTime"
+  },
+  {
+    "name": "assignPolyfill",
+    "newName": "applyPolyfill"
+  },
+  {
+    "name": "toArray",
+    "newName": "convertToArray"
+  },
+  {
+    "name": "clientJsUrl",
+    "newName": "clientScriptUrl"
+  },
+  {
+    "name": "instance",
+    "newName": "singletonInstance"
+  },
+  {
+    "name": "AdManager",
+    "newName": "AdvertisementManager"
+  },
+  {
+    "name": "getInstance",
+    "newName": "fetchSingletonInstance"
+  },
+  {
+    "name": "sendViewabilityMeasurement",
+    "newName": "transmitViewabilityMeasurement"
+  },
+  {
+    "name": "destroy",
+    "newName": "terminateAdManager"
+  },
+  {
+    "name": "initialize",
+    "newName": "initializeAdManager"
+  },
+  {
+    "name": "isFullscreen",
+    "newName": "checkFullscreenMode"
+  },
+  {
+    "name": "getElementPosition",
+    "newName": "fetchElementPosition"
+  },
+  {
+    "name": "calculateViewabilityData",
+    "newName": "computeViewabilityMetrics"
+  },
+  {
+    "name": "isInitialized",
+    "newName": "verifyInitialization"
+  },
+  {
+    "name": "registerElement",
+    "newName": "logElement"
+  },
+  {
+    "name": "unregisterElement",
+    "newName": "removeElementLog"
+  },
+  {
+    "name": "getOverlayAdMetadata",
+    "newName": "fetchOverlayAdMetadata"
+  },
+  {
+    "name": "sendPageSignals",
+    "newName": "transmitPageSignals"
+  },
+  {
+    "name": "generateEngagementString",
+    "newName": "createEngagementString"
+  },
+  {
+    "name": "MediaStateManager",
+    "newName": "AdMediaStateManager"
+  },
+  {
+    "name": "setupMediaState",
+    "newName": "initializeMediaState"
+  },
+  {
+    "name": "attemptMediaPlayback",
+    "newName": "tryMediaPlayback"
+  },
+  {
+    "name": "resetMediaState",
+    "newName": "clearMediaState"
+  },
+  {
+    "name": "defaultSize",
+    "newName": "defaultAdSize"
+  },
+  {
+    "name": "VideoPlayer",
+    "newName": "AdVideoPlayer"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "timeoutWrapper"
+  },
+  {
+    "name": "ensureString",
+    "newName": "validateString"
+  },
+  {
+    "name": "isIphone",
+    "newName": "checkIphoneDevice"
+  },
+  {
+    "name": "load",
+    "newName": "loadAdContent"
+  },
+  {
+    "name": "setVolume",
+    "newName": "adjustVolume"
+  },
+  {
+    "name": "throwIncidentError",
+    "newName": "applyElementStyle"
+  },
+  {
+    "name": "createWarningError",
+    "newName": "applyDefaultStyle"
+  },
+  {
+    "name": "getVolume",
+    "newName": "fetchVolumeLevel"
+  },
+  {
+    "name": "handleAutoPlay",
+    "newName": "manageAutoPlay"
+  },
+  {
+    "name": "pause",
+    "newName": "pauseAdContent"
+  },
+  {
+    "name": "getCurrentTime",
+    "newName": "fetchCurrentTime"
+  },
+  {
+    "name": "getDuration",
+    "newName": "fetchAdDuration"
+  },
+  {
+    "name": "getRectangleSize",
+    "newName": "fetchRectangleSize"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "fetchAdEnvironment"
+  },
+  {
+    "name": "resetVideoTracking",
+    "newName": "clearVideoTracking"
+  },
+  {
+    "name": "resetPlaybackState",
+    "newName": "clearPlaybackState"
+  },
+  {
+    "name": "isArrayLike",
+    "newName": "triggerEvent"
+  },
+  {
+    "name": "handleFullscreenStart",
+    "newName": "initiateFullscreenMode"
+  },
+  {
+    "name": "parseAndValidateArray",
+    "newName": "parseAndValidateData"
+  },
+  {
+    "name": "serializeTransformations",
+    "newName": "serializeAdTransformations"
+  },
+  {
+    "name": "cloneIfNotFrozen",
+    "newName": "cloneAdIfNotFrozen"
+  },
+  {
+    "name": "isValidError",
+    "newName": "validateError"
+  },
+  {
+    "name": "once",
+    "newName": "triggerVolumeChange"
+  },
+  {
+    "name": "ErrorDetails",
+    "newName": "processErrorDetails"
+  },
+  {
+    "name": "arrayOfIntegersTransformationInstance",
+    "newName": "handleAdCompletion"
+  },
+  {
+    "name": "AdErrorEvent",
+    "newName": "triggerAdErrorEvent"
+  },
+  {
+    "name": "year",
+    "newName": "triggerAdError"
+  },
+  {
+    "name": "sliceArguments",
+    "newName": "monitorAdSize"
+  },
+  {
+    "name": "wrapGeneratorToPromise",
+    "newName": "wrapIteratorToPromise"
+  },
+  {
+    "name": "calculateBufferedAheadTime",
+    "newName": "computeBufferedTime"
+  },
+  {
+    "name": "isObjectOrFunction",
+    "newName": "reportAdStart"
+  }
+]

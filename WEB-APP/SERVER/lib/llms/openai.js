@@ -9,7 +9,7 @@ async function OpenAiRenameUtility(code, apiKey) {
   // https://platform.openai.com/docs/guides/gpt/function-calling
 
   const modelForFunctionCalling = new ChatOpenAI({
-    modelName: "gpt-4-0125-preview",
+    modelName: "gpt-3.5-turbo-0125",
     temperature: 0.5,
     openAIApiKey: apiKey,
   });

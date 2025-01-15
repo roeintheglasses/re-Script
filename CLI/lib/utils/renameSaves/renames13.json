@@ -1,0 +1,354 @@
+[
+  {
+    "name": "generatorWrapper",
+    "newName": "adGenerator"
+  },
+  {
+    "name": "value",
+    "newName": "adData"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "customMap"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entry"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "entries"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "circularNode"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "entryCounter"
+  },
+  {
+    "name": "key",
+    "newName": "keyValue"
+  },
+  {
+    "name": "AdVisibilityTracker",
+    "newName": "AdTracker"
+  },
+  {
+    "name": "isValidOpacity",
+    "newName": "isValidVolume"
+  },
+  {
+    "name": "transformArray",
+    "newName": "processArray"
+  },
+  {
+    "name": "filterElements",
+    "newName": "filterArray"
+  },
+  {
+    "name": "mapElements",
+    "newName": "mapArray"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "extendPrototype"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "asyncHandler"
+  },
+  {
+    "name": "updateVisibilityMetrics",
+    "newName": "updateVisibilityData"
+  },
+  {
+    "name": "updateMetrics",
+    "newName": "updateMetricData"
+  },
+  {
+    "name": "calculateFrameOffset",
+    "newName": "getFrameOffset"
+  },
+  {
+    "name": "calculateVisibilityRatio",
+    "newName": "getVisibilityRatio"
+  },
+  {
+    "name": "translateRectangle",
+    "newName": "translateRect"
+  },
+  {
+    "name": "isElementInvisibleOrOutOfView",
+    "newName": "isElementHidden"
+  },
+  {
+    "name": "calculateTimeDifference",
+    "newName": "getTimeDifference"
+  },
+  {
+    "name": "calculateTotalVisibility",
+    "newName": "getTotalVisibility"
+  },
+  {
+    "name": "calculateMaxVisibility",
+    "newName": "getMaxVisibility"
+  },
+  {
+    "name": "calculateAverageVisibility",
+    "newName": "getAverageVisibility"
+  },
+  {
+    "name": "roundToPrecision",
+    "newName": "roundValue"
+  },
+  {
+    "name": "keysOfObject",
+    "newName": "getObjectKeys"
+  },
+  {
+    "name": "containsElement",
+    "newName": "arrayContains"
+  },
+  {
+    "name": "filterAndTransform",
+    "newName": "filterAndMap"
+  },
+  {
+    "name": "filterAndLinkAdContainers",
+    "newName": "linkAdContainers"
+  },
+  {
+    "name": "getPropertyIfCondition",
+    "newName": "getPropertyIf"
+  },
+  {
+    "name": "checkConditionInArray",
+    "newName": "checkArrayCondition"
+  },
+  {
+    "name": "defaultConditionChecker",
+    "newName": "defaultChecker"
+  },
+  {
+    "name": "specificConditionChecker",
+    "newName": "specificChecker"
+  },
+  {
+    "name": "adDataMapping",
+    "newName": "adMapping"
+  },
+  {
+    "name": "extendedAdDataMapping",
+    "newName": "extendedAdMapping"
+  },
+  {
+    "name": "additionalDataMapping",
+    "newName": "additionalMapping"
+  },
+  {
+    "name": "nullResetter",
+    "newName": "resetNullValues"
+  },
+  {
+    "name": "emptyFunction",
+    "newName": "noopFunction"
+  },
+  {
+    "name": "processResources",
+    "newName": "processAdResources"
+  },
+  {
+    "name": "queryReporter",
+    "newName": "adQueryReporter"
+  },
+  {
+    "name": "reportRetriever",
+    "newName": "retrieveReport"
+  },
+  {
+    "name": "statusRetriever",
+    "newName": "retrieveStatus"
+  },
+  {
+    "name": "toggleRegister",
+    "newName": "toggleAdRegister"
+  },
+  {
+    "name": "updateRegister",
+    "newName": "updateAdRegister"
+  },
+  {
+    "name": "videoReporter",
+    "newName": "videoAdReporter"
+  },
+  {
+    "name": "widthRetriever",
+    "newName": "retrieveAdWidth"
+  },
+  {
+    "name": "executionResetter",
+    "newName": "resetExecution"
+  },
+  {
+    "name": "yearResetter",
+    "newName": "resetYear"
+  },
+  {
+    "name": "zoneResetter",
+    "newName": "resetZone"
+  },
+  {
+    "name": "abstractResponder",
+    "newName": "baseHandler"
+  },
+  {
+    "name": "baseResponder",
+    "newName": "baseAdHandler"
+  },
+  {
+    "name": "coordinateResponder",
+    "newName": "coordinateAdHandler"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "timeoutHandler"
+  },
+  {
+    "name": "getAdState",
+    "newName": "fetchAdState"
+  },
+  {
+    "name": "getAdEnvironmentInstance",
+    "newName": "fetchAdEnvironment"
+  },
+  {
+    "name": "isAdPlayingOrMuted",
+    "newName": "isAdMuted"
+  },
+  {
+    "name": "calculateVisibilityAtThreshold",
+    "newName": "getVisibilityAtThreshold"
+  },
+  {
+    "name": "isAdTimeout",
+    "newName": "checkAdTimeout"
+  },
+  {
+    "name": "generateAdPlaybackData",
+    "newName": "createAdPlaybackData"
+  },
+  {
+    "name": "generateDetailedAdPlaybackData",
+    "newName": "createDetailedAdPlaybackData"
+  },
+  {
+    "name": "updateAdPlaybackData",
+    "newName": "updateAdPlaybackInfo"
+  },
+  {
+    "name": "ensureArraySize",
+    "newName": "resizeArray"
+  },
+  {
+    "name": "generateImpressionDataArray",
+    "newName": "createImpressionDataArray"
+  },
+  {
+    "name": "generateAdRequestData",
+    "newName": "createAdRequestData"
+  },
+  {
+    "name": "verifyRequest",
+    "newName": "validateRequest"
+  },
+  {
+    "name": "extendObject",
+    "newName": "extendAdObject"
+  },
+  {
+    "name": "addParametersFromObject",
+    "newName": "addAdParameters"
+  },
+  {
+    "name": "buildQueryString",
+    "newName": "createQueryString"
+  },
+  {
+    "name": "accumulatePosition",
+    "newName": "getCurrentPosition"
+  },
+  {
+    "name": "roundRectangle",
+    "newName": "roundRect"
+  },
+  {
+    "name": "createRectangle",
+    "newName": "createRect"
+  },
+  {
+    "name": "convertRectToBox",
+    "newName": "rectToBox"
+  },
+  {
+    "name": "createRectangle",
+    "newName": "createRect"
+  },
+  {
+    "name": "Size",
+    "newName": "Dimension"
+  },
+  {
+    "name": "AdComponent",
+    "newName": "AdElement"
+  },
+  {
+    "name": "AdContainer",
+    "newName": "AdContainerElement"
+  },
+  {
+    "name": "VisibilityMetricsCalculator",
+    "newName": "VisibilityCalculator"
+  },
+  {
+    "name": "MetricsTracker",
+    "newName": "MetricTracker"
+  },
+  {
+    "name": "AdEventNames",
+    "newName": "AdEventTypes"
+  },
+  {
+    "name": "AdProcessor",
+    "newName": "AdHandler"
+  },
+  {
+    "name": "mappedAdEventTypes",
+    "newName": "mappedEventTypes"
+  },
+  {
+    "name": "adEventTimestamp",
+    "newName": "adEventTime"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "fetchAdEnvironmentConfig"
+  },
+  {
+    "name": "isAdVisible",
+    "newName": "checkAdVisibility"
+  },
+  {
+    "name": "adData",
+    "newName": "adDataObject"
+  },
+  {
+    "name": "adGenerator",
+    "newName": "adGeneratorObject"
+  },
+  {
+    "name": "adMapping",
+    "newName": "adDataMapping"
+  }
+]

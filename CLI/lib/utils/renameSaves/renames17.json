@@ -1,0 +1,298 @@
+[
+  {
+    "name": "generatorWrapper",
+    "newName": "event"
+  },
+  {
+    "name": "pointerTypeMap",
+    "newName": "pointerTypeMapping"
+  },
+  {
+    "name": "TouchEventProcessor",
+    "newName": "CustomTouchEvent"
+  },
+  {
+    "name": "isListenableKey",
+    "newName": "listenableKey"
+  },
+  {
+    "name": "isListenable",
+    "newName": "checkIsListenable"
+  },
+  {
+    "name": "listenerUniqueId",
+    "newName": "uniqueListenerId"
+  },
+  {
+    "name": "Listener",
+    "newName": "EventListener"
+  },
+  {
+    "name": "clearListener",
+    "newName": "resetListener"
+  },
+  {
+    "name": "EventTarget",
+    "newName": "CustomEventTarget"
+  },
+  {
+    "name": "addParameter",
+    "newName": "addListener"
+  },
+  {
+    "name": "removeElement",
+    "newName": "removeListener"
+  },
+  {
+    "name": "Cu",
+    "newName": "removeListenerFromTarget"
+  },
+  {
+    "name": "Bu",
+    "newName": "findListenerIndex"
+  },
+  {
+    "name": "Du",
+    "newName": "closureListenerMapKey"
+  },
+  {
+    "name": "Eu",
+    "newName": "eventMap"
+  },
+  {
+    "name": "Fu",
+    "newName": "globalListenerCount"
+  },
+  {
+    "name": "addPageHideListener",
+    "newName": "addEventListeners"
+  },
+  {
+    "name": "Ju",
+    "newName": "addSingleEventListener"
+  },
+  {
+    "name": "Lu",
+    "newName": "createEventWrapper"
+  },
+  {
+    "name": "Gu",
+    "newName": "addOnceEventListener"
+  },
+  {
+    "name": "Ou",
+    "newName": "removeEventListeners"
+  },
+  {
+    "name": "Pu",
+    "newName": "removeEventListenerFromElement"
+  },
+  {
+    "name": "Mu",
+    "newName": "getPrefixedEventName"
+  },
+  {
+    "name": "Nu",
+    "newName": "handleEvent"
+  },
+  {
+    "name": "Ku",
+    "newName": "getEventTarget"
+  },
+  {
+    "name": "Qu",
+    "newName": "closureEventFunctionKey"
+  },
+  {
+    "name": "Iu",
+    "newName": "getEventHandler"
+  },
+  {
+    "name": "AdEnvironmentConfig",
+    "newName": "AdEnvironment"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "adEnvironmentPrototype"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "resetEnvironment"
+  },
+  {
+    "name": "ObjectPool",
+    "newName": "CustomObjectPool"
+  },
+  {
+    "name": "releaseObject",
+    "newName": "releasePooledObject"
+  },
+  {
+    "name": "Uu",
+    "newName": "messageChannel"
+  },
+  {
+    "name": "getMessageChannelMethod",
+    "newName": "createMessageChannel"
+  },
+  {
+    "name": "TaskQueue",
+    "newName": "AsyncTaskQueue"
+  },
+  {
+    "name": "taskQueuePool",
+    "newName": "taskNodePool"
+  },
+  {
+    "name": "TaskQueueNode",
+    "newName": "AsyncTaskNode"
+  },
+  {
+    "name": "executeTasksMethod",
+    "newName": "scheduleTaskExecution"
+  },
+  {
+    "name": "tasksExecuted",
+    "newName": "tasksScheduled"
+  },
+  {
+    "name": "globalTaskQueue",
+    "newName": "mainTaskQueue"
+  },
+  {
+    "name": "enqueueTask",
+    "newName": "addTaskToQueue"
+  },
+  {
+    "name": "setupExecuteTasksMethod",
+    "newName": "initializeTaskScheduler"
+  },
+  {
+    "name": "executeQueuedTasks",
+    "newName": "runQueuedTasks"
+  },
+  {
+    "name": "isThenable",
+    "newName": "checkIsThenable"
+  },
+  {
+    "name": "PromisePolyfill",
+    "newName": "CustomPromise"
+  },
+  {
+    "name": "PromiseChainNode",
+    "newName": "PromiseNode"
+  },
+  {
+    "name": "promiseChainNodePool",
+    "newName": "promiseNodePool"
+  },
+  {
+    "name": "createPromiseChainNode",
+    "newName": "createPromiseNode"
+  },
+  {
+    "name": "thenHelper",
+    "newName": "createThenHandler"
+  },
+  {
+    "name": "resolveOrReject",
+    "newName": "resolveOrRejectPromise"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "processThenable"
+  },
+  {
+    "name": "finalizePromise",
+    "newName": "completePromise"
+  },
+  {
+    "name": "networkVersion",
+    "newName": "dequeuePromiseNode"
+  },
+  {
+    "name": "rejectPromiseChainNode",
+    "newName": "processPromiseNode"
+  },
+  {
+    "name": "callHandler",
+    "newName": "invokeHandler"
+  },
+  {
+    "name": "reportUnhandledRejection",
+    "newName": "logUnhandledRejection"
+  },
+  {
+    "name": "logError",
+    "newName": "deferError"
+  },
+  {
+    "name": "CancellationError",
+    "newName": "CancelError"
+  },
+  {
+    "name": "Timer",
+    "newName": "CustomTimer"
+  },
+  {
+    "name": "setAsyncTimeout",
+    "newName": "scheduleAsyncTimeout"
+  },
+  {
+    "name": "createTimerPromise",
+    "newName": "createTimeoutPromise"
+  },
+  {
+    "name": "getCurrentTimestamp",
+    "newName": "getUnixTimestamp"
+  },
+  {
+    "name": "SimpleStore",
+    "newName": "KeyValueStore"
+  },
+  {
+    "name": "setBitFlag",
+    "newName": "setFlag"
+  },
+  {
+    "name": "globalStore",
+    "newName": "singletonStore"
+  },
+  {
+    "name": "GlobalStoreConstructor",
+    "newName": "GlobalStore"
+  },
+  {
+    "name": "getGlobalStore",
+    "newName": "retrieveGlobalStore"
+  },
+  {
+    "name": "registerGlobalValue",
+    "newName": "registerGlobalVariable"
+  },
+  {
+    "name": "GlobalValue",
+    "newName": "GlobalVariable"
+  },
+  {
+    "name": "BooleanGlobalValue",
+    "newName": "BooleanGlobalVariable"
+  },
+  {
+    "name": "RectGlobalValue",
+    "newName": "RectGlobalVariable"
+  },
+  {
+    "name": "parseRectFromString",
+    "newName": "convertStringToRect"
+  },
+  {
+    "name": "calculateBoundingRect",
+    "newName": "computeBoundingRect"
+  },
+  {
+    "name": "getElementRectangle",
+    "newName": "getElementBoundingRect"
+  }
+]

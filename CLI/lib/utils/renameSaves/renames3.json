@@ -1,0 +1,554 @@
+[
+  {
+    "name": "generatorWrapper",
+    "newName": "input"
+  },
+  {
+    "name": "value",
+    "newName": "predicate"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "length"
+  },
+  {
+    "name": "findEntry",
+    "newName": "elements"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "index"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "key"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "charCode"
+  },
+  {
+    "name": "noopFunction",
+    "newName": "noop"
+  },
+  {
+    "name": "tryNoopFunction",
+    "newName": "tryNoop"
+  },
+  {
+    "name": "getCachedValue",
+    "newName": "getCachedResult"
+  },
+  {
+    "name": "browserFeatures",
+    "newName": "features"
+  },
+  {
+    "name": "isOpera",
+    "newName": "isOperaBrowser"
+  },
+  {
+    "name": "isIE",
+    "newName": "isInternetExplorer"
+  },
+  {
+    "name": "isEdge",
+    "newName": "isEdgeBrowser"
+  },
+  {
+    "name": "isGecko",
+    "newName": "isGeckoBrowser"
+  },
+  {
+    "name": "isWebKit",
+    "newName": "isWebKitBrowser"
+  },
+  {
+    "name": "isMacOS",
+    "newName": "isMacOSPlatform"
+  },
+  {
+    "name": "isAndroid",
+    "newName": "isAndroidPlatform"
+  },
+  {
+    "name": "isIphone",
+    "newName": "isIphonePlatform"
+  },
+  {
+    "name": "isIpad",
+    "newName": "isIpadPlatform"
+  },
+  {
+    "name": "isIpod",
+    "newName": "isIpodPlatform"
+  },
+  {
+    "name": "isIphoneIpadIpod",
+    "newName": "isAppleMobileDevice"
+  },
+  {
+    "name": "browserVersion",
+    "newName": "version"
+  },
+  {
+    "name": "executeCallbacks",
+    "newName": "versionMatch"
+  },
+  {
+    "name": "currentDocument",
+    "newName": "document"
+  },
+  {
+    "name": "userAgentVersion",
+    "newName": "userAgentVersion"
+  },
+  {
+    "name": "finalBrowserVersion",
+    "newName": "finalVersion"
+  },
+  {
+    "name": "supportsHtml5",
+    "newName": "supportsHtml5"
+  },
+  {
+    "name": "isAndroidBrowser",
+    "newName": "isFirefoxBrowser"
+  },
+  {
+    "name": "isAndroidNonChrome",
+    "newName": "isAndroidNonChromeBrowser"
+  },
+  {
+    "name": "isIos",
+    "newName": "isChromiumBased"
+  },
+  {
+    "name": "base64AlphabetVariants",
+    "newName": "base64Variants"
+  },
+  {
+    "name": "base64AlphabetIndex",
+    "newName": "base64Index"
+  },
+  {
+    "name": "base64Encode",
+    "newName": "encodeBase64"
+  },
+  {
+    "name": "getBase64EncodedArray",
+    "newName": "decodeBase64ToArray"
+  },
+  {
+    "name": "decodeBase64",
+    "newName": "decodeBase64"
+  },
+  {
+    "name": "initializeBase64Encoding",
+    "newName": "initializeBase64"
+  },
+  {
+    "name": "supportsUint8Array",
+    "newName": "hasUint8Array"
+  },
+  {
+    "name": "supportsBtoa",
+    "newName": "hasBtoa"
+  },
+  {
+    "name": "supportsBigInt",
+    "newName": "hasBigInt"
+  },
+  {
+    "name": "unusedVar1",
+    "newName": "unusedVar1"
+  },
+  {
+    "name": "lowOrderInteger",
+    "newName": "lowOrderInt"
+  },
+  {
+    "name": "highOrderInteger",
+    "newName": "highOrderInt"
+  },
+  {
+    "name": "calculateIntegers",
+    "newName": "calculateIntegerParts"
+  },
+  {
+    "name": "formatLongNumber",
+    "newName": "formatLongInt"
+  },
+  {
+    "name": "padNumber",
+    "newName": "padInt"
+  },
+  {
+    "name": "getFormattedNumber",
+    "newName": "getFormattedInt"
+  },
+  {
+    "name": "parseAndSetBigIntegers",
+    "newName": "parseAndSetBigInts"
+  },
+  {
+    "name": "invertAndIncrement",
+    "newName": "invertAndAddOne"
+  },
+  {
+    "name": "defaultUnsigned64",
+    "newName": "defaultUnsigned64"
+  },
+  {
+    "name": "defaultSigned64",
+    "newName": "defaultSigned64"
+  },
+  {
+    "name": "Unsigned64",
+    "newName": "Unsigned64"
+  },
+  {
+    "name": "createUnsigned64",
+    "newName": "createUnsigned64"
+  },
+  {
+    "name": "Signed64",
+    "newName": "Signed64"
+  },
+  {
+    "name": "createSigned64",
+    "newName": "createSigned64"
+  },
+  {
+    "name": "ByteArray",
+    "newName": "ByteArray"
+  },
+  {
+    "name": "writeVarint32",
+    "newName": "writeVarint32"
+  },
+  {
+    "name": "writeVarint",
+    "newName": "writeVarint"
+  },
+  {
+    "name": "writeVarint64",
+    "newName": "writeVarint64"
+  },
+  {
+    "name": "writeBytes",
+    "newName": "writeBytes"
+  },
+  {
+    "name": "ProtobufWriter",
+    "newName": "ProtobufWriter"
+  },
+  {
+    "name": "appendBuffer",
+    "newName": "appendBuffer"
+  },
+  {
+    "name": "finalizeAndAppendBuffer",
+    "newName": "finalizeAndAppendBuffer"
+  },
+  {
+    "name": "updateLengthPrefix",
+    "newName": "updateLengthPrefix"
+  },
+  {
+    "name": "writeFieldHeader",
+    "newName": "writeFieldHeader"
+  },
+  {
+    "name": "writeBytesField",
+    "newName": "writeBytesField"
+  },
+  {
+    "name": "CustomError",
+    "newName": "CustomError"
+  },
+  {
+    "name": "toArray",
+    "newName": "toArray"
+  },
+  {
+    "name": "generateSymbol",
+    "newName": "generateSymbol"
+  },
+  {
+    "name": "uniqueSymbol",
+    "newName": "uniqueSymbol"
+  },
+  {
+    "name": "customProperty1",
+    "newName": "customProperty1"
+  },
+  {
+    "name": "customProperty2",
+    "newName": "customProperty2"
+  },
+  {
+    "name": "customProperty3",
+    "newName": "customProperty3"
+  },
+  {
+    "name": "setCustomProperty",
+    "newName": "setCustomProperty"
+  },
+  {
+    "name": "clearBitFlag",
+    "newName": "clearBitFlag"
+  },
+  {
+    "name": "toggleBitFlag",
+    "newName": "toggleBitFlag"
+  },
+  {
+    "name": "getBitFlags",
+    "newName": "getBitFlags"
+  },
+  {
+    "name": "getRawBitFlags",
+    "newName": "getRawBitFlags"
+  },
+  {
+    "name": "setRawBitFlags",
+    "newName": "setRawBitFlags"
+  },
+  {
+    "name": "setFlag34",
+    "newName": "setFlag34"
+  },
+  {
+    "name": "setFlag32",
+    "newName": "setFlag32"
+  },
+  {
+    "name": "clear14591Flag",
+    "newName": "clear14591Flag"
+  },
+  {
+    "name": "set34Clear14557Flag",
+    "newName": "set34Clear14557Flag"
+  },
+  {
+    "name": "get1023Shifted",
+    "newName": "get1023Shifted"
+  },
+  {
+    "name": "emptyObject1",
+    "newName": "emptyObject1"
+  },
+  {
+    "name": "emptyObject2",
+    "newName": "emptyObject2"
+  },
+  {
+    "name": "isObjectWithId",
+    "newName": "isObjectWithId"
+  },
+  {
+    "name": "isPlainObject",
+    "newName": "isPlainObject"
+  },
+  {
+    "name": "undefinedVariable1",
+    "newName": "undefinedVariable1"
+  },
+  {
+    "name": "undefinedFunction1",
+    "newName": "undefinedFunction1"
+  },
+  {
+    "name": "frozenArray",
+    "newName": "frozenArray"
+  },
+  {
+    "name": "emptyArray",
+    "newName": "emptyArray"
+  },
+  {
+    "name": "throwIfFlag2",
+    "newName": "throwIfFlag2"
+  },
+  {
+    "name": "IteratorWithTransform",
+    "newName": "IteratorWithTransform"
+  },
+  {
+    "name": "setErrorContext",
+    "newName": "setErrorContext"
+  },
+  {
+    "name": "undefinedVariable2",
+    "newName": "undefinedVariable2"
+  },
+  {
+    "name": "throwIncidentError",
+    "newName": "throwIncidentError"
+  },
+  {
+    "name": "createWarningError",
+    "newName": "createWarningError"
+  },
+  {
+    "name": "parseNumericValue",
+    "newName": "parseNumericValue"
+  },
+  {
+    "name": "assertBoolean",
+    "newName": "assertBoolean"
+  },
+  {
+    "name": "parseNullableBoolean",
+    "newName": "parseNullableBoolean"
+  },
+  {
+    "name": "parseBooleanOrNumber",
+    "newName": "parseBooleanOrNumber"
+  },
+  {
+    "name": "numericStringRegex",
+    "newName": "numericStringRegex"
+  },
+  {
+    "name": "isNumericString",
+    "newName": "isNumericString"
+  },
+  {
+    "name": "parseIntEnum",
+    "newName": "parseIntEnum"
+  },
+  {
+    "name": "parseNullableIntEnum",
+    "newName": "parseNullableIntEnum"
+  },
+  {
+    "name": "parseNullableInt",
+    "newName": "parseNullableInt"
+  },
+  {
+    "name": "parseInt32",
+    "newName": "parseInt32"
+  },
+  {
+    "name": "parseNullableInt32",
+    "newName": "parseNullableInt32"
+  },
+  {
+    "name": "parseNullableUInt32",
+    "newName": "parseNullableUInt32"
+  },
+  {
+    "name": "convertToInt64",
+    "newName": "convertToInt64"
+  },
+  {
+    "name": "isPositiveInt64",
+    "newName": "isPositiveInt64"
+  },
+  {
+    "name": "isValidInt64Range",
+    "newName": "isValidInt64Range"
+  },
+  {
+    "name": "normalizeNumber",
+    "newName": "normalizeNumber"
+  },
+  {
+    "name": "convertSafeInteger",
+    "newName": "convertSafeInteger"
+  },
+  {
+    "name": "convertNumberToString",
+    "newName": "convertNumberToString"
+  },
+  {
+    "name": "convertStringToInt64",
+    "newName": "convertStringToInt64"
+  },
+  {
+    "name": "ensureString",
+    "newName": "ensureString"
+  },
+  {
+    "name": "optionalString",
+    "newName": "optionalString"
+  },
+  {
+    "name": "stringOrNull",
+    "newName": "stringOrNull"
+  },
+  {
+    "name": "createObjectOrUndefined",
+    "newName": "createObjectOrUndefined"
+  },
+  {
+    "name": "getSingletonInstance",
+    "newName": "getSingletonInstance"
+  },
+  {
+    "name": "getValidatedDataOrUndefined",
+    "newName": "getValidatedDataOrUndefined"
+  },
+  {
+    "name": "getStringOrEmpty",
+    "newName": "getStringOrEmpty"
+  },
+  {
+    "name": "temporaryData",
+    "newName": "temporaryData"
+  },
+  {
+    "name": "createInstanceWithTemporaryData",
+    "newName": "createInstanceWithTemporaryData"
+  },
+  {
+    "name": "booleanArrayCache",
+    "newName": "booleanArrayCache"
+  },
+  {
+    "name": "zeroValueArrayCache",
+    "newName": "zeroValueArrayCache"
+  },
+  {
+    "name": "convertToTuple",
+    "newName": "convertToTuple"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "onFulfilled"
+  },
+  {
+    "name": "polyfillCheckCache",
+    "newName": "polyfillCheckCache"
+  },
+  {
+    "name": "requiresPolyfill",
+    "newName": "requiresPolyfill"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "CustomMap"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "setTimeoutWrapper"
+  },
+  {
+    "name": "EnhancedMap",
+    "newName": "EnhancedMap"
+  },
+  {
+    "name": "EnsureMutable",
+    "newName": "EnsureMutable"
+  },
+  {
+    "name": "TransformMapEntries",
+    "newName": "TransformMapEntries"
+  },
+  {
+    "name": "TransformEntries",
+    "newName": "TransformEntries"
+  }
+]

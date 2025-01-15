@@ -1,4 +1,5 @@
 import { encode } from "gpt-3-encoder";
+import * as fs from "fs";
 
 const START_NEXT_CODE_BLOCK_AT_FRACTION = (1 / 5) * 4;
 const SOFT_LIMIT_FRACTION = 1 / 4;
@@ -7,12 +8,14 @@ const HARD_LIMIT_FRACTION = 1 / 3;
 export async function divideIntoCodeBlocks(code) {
   let codeBlocks = [];
   let currentCode = code;
-
-  const numTokensForRequestAndResponse = 16000;
+  let i = 0;
+  const numTokensForRequestAndResponse = 60000;
   const tokenSoftLimit = numTokensForRequestAndResponse * SOFT_LIMIT_FRACTION;
   const tokenHardLimit = numTokensForRequestAndResponse * HARD_LIMIT_FRACTION;
 
   while (currentCode.length > 0) {
+    i++;
+    console.log("DIVIDING");
     const { removedCode, remainingCode } = reduceAndEncodeCodeWithLimits(
       currentCode,
       {
@@ -20,9 +23,16 @@ export async function divideIntoCodeBlocks(code) {
         hardLimit: tokenHardLimit,
       }
     );
+    console.log("SAVING Code block");
+    fs.writeFileSync(
+      `./lib/utils/saves/codeBlock${i}.json`,
+      JSON.stringify(removedCode, null, 2)
+    );
     codeBlocks.push(removedCode);
     currentCode = remainingCode;
   }
+
+  console.log("CODE DIVIDED LETS GOOO ");
 
   return codeBlocks;
 }
@@ -32,6 +42,7 @@ function reduceAndEncodeCodeWithLimits(code, limits) {
   let lastStopOver = stopAt;
 
   while (true) {
+    console.log("REDUCING ");
     const codeSlice = code.slice(0, stopAt);
     const numTokens = encode(codeSlice).length;
     if (numTokens > limits.hardLimit) {

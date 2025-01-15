@@ -9,15 +9,15 @@ async function OpenAiRenameUtility(code, apiKey) {
   // https://platform.openai.com/docs/guides/gpt/function-calling
 
   const modelForFunctionCalling = new ChatOpenAI({
-    modelName: "gpt-4-0125-preview",
+    modelName: "gpt-4o",
     temperature: 0.5,
     openAIApiKey: apiKey,
   });
-
+  console.log("INSIDE OPEN API CALLS");
   const result = await modelForFunctionCalling.invoke(
     [
       new SystemMessage(
-        "You are a senior javascript programmer with experience in unminifying and deobfuscating code. Understand given code and rename all Javascript variables and functions to have descriptive names based on their usage in the code."
+        "You are a senior javascript programmer with experience in unminifying and deobfuscating code. Understand given code and rename all Javascript variables and functions to have descriptive names based on their usage in the code. This is the code if IMA SDK by google : IMA SDKs make it easy to integrate multimedia ads into your websites and apps. IMA SDKs can request ads from any VAST-compliant ad server and manage ad playback in your apps."
       ),
       new HumanMessage(code),
     ],

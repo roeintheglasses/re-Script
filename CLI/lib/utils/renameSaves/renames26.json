@@ -1,0 +1,326 @@
+[
+  {
+    "name": "entryIdCounter",
+    "newName": "charCode"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "customBase64Map"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "charIndex"
+  },
+  {
+    "name": "findEntry",
+    "newName": "byteArray"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "byteArrayIndex"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "adsManager"
+  },
+  {
+    "name": "AppSignals",
+    "newName": "appSignals"
+  },
+  {
+    "name": "getAdInstance",
+    "newName": "getAdManagerInstance"
+  },
+  {
+    "name": "shouldUseCustomPlayback",
+    "newName": "checkCustomPlayback"
+  },
+  {
+    "name": "imaSdkInstanceSingleton",
+    "newName": "imaSdkSingleton"
+  },
+  {
+    "name": "isBooleanConfigEnabled",
+    "newName": "checkBooleanConfig"
+  },
+  {
+    "name": "isTouchEnabledDevice",
+    "newName": "checkTouchDevice"
+  },
+  {
+    "name": "isIOSVersionAtLeast",
+    "newName": "checkIOSVersion"
+  },
+  {
+    "name": "isIphone",
+    "newName": "checkIphone"
+  },
+  {
+    "name": "isIpod",
+    "newName": "checkIpod"
+  },
+  {
+    "name": "isAndroid",
+    "newName": "checkAndroid"
+  },
+  {
+    "name": "matchesUserAgentVersion",
+    "newName": "checkUserAgentVersion"
+  },
+  {
+    "name": "androidVersionRegex",
+    "newName": "androidVersionPattern"
+  },
+  {
+    "name": "isTVOSOrAndroidTV",
+    "newName": "checkTVOSOrAndroidTV"
+  },
+  {
+    "name": "getDeviceType",
+    "newName": "fetchDeviceType"
+  },
+  {
+    "name": "stripUrlPrefix",
+    "newName": "removeUrlPrefix"
+  },
+  {
+    "name": "getEffectiveUrl",
+    "newName": "fetchEffectiveUrl"
+  },
+  {
+    "name": "computeReferrerUrl",
+    "newName": "getReferrerUrl"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "timeoutWrapper"
+  },
+  {
+    "name": "getAncestorOrigins",
+    "newName": "fetchAncestorOrigins"
+  },
+  {
+    "name": "getParentPageUrl",
+    "newName": "fetchParentPageUrl"
+  },
+  {
+    "name": "truncateUrl",
+    "newName": "shortenUrl"
+  },
+  {
+    "name": "totalAdBufferingTime",
+    "newName": "adEventTypes"
+  },
+  {
+    "name": "defineAdEventTypes",
+    "newName": "initializeAdEventTypes"
+  },
+  {
+    "name": "NetworkManager",
+    "newName": "networkManager"
+  },
+  {
+    "name": "sendRequest",
+    "newName": "sendNetworkRequest"
+  },
+  {
+    "name": "markAsCompleted",
+    "newName": "adReporter"
+  },
+  {
+    "name": "buildErrorReportParams",
+    "newName": "constructErrorReportParams"
+  },
+  {
+    "name": "fetchNewToken",
+    "newName": "retrieveNewToken"
+  },
+  {
+    "name": "TokenManager",
+    "newName": "tokenManager"
+  },
+  {
+    "name": "KE",
+    "newName": "initializeTokenManager"
+  },
+  {
+    "name": "Token",
+    "newName": "AdToken"
+  },
+  {
+    "name": "EmptyToken",
+    "newName": "EmptyAdToken"
+  },
+  {
+    "name": "Message",
+    "newName": "AdMessage"
+  },
+  {
+    "name": "MessageQueue",
+    "newName": "adMessageQueue"
+  },
+  {
+    "name": "enqueueMessage",
+    "newName": "queueAdMessage"
+  },
+  {
+    "name": "CustomEvent",
+    "newName": "AdCustomEvent"
+  },
+  {
+    "name": "CreativeType",
+    "newName": "AdCreativeType"
+  },
+  {
+    "name": "ResourceType",
+    "newName": "AdResourceType"
+  },
+  {
+    "name": "SizeCriteria",
+    "newName": "AdSizeCriteria"
+  },
+  {
+    "name": "CompanionAdSelectionSettings",
+    "newName": "AdSelectionSettings"
+  },
+  {
+    "name": "CompanionAdSelector",
+    "newName": "AdSelector"
+  },
+  {
+    "name": "filterCompanionAds",
+    "newName": "filterAds"
+  },
+  {
+    "name": "isAdEligible",
+    "newName": "checkAdEligibility"
+  },
+  {
+    "name": "findEligibleAdVariant",
+    "newName": "findAdVariant"
+  },
+  {
+    "name": "isValidEnumValue",
+    "newName": "validateEnumValue"
+  },
+  {
+    "name": "AdError",
+    "newName": "AdPlaybackError"
+  },
+  {
+    "name": "errorType",
+    "newName": "initializationError"
+  },
+  {
+    "name": "aF",
+    "newName": "invalidInfoError"
+  },
+  {
+    "name": "createAdPlayError",
+    "newName": "generateAdPlayError"
+  },
+  {
+    "name": "debugFlags",
+    "newName": "debugSettings"
+  },
+  {
+    "name": "SingletonBase",
+    "newName": "Singleton"
+  },
+  {
+    "name": "RandomExperimentManager",
+    "newName": "experimentManager"
+  },
+  {
+    "name": "logErrorEvent",
+    "newName": "recordErrorEvent"
+  },
+  {
+    "name": "waitForWindowLoad",
+    "newName": "waitForPageLoad"
+  },
+  {
+    "name": "CacheManager",
+    "newName": "cacheManager"
+  },
+  {
+    "name": "getCacheManagerInstance",
+    "newName": "getCacheInstance"
+  },
+  {
+    "name": "clearCacheManager",
+    "newName": "resetCacheManager"
+  },
+  {
+    "name": "evaluateCacheItemState",
+    "newName": "checkCacheItemState"
+  },
+  {
+    "name": "loadCacheItems",
+    "newName": "initializeCacheItems"
+  },
+  {
+    "name": "isDataPresent",
+    "newName": "checkDataPresence"
+  },
+  {
+    "name": "Deferred",
+    "newName": "AsyncDeferred"
+  },
+  {
+    "name": "InputError",
+    "newName": "InputValidationError"
+  },
+  {
+    "name": "BasePromise",
+    "newName": "BaseAsyncPromise"
+  },
+  {
+    "name": "DeferredWithResult",
+    "newName": "DeferredAsyncResult"
+  },
+  {
+    "name": "notifyListeners",
+    "newName": "triggerListeners"
+  },
+  {
+    "name": "Result",
+    "newName": "AsyncResult"
+  },
+  {
+    "name": "resolveResult",
+    "newName": "resolveAsyncResult"
+  },
+  {
+    "name": "resolveWithAnotherPromise",
+    "newName": "resolveWithPromise"
+  },
+  {
+    "name": "BaseResult",
+    "newName": "BaseAsyncResult"
+  },
+  {
+    "name": "SuccessResult",
+    "newName": "SuccessfulAsyncResult"
+  },
+  {
+    "name": "NullableSuccessResult",
+    "newName": "NullableAsyncResult"
+  },
+  {
+    "name": "Notification",
+    "newName": "AsyncNotification"
+  },
+  {
+    "name": "TaskManager",
+    "newName": "asyncTaskManager"
+  },
+  {
+    "name": "addTask",
+    "newName": "queueTask"
+  },
+  {
+    "name": "waitForTasks",
+    "newName": "waitForAllTasks"
+  }
+]

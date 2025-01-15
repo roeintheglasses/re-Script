@@ -1,0 +1,822 @@
+[
+  {
+    "name": "settlePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "adPromiseResolver"
+  },
+  {
+    "name": "getAdInstance",
+    "newName": "getAdInstanceFromResolver"
+  },
+  {
+    "name": "findEntry",
+    "newName": "adResponse"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "adGeneratorWrapper"
+  },
+  {
+    "name": "value",
+    "newName": "adValue"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "adBody"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "adReader"
+  },
+  {
+    "name": "logError",
+    "newName": "logAdError"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "adEntries"
+  },
+  {
+    "name": "key",
+    "newName": "processAdEntries"
+  },
+  {
+    "name": "entry",
+    "newName": "adEntry"
+  },
+  {
+    "name": "currentEntry",
+    "newName": "isAdEntryDone"
+  },
+  {
+    "name": "foundEntry",
+    "newName": "currentAdEntry"
+  },
+  {
+    "name": "resolveFunction",
+    "newName": "shouldResolvePromise"
+  },
+  {
+    "name": "rejectFunction",
+    "newName": "currentAdEntryValue"
+  },
+  {
+    "name": "user",
+    "newName": "adUserBuffer"
+  },
+  {
+    "name": "wrapGeneratorToPromise",
+    "newName": "wrapAdGeneratorToPromise"
+  },
+  {
+    "name": "profileData",
+    "newName": "adProfileData"
+  },
+  {
+    "name": "generatorYield",
+    "newName": "adGeneratorYield"
+  },
+  {
+    "name": "tasks",
+    "newName": "adTasks"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "isCustomMap"
+  },
+  {
+    "name": "finalizeMediaBuffer",
+    "newName": "finalizeAdBuffer"
+  },
+  {
+    "name": "dispatchMediaProgressEvent",
+    "newName": "dispatchAdProgressEvent"
+  },
+  {
+    "name": "MediaSourceLoader",
+    "newName": "AdMediaSourceLoader"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "fetchAdEnvironment"
+  },
+  {
+    "name": "closeCache",
+    "newName": "closeAdCache"
+  },
+  {
+    "name": "UriParameterManager",
+    "newName": "AdUriParameterManager"
+  },
+  {
+    "name": "parseUriParameters",
+    "newName": "parseAdUriParameters"
+  },
+  {
+    "name": "getAdId",
+    "newName": "fetchAdId"
+  },
+  {
+    "name": "getRangeStart",
+    "newName": "fetchAdRangeStart"
+  },
+  {
+    "name": "getParameterById",
+    "newName": "fetchAdParameterById"
+  },
+  {
+    "name": "EmptyFunction",
+    "newName": "NoOpFunction"
+  },
+  {
+    "name": "trustedDomains",
+    "newName": "adTrustedDomains"
+  },
+  {
+    "name": "isSupportedEnvironment",
+    "newName": "isAdEnvironmentSupported"
+  },
+  {
+    "name": "isIphone",
+    "newName": "isIphoneDevice"
+  },
+  {
+    "name": "handleAsync",
+    "newName": "checkAsync"
+  },
+  {
+    "name": "isAndroid",
+    "newName": "isAndroidDevice"
+  },
+  {
+    "name": "trustedDomainsListCache",
+    "newName": "adTrustedDomainsCache"
+  },
+  {
+    "name": "userAgentStringCache",
+    "newName": "adUserAgentStringCache"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "adGeneratorWrapper"
+  },
+  {
+    "name": "isAppleDevice",
+    "newName": "isAppleDeviceDetected"
+  },
+  {
+    "name": "includesString",
+    "newName": "stringIncludes"
+  },
+  {
+    "name": "getUserAgentString",
+    "newName": "fetchUserAgentString"
+  },
+  {
+    "name": "table",
+    "newName": "adTable"
+  },
+  {
+    "name": "hasPlatform",
+    "newName": "hasUserAgentPlatform"
+  },
+  {
+    "name": "userAgentData",
+    "newName": "userAgentDataObject"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "isThenableObject"
+  },
+  {
+    "name": "vm",
+    "newName": "vmObject"
+  },
+  {
+    "name": "tm",
+    "newName": "tmObject"
+  },
+  {
+    "name": "um",
+    "newName": "umObject"
+  },
+  {
+    "name": "isChromiumBased",
+    "newName": "isChromiumBrowser"
+  },
+  {
+    "name": "isTrustedDomain",
+    "newName": "isAdTrustedDomain"
+  },
+  {
+    "name": "value",
+    "newName": "adValue"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "adDomain"
+  },
+  {
+    "name": "ErrorBase",
+    "newName": "AdErrorBase"
+  },
+  {
+    "name": "CustomError",
+    "newName": "AdCustomError"
+  },
+  {
+    "name": "getNameFromError",
+    "newName": "fetchAdErrorName"
+  },
+  {
+    "name": "getErrorFromName",
+    "newName": "fetchAdErrorCode"
+  },
+  {
+    "name": "code",
+    "newName": "adErrorCode"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "adErrorDetails"
+  },
+  {
+    "name": "ErrorCodes",
+    "newName": "AdErrorCodes"
+  },
+  {
+    "name": "getAdPropertyNumericValue",
+    "newName": "fetchAdPropertyNumericValue"
+  },
+  {
+    "name": "isMobile",
+    "newName": "isMobileDevice"
+  },
+  {
+    "name": "NOT_FOUND_ERR",
+    "newName": "AD_NOT_FOUND_ERR"
+  },
+  {
+    "name": "rf",
+    "newName": "AD_CONSTRAINT_ERR"
+  },
+  {
+    "name": "uf",
+    "newName": "AD_DATA_ERR"
+  },
+  {
+    "name": "extractBaseUrl",
+    "newName": "extractAdBaseUrl"
+  },
+  {
+    "name": "getNumericAdProperty",
+    "newName": "fetchNumericAdProperty"
+  },
+  {
+    "name": "ABORT_ERR",
+    "newName": "AD_ABORT_ERR"
+  },
+  {
+    "name": "getAdPropertyValue",
+    "newName": "fetchAdPropertyValue"
+  },
+  {
+    "name": "createHtmlElement",
+    "newName": "createAdHtmlElement"
+  },
+  {
+    "name": "TIMEOUT_ERR",
+    "newName": "AD_TIMEOUT_ERR"
+  },
+  {
+    "name": "getAdProperty",
+    "newName": "fetchAdProperty"
+  },
+  {
+    "name": "INVALID_ACCESS_ERR",
+    "newName": "AD_INVALID_ACCESS_ERR"
+  },
+  {
+    "name": "INVALID_STATE_ERR",
+    "newName": "AD_INVALID_STATE_ERR"
+  },
+  {
+    "name": "UnknownErrorCode",
+    "newName": "AD_UNKNOWN_ERR_CODE"
+  },
+  {
+    "name": "NotFoundErrorCode",
+    "newName": "AD_NOT_FOUND_ERR_CODE"
+  },
+  {
+    "name": "ConstraintErrorCode",
+    "newName": "AD_CONSTRAINT_ERR_CODE"
+  },
+  {
+    "name": "DataErrorCode",
+    "newName": "AD_DATA_ERR_CODE"
+  },
+  {
+    "name": "TransactionInactiveErrorCode",
+    "newName": "AD_TRANSACTION_INACTIVE_ERR_CODE"
+  },
+  {
+    "name": "AbortErrorCode",
+    "newName": "AD_ABORT_ERR_CODE"
+  },
+  {
+    "name": "ReadOnlyErrorCode",
+    "newName": "AD_READ_ONLY_ERR_CODE"
+  },
+  {
+    "name": "TimeoutErrorCode",
+    "newName": "AD_TIMEOUT_ERR_CODE"
+  },
+  {
+    "name": "QuotaExceededErrorCode",
+    "newName": "AD_QUOTA_EXCEEDED_ERR_CODE"
+  },
+  {
+    "name": "InvalidAccessErrorCode",
+    "newName": "AD_INVALID_ACCESS_ERR_CODE"
+  },
+  {
+    "name": "InvalidStateErrorCode",
+    "newName": "AD_INVALID_STATE_ERR_CODE"
+  },
+  {
+    "name": "createErrorFromRequest",
+    "newName": "createAdErrorFromRequest"
+  },
+  {
+    "name": "createErrorFromException",
+    "newName": "createAdErrorFromException"
+  },
+  {
+    "name": "KeyRangeWrapper",
+    "newName": "AdKeyRangeWrapper"
+  },
+  {
+    "name": "IndexedDBKeyRange",
+    "newName": "AdIndexedDBKeyRange"
+  },
+  {
+    "name": "PromiseBase",
+    "newName": "AdPromiseBase"
+  },
+  {
+    "name": "Deferred",
+    "newName": "AdDeferred"
+  },
+  {
+    "name": "handleAsync",
+    "newName": "asyncHandlers"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "thenableHandler"
+  },
+  {
+    "name": "createDeferred",
+    "newName": "isDeferredCreated"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "timeoutHandler"
+  },
+  {
+    "name": "tasks",
+    "newName": "adTasks"
+  },
+  {
+    "name": "executeCallbacks",
+    "newName": "executeAdCallbacks"
+  },
+  {
+    "name": "logError",
+    "newName": "logAdError"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "isFulfilled"
+  },
+  {
+    "name": "isDone",
+    "newName": "isAdDone"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "adEntryCounter"
+  },
+  {
+    "name": "settlePromise",
+    "newName": "settleAdPromise"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "inheritAdPrototype"
+  },
+  {
+    "name": "cancel",
+    "newName": "cancelAd"
+  },
+  {
+    "name": "resetGeneratorState",
+    "newName": "resetAdGeneratorState"
+  },
+  {
+    "name": "rejectPromise",
+    "newName": "rejectAdPromise"
+  },
+  {
+    "name": "dispatchUnhandledRejection",
+    "newName": "dispatchAdUnhandledRejection"
+  },
+  {
+    "name": "executeCallbacks",
+    "newName": "executeAdCallbacks"
+  },
+  {
+    "name": "assertNotFired",
+    "newName": "assertAdNotFired"
+  },
+  {
+    "name": "resetGeneratorState",
+    "newName": "resetAdGeneratorState"
+  },
+  {
+    "name": "rejectPromise",
+    "newName": "rejectAdPromise"
+  },
+  {
+    "name": "addToCallbackQueueWithoutContext",
+    "newName": "addToAdCallbackQueueWithoutContext"
+  },
+  {
+    "name": "addToCallbackQueue",
+    "newName": "addToAdCallbackQueue"
+  },
+  {
+    "name": "then",
+    "newName": "thenAd"
+  },
+  {
+    "name": "hasCallbacks",
+    "newName": "hasAdCallbacks"
+  },
+  {
+    "name": "callbackMarker",
+    "newName": "adCallbackMarker"
+  },
+  {
+    "name": "processCallbackQueue",
+    "newName": "processAdCallbackQueue"
+  },
+  {
+    "name": "AlreadyCalledError",
+    "newName": "AdAlreadyCalledError"
+  },
+  {
+    "name": "CanceledError",
+    "newName": "AdCanceledError"
+  },
+  {
+    "name": "TimeoutError",
+    "newName": "AdTimeoutError"
+  },
+  {
+    "name": "timeoutRegistry",
+    "newName": "adTimeoutRegistry"
+  },
+  {
+    "name": "CursorRequest",
+    "newName": "AdCursorRequest"
+  },
+  {
+    "name": "AdEnvironmentConfig",
+    "newName": "AdEnvironmentConfig"
+  },
+  {
+    "name": "next",
+    "newName": "nextAd"
+  },
+  {
+    "name": "removeElement",
+    "newName": "removeAdElement"
+  },
+  {
+    "name": "getAdStateValue",
+    "newName": "fetchAdStateValue"
+  },
+  {
+    "name": "openCursor",
+    "newName": "openAdCursor"
+  },
+  {
+    "name": "IndexRequest",
+    "newName": "AdIndexRequest"
+  },
+  {
+    "name": "getAdName",
+    "newName": "fetchAdName"
+  },
+  {
+    "name": "getIndex",
+    "newName": "fetchAdIndex"
+  },
+  {
+    "name": "openIndexCursor",
+    "newName": "openAdIndexCursor"
+  },
+  {
+    "name": "ObjectStoreRequest",
+    "newName": "AdObjectStoreRequest"
+  },
+  {
+    "name": "executeStoreRequest",
+    "newName": "executeAdStoreRequest"
+  },
+  {
+    "name": "putValue",
+    "newName": "putAdValue"
+  },
+  {
+    "name": "addParameter",
+    "newName": "addAdParameter"
+  },
+  {
+    "name": "removeElement",
+    "newName": "removeAdElement"
+  },
+  {
+    "name": "get",
+    "newName": "fetchAd"
+  },
+  {
+    "name": "clearAll",
+    "newName": "clearAllAds"
+  },
+  {
+    "name": "getIndexTimestamp",
+    "newName": "fetchAdIndexTimestamp"
+  },
+  {
+    "name": "TransactionRequest",
+    "newName": "AdTransactionRequest"
+  },
+  {
+    "name": "fetchData",
+    "newName": "fetchAdData"
+  },
+  {
+    "name": "commit",
+    "newName": "commitAdTransaction"
+  },
+  {
+    "name": "wait",
+    "newName": "waitForAdTransaction"
+  },
+  {
+    "name": "abort",
+    "newName": "abortAdTransaction"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "fetchAdEnvironment"
+  },
+  {
+    "name": "DatabaseRequest",
+    "newName": "AdDatabaseRequest"
+  },
+  {
+    "name": "undefinedVariable1",
+    "newName": "isAdCacheOpen"
+  },
+  {
+    "name": "xf",
+    "newName": "handleAdError"
+  },
+  {
+    "name": "filterAdProperties",
+    "newName": "filterAdProperties"
+  },
+  {
+    "name": "closeCache",
+    "newName": "closeAdCache"
+  },
+  {
+    "name": "getUniqueId",
+    "newName": "fetchAdUniqueId"
+  },
+  {
+    "name": "getAdName",
+    "newName": "fetchAdName"
+  },
+  {
+    "name": "getAdManifestVersion",
+    "newName": "fetchAdManifestVersion"
+  },
+  {
+    "name": "AB",
+    "newName": "createAdTransaction"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "fetchAdEnvironment"
+  },
+  {
+    "name": "zB",
+    "newName": "AdVersionChangeEvent"
+  },
+  {
+    "name": "BB",
+    "newName": "openAdDatabase"
+  },
+  {
+    "name": "CB",
+    "newName": "AdCacheManager"
+  },
+  {
+    "name": "initializeMraid",
+    "newName": "initializeAdCache"
+  },
+  {
+    "name": "getUniqueId",
+    "newName": "fetchAdUniqueId"
+  },
+  {
+    "name": "closeCache",
+    "newName": "closeAdCache"
+  },
+  {
+    "name": "EB",
+    "newName": "estimateAdStorageUsage"
+  },
+  {
+    "name": "containsElement",
+    "newName": "containsAdElement"
+  },
+  {
+    "name": "isIpod",
+    "newName": "storeAdInCache"
+  },
+  {
+    "name": "tasks",
+    "newName": "setupAdObjectStore"
+  },
+  {
+    "name": "DB",
+    "newName": "clearOldAds"
+  },
+  {
+    "name": "FB",
+    "newName": "parseAdUri"
+  },
+  {
+    "name": "HB",
+    "newName": "generateAdCacheKey"
+  },
+  {
+    "name": "GB",
+    "newName": "fetchAdFromCache"
+  },
+  {
+    "name": "deleteVideoChunk",
+    "newName": "deleteAdVideoChunk"
+  },
+  {
+    "name": "VideoChunkLoader",
+    "newName": "AdVideoChunkLoader"
+  },
+  {
+    "name": "dispatchUnhandledRejection",
+    "newName": "dispatchAdUnhandledRejection"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "isAdFulfilled"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "handleAdThenable"
+  },
+  {
+    "name": "checkAndHandleLoadingState",
+    "newName": "checkAdLoadingState"
+  },
+  {
+    "name": "wrapGeneratorToPromise",
+    "newName": "wrapAdGeneratorToPromise"
+  },
+  {
+    "name": "generatorYield",
+    "newName": "adGeneratorYield"
+  },
+  {
+    "name": "loadVideoChunk",
+    "newName": "loadAdVideoChunk"
+  },
+  {
+    "name": "loadVideoChunkFromCache",
+    "newName": "loadAdVideoChunkFromCache"
+  },
+  {
+    "name": "processVideoChunkData",
+    "newName": "processAdVideoChunkData"
+  },
+  {
+    "name": "handleFallbackAndIncrementRetry",
+    "newName": "handleAdFallbackAndRetry"
+  },
+  {
+    "name": "setParameter",
+    "newName": "setAdUriParameter"
+  },
+  {
+    "name": "deleteVideoChunk",
+    "newName": "deleteAdVideoChunk"
+  },
+  {
+    "name": "dispatchEvent",
+    "newName": "dispatchAdEvent"
+  },
+  {
+    "name": "createCustomEvent",
+    "newName": "createAdCustomEvent"
+  },
+  {
+    "name": "getGeneratorException",
+    "newName": "getAdGeneratorException"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "isThenableObject"
+  },
+  {
+    "name": "Lm",
+    "newName": "isAdLm"
+  },
+  {
+    "name": "Pu",
+    "newName": "clearAdTimeout"
+  },
+  {
+    "name": "Gu",
+    "newName": "adEventListener"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  }
+]

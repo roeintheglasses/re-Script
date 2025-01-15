@@ -1,0 +1,446 @@
+[
+  {
+    "name": "t",
+    "newName": "eventType"
+  },
+  {
+    "name": "GJ",
+    "newName": "handleAdCompletion"
+  },
+  {
+    "name": "EJ",
+    "newName": "handleAsyncPlayback"
+  },
+  {
+    "name": "CJ",
+    "newName": "invokeCallback"
+  },
+  {
+    "name": "markAsCompleted",
+    "newName": "adInstanceManager"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "adManager"
+  },
+  {
+    "name": "value",
+    "newName": "callback"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "adConfig"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "adManagerPrototype"
+  },
+  {
+    "name": "zone",
+    "newName": "AdManager"
+  },
+  {
+    "name": "JJ",
+    "newName": "createAdDisplayOptions"
+  },
+  {
+    "name": "findEntry",
+    "newName": "adElement"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "adTasks"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "adNode"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "adTaskCounter"
+  },
+  {
+    "name": "isIphone",
+    "newName": "playOnIphone"
+  },
+  {
+    "name": "identityFunction",
+    "newName": "adIdentity"
+  },
+  {
+    "name": "logError",
+    "newName": "errorLogger"
+  },
+  {
+    "name": "handleAsync",
+    "newName": "asyncHandler"
+  },
+  {
+    "name": "isDone",
+    "newName": "adCompletionTimer"
+  },
+  {
+    "name": "dispatchUnhandledRejection",
+    "newName": "handleRejection"
+  },
+  {
+    "name": "currentTime",
+    "newName": "currentAdTime"
+  },
+  {
+    "name": "shouldRestorePlaybackStateAfterAdBreak",
+    "newName": "restorePlaybackState"
+  },
+  {
+    "name": "tasks",
+    "newName": "adTasks"
+  },
+  {
+    "name": "configureAdsManager",
+    "newName": "setupAdsManager"
+  },
+  {
+    "name": "initialize",
+    "newName": "initializeAdManager"
+  },
+  {
+    "name": "isEmpty",
+    "newName": "isTaskQueueEmpty"
+  },
+  {
+    "name": "settlePromise",
+    "newName": "settleAdPromise"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "resolveAdPromise"
+  },
+  {
+    "name": "createDeferred",
+    "newName": "createAdDeferred"
+  },
+  {
+    "name": "tryCall",
+    "newName": "tryAdCall"
+  },
+  {
+    "name": "getGeneratorException",
+    "newName": "getAdException"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "adFulfilled"
+  },
+  {
+    "name": "totalAdBufferingTime",
+    "newName": "adBufferingTime"
+  },
+  {
+    "name": "resize",
+    "newName": "resizeAd"
+  },
+  {
+    "name": "adTagUrl",
+    "newName": "adTagUrl"
+  },
+  {
+    "name": "adInstanceManager",
+    "newName": "adInstanceManager"
+  },
+  {
+    "name": "imaSdkInstanceSingleton",
+    "newName": "imaSdkInstance"
+  },
+  {
+    "name": "getVolume",
+    "newName": "getAdVolume"
+  },
+  {
+    "name": "setVolume",
+    "newName": "setAdVolume"
+  },
+  {
+    "name": "volume",
+    "newName": "adVolume"
+  },
+  {
+    "name": "paused",
+    "newName": "pauseAd"
+  },
+  {
+    "name": "resume",
+    "newName": "resumeAd"
+  },
+  {
+    "name": "destroy",
+    "newName": "destroyAd"
+  },
+  {
+    "name": "getCuePoints",
+    "newName": "getAdCuePoints"
+  },
+  {
+    "name": "initializeTransformations",
+    "newName": "initializeAdTransformations"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "getAdEnvironment"
+  },
+  {
+    "name": "setAdPropertyFromString",
+    "newName": "setAdPropertyFromString"
+  },
+  {
+    "name": "focus",
+    "newName": "focusAd"
+  },
+  {
+    "name": "HJ",
+    "newName": "handleGfpCookie"
+  },
+  {
+    "name": "supportsHtml5",
+    "newName": "supportsHtml5"
+  },
+  {
+    "name": "isAndroidNonChrome",
+    "newName": "isAndroidNonChrome"
+  },
+  {
+    "name": "resetGeneratorState",
+    "newName": "resetAdState"
+  },
+  {
+    "name": "AdConfiguration",
+    "newName": "AdConfiguration"
+  },
+  {
+    "name": "setAdPropertyFromObject",
+    "newName": "setAdPropertyFromObject"
+  },
+  {
+    "name": "updateElement",
+    "newName": "updateElement"
+  },
+  {
+    "name": "convertToInt64",
+    "newName": "convertToInt64"
+  },
+  {
+    "name": "AdCookieManager",
+    "newName": "AdCookieManager"
+  },
+  {
+    "name": "buildAdRequest",
+    "newName": "buildAdRequest"
+  },
+  {
+    "name": "setAdCookie",
+    "newName": "setAdCookie"
+  },
+  {
+    "name": "processAdCookie",
+    "newName": "processAdCookie"
+  },
+  {
+    "name": "clicked",
+    "newName": "adClicked"
+  },
+  {
+    "name": "getCurrentAd",
+    "newName": "getCurrentAd"
+  },
+  {
+    "name": "getCuePoints",
+    "newName": "getAdCuePoints"
+  },
+  {
+    "name": "destroy",
+    "newName": "destroyAd"
+  },
+  {
+    "name": "resume",
+    "newName": "resumeAd"
+  },
+  {
+    "name": "pause",
+    "newName": "pauseAd"
+  },
+  {
+    "name": "setVolume",
+    "newName": "setAdVolume"
+  },
+  {
+    "name": "getVolume",
+    "newName": "getAdVolume"
+  },
+  {
+    "name": "collapse",
+    "newName": "collapseAd"
+  },
+  {
+    "name": "expandRectangle",
+    "newName": "expandAdRectangle"
+  },
+  {
+    "name": "stopTimer",
+    "newName": "stopAdTimer"
+  },
+  {
+    "name": "resize",
+    "newName": "resizeAd"
+  },
+  {
+    "name": "startTimer",
+    "newName": "startAdTimer"
+  },
+  {
+    "name": "skip",
+    "newName": "skipAd"
+  },
+  {
+    "name": "updateAdsRenderingSettings",
+    "newName": "updateAdsRenderingSettings"
+  },
+  {
+    "name": "discardAdBreak",
+    "newName": "discardAdBreak"
+  },
+  {
+    "name": "getAdSkippableState",
+    "newName": "getAdSkippableState"
+  },
+  {
+    "name": "getRemainingTime",
+    "newName": "getRemainingAdTime"
+  },
+  {
+    "name": "isCustomClickTrackingUsed",
+    "newName": "isCustomClickTrackingUsed"
+  },
+  {
+    "name": "isCustomPlaybackUsed",
+    "newName": "isCustomPlaybackUsed"
+  },
+  {
+    "name": "initialize",
+    "newName": "initializeAdManager"
+  },
+  {
+    "name": "AdsManagerLoadedEventType",
+    "newName": "AdsManagerLoadedEventType"
+  },
+  {
+    "name": "AdsManagerLoadedEvent",
+    "newName": "AdsManagerLoadedEvent"
+  },
+  {
+    "name": "AdEvent",
+    "newName": "AdEvent"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "inheritPrototype"
+  },
+  {
+    "name": "getAdsManager",
+    "newName": "getAdsManager"
+  },
+  {
+    "name": "getUserRequestContext",
+    "newName": "getUserRequestContext"
+  },
+  {
+    "name": "defineNamespace",
+    "newName": "defineNamespace"
+  },
+  {
+    "name": "module$exports$google3$javascript$ads$interactivemedia$sdk$clientside$api$ads_manager_loaded_event",
+    "newName": "AdsManagerLoadedEventNamespace"
+  },
+  {
+    "name": "getUSPData",
+    "newName": "getUSPData"
+  },
+  {
+    "name": "USPDataHandler",
+    "newName": "USPDataHandler"
+  },
+  {
+    "name": "supportsBigInt",
+    "newName": "supportsBigInt"
+  },
+  {
+    "name": "defaultSort",
+    "newName": "defaultSort"
+  },
+  {
+    "name": "forEachElement",
+    "newName": "forEachElement"
+  },
+  {
+    "name": "parseMessageData",
+    "newName": "parseMessageData"
+  },
+  {
+    "name": "initializeUSPApiCaller",
+    "newName": "initializeUSPApiCaller"
+  },
+  {
+    "name": "tryCall",
+    "newName": "tryCall"
+  },
+  {
+    "name": "fetchUSPData",
+    "newName": "fetchUSPData"
+  },
+  {
+    "name": "WindowWrapper",
+    "newName": "WindowWrapper"
+  },
+  {
+    "name": "findPrebidJs",
+    "newName": "findPrebidJs"
+  },
+  {
+    "name": "getAdDataOrZero",
+    "newName": "getAdDataOrZero"
+  },
+  {
+    "name": "versionRegex",
+    "newName": "versionRegex"
+  },
+  {
+    "name": "globalMap",
+    "newName": "globalMap"
+  },
+  {
+    "name": "processBidResponses",
+    "newName": "processBidResponses"
+  },
+  {
+    "name": "updateAliasRegistry",
+    "newName": "updateAliasRegistry"
+  },
+  {
+    "name": "updateAdUnitCode",
+    "newName": "updateAdUnitCode"
+  },
+  {
+    "name": "updateBidRequest",
+    "newName": "updateBidRequest"
+  },
+  {
+    "name": "createBidResponseObject",
+    "newName": "createBidResponseObject"
+  },
+  {
+    "name": "createMapFunction",
+    "newName": "createMapFunction"
+  },
+  {
+    "name": "processAuctionEndEvents",
+    "newName": "processAuctionEndEvents"
+  }
+]

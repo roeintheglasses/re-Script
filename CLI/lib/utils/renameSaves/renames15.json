@@ -1,0 +1,270 @@
+[
+  {
+    "name": "ata",
+    "newName": "adData"
+  },
+  {
+    "name": "profileData",
+    "newName": "adProfileData"
+  },
+  {
+    "name": "rejectFunction",
+    "newName": "adConfig"
+  },
+  {
+    "name": "user",
+    "newName": "adUser"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "timeDifference"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "context"
+  },
+  {
+    "name": "value",
+    "newName": "urlParams"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "versionMatch"
+  },
+  {
+    "name": "findEntry",
+    "newName": "adEntry"
+  },
+  {
+    "name": "resolveFunction",
+    "newName": "resolveAdFunction"
+  },
+  {
+    "name": "emptyString",
+    "newName": "emptyUrlString"
+  },
+  {
+    "name": "isBooleanFlag",
+    "newName": "isAdUtilityAvailable"
+  },
+  {
+    "name": "generateUrlParams",
+    "newName": "generateAdUrlParams"
+  },
+  {
+    "name": "extractVersion",
+    "newName": "extractSdkVersion"
+  },
+  {
+    "name": "determineSdkType",
+    "newName": "getSdkType"
+  },
+  {
+    "name": "sdkType",
+    "newName": "sdkIdentifier"
+  },
+  {
+    "name": "sdkVersion",
+    "newName": "sdkReleaseVersion"
+  },
+  {
+    "name": "generateErrorObject",
+    "newName": "generateAdErrorObject"
+  },
+  {
+    "name": "isCustomMetricViewable",
+    "newName": "isCustomMetricVisible"
+  },
+  {
+    "name": "getMetricType",
+    "newName": "getAdMetricType"
+  },
+  {
+    "name": "metricNames",
+    "newName": "adMetricNames"
+  },
+  {
+    "name": "metricValidators",
+    "newName": "adMetricValidators"
+  },
+  {
+    "name": "ProfileMetrics",
+    "newName": "AdProfileMetrics"
+  },
+  {
+    "name": "parseCustomMetrics",
+    "newName": "parseAdCustomMetrics"
+  },
+  {
+    "name": "calculateMetricValue",
+    "newName": "calculateAdMetricValue"
+  },
+  {
+    "name": "CustomMetric",
+    "newName": "AdCustomMetric"
+  },
+  {
+    "name": "AdDataParser",
+    "newName": "AdParser"
+  },
+  {
+    "name": "ViewabilityMeasurement",
+    "newName": "AdViewabilityMeasurement"
+  },
+  {
+    "name": "MeasurementStrategy",
+    "newName": "AdMeasurementStrategy"
+  },
+  {
+    "name": "ViewableImpressionMeasurement",
+    "newName": "ViewableAdImpressionMeasurement"
+  },
+  {
+    "name": "MeasurableImpressionMeasurement",
+    "newName": "MeasurableAdImpressionMeasurement"
+  },
+  {
+    "name": "StrategyFactory",
+    "newName": "AdStrategyFactory"
+  },
+  {
+    "name": "ViewabilityQuery",
+    "newName": "AdViewabilityQuery"
+  },
+  {
+    "name": "ViewabilityService",
+    "newName": "AdViewabilityService"
+  },
+  {
+    "name": "NativeViewabilityQuery",
+    "newName": "NativeAdViewabilityQuery"
+  },
+  {
+    "name": "NativeViewabilityService",
+    "newName": "NativeAdViewabilityService"
+  },
+  {
+    "name": "adService",
+    "newName": "AdService"
+  },
+  {
+    "name": "addMraidEventListener",
+    "newName": "addMraidAdEventListener"
+  },
+  {
+    "name": "initializeMraid",
+    "newName": "initializeMraidAd"
+  },
+  {
+    "name": "setupMraid",
+    "newName": "setupMraidAd"
+  },
+  {
+    "name": "checkMraidFeatures",
+    "newName": "checkMraidAdFeatures"
+  },
+  {
+    "name": "startMraidMeasurement",
+    "newName": "startMraidAdMeasurement"
+  },
+  {
+    "name": "configureMraidExperiments",
+    "newName": "configureMraidAdExperiments"
+  },
+  {
+    "name": "removeMraidEventListener",
+    "newName": "removeMraidAdEventListener"
+  },
+  {
+    "name": "onMraidReady",
+    "newName": "onMraidAdReady"
+  },
+  {
+    "name": "initializeAdDisplayContainer",
+    "newName": "initializeAdContainer"
+  },
+  {
+    "name": "enableManualVideoAdBreaks",
+    "newName": "enableManualAdBreaks"
+  },
+  {
+    "name": "FeatureToggle",
+    "newName": "AdFeatureToggle"
+  },
+  {
+    "name": "AdEventReporter",
+    "newName": "AdReporter"
+  },
+  {
+    "name": "Et",
+    "newName": "createAdEvent"
+  },
+  {
+    "name": "processAdTrackingInfo",
+    "newName": "processAdTrackingData"
+  },
+  {
+    "name": "getDefaultAdProviders",
+    "newName": "getAdProviders"
+  },
+  {
+    "name": "initializeAdReporting",
+    "newName": "initializeAdReportingService"
+  },
+  {
+    "name": "finalizeAdReporting",
+    "newName": "finalizeAdReportingService"
+  },
+  {
+    "name": "getAdReportingMode",
+    "newName": "getAdReportingMode"
+  },
+  {
+    "name": "reportAdEvent",
+    "newName": "sendAdEvent"
+  },
+  {
+    "name": "resetAdProviders",
+    "newName": "resetAdProviders"
+  },
+  {
+    "name": "reportAdStart",
+    "newName": "sendAdStartEvent"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "adEventReporterPrototype"
+  },
+  {
+    "name": "trackAdEventByType",
+    "newName": "trackAdEvent"
+  },
+  {
+    "name": "initializeAdSdk",
+    "newName": "initializeAdSdkService"
+  },
+  {
+    "name": "createAdElement",
+    "newName": "createAdElementInstance"
+  },
+  {
+    "name": "validateAdProperties",
+    "newName": "validateAdProperties"
+  },
+  {
+    "name": "AudioAudibleEvent",
+    "newName": "AudibleAdEvent"
+  },
+  {
+    "name": "AudioMeasurableEvent",
+    "newName": "MeasurableAdEvent"
+  },
+  {
+    "name": "AudioEventProcessor",
+    "newName": "AdAudioEventProcessor"
+  },
+  {
+    "name": "AdEventValidator",
+    "newName": "AdEventValidator"
+  }
+]

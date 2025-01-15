@@ -1,0 +1,330 @@
+[
+  {
+    "name": "generatorWrapper",
+    "newName": "iterator"
+  },
+  {
+    "name": "value",
+    "newName": "currentValue"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "randomValue"
+  },
+  {
+    "name": "findEntry",
+    "newName": "index"
+  },
+  {
+    "name": "table",
+    "newName": "BaseClass"
+  },
+  {
+    "name": "tryCall",
+    "newName": "AdEnvironment"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "timeoutWrapper"
+  },
+  {
+    "name": "tasks",
+    "newName": "objectUrl"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "eventListener"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "sourceOpenHandler"
+  },
+  {
+    "name": "uuidCharacters",
+    "newName": "uuidCharset"
+  },
+  {
+    "name": "generateUUID",
+    "newName": "generateUuid"
+  },
+  {
+    "name": "CustomUri",
+    "newName": "CustomUrl"
+  },
+  {
+    "name": "parseUriParameters",
+    "newName": "parseUrlParams"
+  },
+  {
+    "name": "getOrdParameter",
+    "newName": "getOrdParam"
+  },
+  {
+    "name": "setOrdParameter",
+    "newName": "setOrdParam"
+  },
+  {
+    "name": "buildUriString",
+    "newName": "buildUrlString"
+  },
+  {
+    "name": "getUriParameters",
+    "newName": "getUrlParams"
+  },
+  {
+    "name": "isDoubleClickAd",
+    "newName": "isDoubleClickAdRequest"
+  },
+  {
+    "name": "isBidRequest",
+    "newName": "isBidAdRequest"
+  },
+  {
+    "name": "isGoogleAdsRequest",
+    "newName": "isGoogleAdsAdRequest"
+  },
+  {
+    "name": "isGampadRequest",
+    "newName": "isGampadAdRequest"
+  },
+  {
+    "name": "isAdvRequest",
+    "newName": "isAdvAdRequest"
+  },
+  {
+    "name": "updateMaxSize",
+    "newName": "VastErrorCodes"
+  },
+  {
+    "name": "AdError",
+    "newName": "AdErrorClass"
+  },
+  {
+    "name": "carJsUrl",
+    "newName": "carJsUrlList"
+  },
+  {
+    "name": "identifyAdServer",
+    "newName": "identifyAdServerType"
+  },
+  {
+    "name": "extractPublisherId",
+    "newName": "getPublisherId"
+  },
+  {
+    "name": "extractSlotNameOrIdFromUrl",
+    "newName": "getSlotNameOrId"
+  },
+  {
+    "name": "PrivacySettings",
+    "newName": "PrivacySettingsClass"
+  },
+  {
+    "name": "ConfigSettings",
+    "newName": "ConfigSettingsClass"
+  },
+  {
+    "name": "isBooleanConfigEnabled",
+    "newName": "isConfigEnabled"
+  },
+  {
+    "name": "getVideoElementFakeDuration",
+    "newName": "getFakeVideoDuration"
+  },
+  {
+    "name": "getForcedExperimentIds",
+    "newName": "getForcedExperiments"
+  },
+  {
+    "name": "adType",
+    "newName": "AdType"
+  },
+  {
+    "name": "sanitizePlayerTypeOrVersion",
+    "newName": "sanitizePlayerInfo"
+  },
+  {
+    "name": "getConfigSettingsInstance",
+    "newName": "getConfigSettings"
+  },
+  {
+    "name": "generateAdDisplayRequestConfig",
+    "newName": "generateAdDisplayConfig"
+  },
+  {
+    "name": "imaSdkInstanceSingleton",
+    "newName": "imaSdkInstance"
+  },
+  {
+    "name": "AdRequestBuilder",
+    "newName": "AdRequestBuilderClass"
+  },
+  {
+    "name": "parseUrlParameters",
+    "newName": "parseUrlParamsToObject"
+  },
+  {
+    "name": "AdRequest",
+    "newName": "AdRequestClass"
+  },
+  {
+    "name": "generateAdRequest",
+    "newName": "generateAdRequestInstance"
+  },
+  {
+    "name": "processGdprConsent",
+    "newName": "processGdprConsentData"
+  },
+  {
+    "name": "getPropertyValue",
+    "newName": "getObjectPropertyValue"
+  },
+  {
+    "name": "isLimitedAdsMode",
+    "newName": "isLimitedAdsModeEnabled"
+  },
+  {
+    "name": "isLimitedAdsModeEnabled",
+    "newName": "isLimitedAdsModeActive"
+  },
+  {
+    "name": "isGdprApplicable",
+    "newName": "isGdprConsentApplicable"
+  },
+  {
+    "name": "buildAdRequest",
+    "newName": "buildAdRequestInstance"
+  },
+  {
+    "name": "UserAgentData",
+    "newName": "UserAgentDataClass"
+  },
+  {
+    "name": "HighEntropyValues",
+    "newName": "HighEntropyValuesClass"
+  },
+  {
+    "name": "setArchitecture",
+    "newName": "setAdArchitecture"
+  },
+  {
+    "name": "setBitness",
+    "newName": "setAdBitness"
+  },
+  {
+    "name": "setIsMobile",
+    "newName": "setAdIsMobile"
+  },
+  {
+    "name": "setModel",
+    "newName": "setAdModel"
+  },
+  {
+    "name": "setPlatform",
+    "newName": "setAdPlatform"
+  },
+  {
+    "name": "setPlatformVersion",
+    "newName": "setAdPlatformVersion"
+  },
+  {
+    "name": "setUaFullVersion",
+    "newName": "setAdUaFullVersion"
+  },
+  {
+    "name": "setFullVersionList",
+    "newName": "setAdFullVersionList"
+  },
+  {
+    "name": "setWow64",
+    "newName": "setAdWow64"
+  },
+  {
+    "name": "highEntropyKeys",
+    "newName": "highEntropyAdKeys"
+  },
+  {
+    "name": "getGoogleTagData",
+    "newName": "getGoogleAdTagData"
+  },
+  {
+    "name": "supportsUserAgentData",
+    "newName": "supportsUserAgentAdData"
+  },
+  {
+    "name": "getHighEntropyValues",
+    "newName": "getHighEntropyAdValues"
+  },
+  {
+    "name": "buildUserAgentData",
+    "newName": "buildUserAgentAdData"
+  },
+  {
+    "name": "fetchAndProcessUACH",
+    "newName": "fetchAndProcessUserAgentData"
+  },
+  {
+    "name": "AppSignals",
+    "newName": "AppSignalsClass"
+  },
+  {
+    "name": "getSDKVersion",
+    "newName": "getSdkVersion"
+  },
+  {
+    "name": "fetchProcessedUACH",
+    "newName": "fetchProcessedUserAgentData"
+  },
+  {
+    "name": "shouldUseCustomPlayback",
+    "newName": "shouldEnableCustomPlayback"
+  },
+  {
+    "name": "isCustomPlaybackAllowed",
+    "newName": "isCustomPlaybackEnabled"
+  },
+  {
+    "name": "isOnScreenDetectionEnabled",
+    "newName": "isScreenDetectionEnabled"
+  },
+  {
+    "name": "isTVOSOrAndroidTV",
+    "newName": "isTvOsOrAndroidTv"
+  },
+  {
+    "name": "getDeviceType",
+    "newName": "getAdDeviceType"
+  },
+  {
+    "name": "stripUrlPrefix",
+    "newName": "stripUrlPrefixFromString"
+  },
+  {
+    "name": "getEffectiveUrl",
+    "newName": "getEffectiveAdUrl"
+  },
+  {
+    "name": "isAmpPage",
+    "newName": "isAmpAdPage"
+  },
+  {
+    "name": "getAncestorOrigins",
+    "newName": "getAncestorAdOrigins"
+  },
+  {
+    "name": "getParentPageUrl",
+    "newName": "getParentAdPageUrl"
+  },
+  {
+    "name": "truncateUrl",
+    "newName": "truncateAdUrl"
+  },
+  {
+    "name": "totalAdBufferingTime",
+    "newName": "adBufferingTime"
+  },
+  {
+    "name": "defineAdEventTypes",
+    "newName": "defineAdEvents"
+  }
+]

@@ -1,0 +1,514 @@
+[
+  {
+    "name": "entry",
+    "newName": "entryData"
+  },
+  {
+    "name": "findEntry",
+    "newName": "findEntryData"
+  },
+  {
+    "name": "key",
+    "newName": "entryKey"
+  },
+  {
+    "name": "value",
+    "newName": "entryValue"
+  },
+  {
+    "name": "list",
+    "newName": "entryList"
+  },
+  {
+    "name": "writeBytes",
+    "newName": "entryWriteBytes"
+  },
+  {
+    "name": "entryNode",
+    "newName": "entryNodeData"
+  },
+  {
+    "name": "next",
+    "newName": "nextNode"
+  },
+  {
+    "name": "lastNode",
+    "newName": "lastNodeData"
+  },
+  {
+    "name": "head",
+    "newName": "headNode"
+  },
+  {
+    "name": "size",
+    "newName": "mapSize"
+  },
+  {
+    "name": "clearAll",
+    "newName": "clearAllEntries"
+  },
+  {
+    "name": "has",
+    "newName": "hasEntry"
+  },
+  {
+    "name": "get",
+    "newName": "getEntry"
+  },
+  {
+    "name": "entries",
+    "newName": "getAllEntries"
+  },
+  {
+    "name": "keys",
+    "newName": "getAllKeys"
+  },
+  {
+    "name": "values",
+    "newName": "getAllValues"
+  },
+  {
+    "name": "forEach",
+    "newName": "forEachEntry"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "createCircularLinkedNode"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "iterateOverEntries"
+  },
+  {
+    "name": "createIterator",
+    "newName": "createEntryIterator"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "entryIdCounter"
+  },
+  {
+    "name": "hasOwnPropertySafe",
+    "newName": "hasOwnPropertySafeCheck"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "CustomMapClass"
+  },
+  {
+    "name": "definePolyfill",
+    "newName": "definePolyfillFunction"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "polyfillGeneratorWrapper"
+  },
+  {
+    "name": "Math.floorRectangle",
+    "newName": "MathFloorRectangle"
+  },
+  {
+    "name": "Math.ceilRectangle",
+    "newName": "MathCeilRectangle"
+  },
+  {
+    "name": "Object.screenDimensions",
+    "newName": "ObjectScreenDimensions"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "inheritPrototypeFunction"
+  },
+  {
+    "name": "getIterator",
+    "newName": "getIteratorFunction"
+  },
+  {
+    "name": "globalObject",
+    "newName": "globalObjectReference"
+  },
+  {
+    "name": "closureLibraryBase",
+    "newName": "closureLibraryBaseNamespace"
+  },
+  {
+    "name": "globalScope",
+    "newName": "globalScopeReference"
+  },
+  {
+    "name": "defineNamespace",
+    "newName": "defineNamespaceFunction"
+  },
+  {
+    "name": "getClosureFlagValue",
+    "newName": "getClosureFlagValueFunction"
+  },
+  {
+    "name": "getFromGlobalScope",
+    "newName": "getFromGlobalScopeFunction"
+  },
+  {
+    "name": "getType",
+    "newName": "getTypeFunction"
+  },
+  {
+    "name": "isArrayLike",
+    "newName": "isArrayLikeFunction"
+  },
+  {
+    "name": "isObjectOrFunction",
+    "newName": "isObjectOrFunctionCheck"
+  },
+  {
+    "name": "getUniqueId",
+    "newName": "getUniqueIdFunction"
+  },
+  {
+    "name": "removeUniqueId",
+    "newName": "removeUniqueIdFunction"
+  },
+  {
+    "name": "uniqueIdProperty",
+    "newName": "uniqueIdPropertyKey"
+  },
+  {
+    "name": "uniqueIdCounter",
+    "newName": "uniqueIdCounterValue"
+  },
+  {
+    "name": "boundFunctionCall",
+    "newName": "boundFunctionCallMethod"
+  },
+  {
+    "name": "partialFunctionApplication",
+    "newName": "partialFunctionApplicationMethod"
+  },
+  {
+    "name": "bindOrWrapFunction",
+    "newName": "bindOrWrapFunctionMethod"
+  },
+  {
+    "name": "createFunctionWithArguments",
+    "newName": "createFunctionWithArgumentsMethod"
+  },
+  {
+    "name": "identityFunction",
+    "newName": "identityFunctionMethod"
+  },
+  {
+    "name": "CustomError",
+    "newName": "CustomErrorClass"
+  },
+  {
+    "name": "cb",
+    "newName": "cbVariable"
+  },
+  {
+    "name": "db",
+    "newName": "dbVariable"
+  },
+  {
+    "name": "hasStringPrototypeNormalize",
+    "newName": "hasStringPrototypeNormalizeCheck"
+  },
+  {
+    "name": "hasTextEncoder",
+    "newName": "hasTextEncoderCheck"
+  },
+  {
+    "name": "encodeString",
+    "newName": "encodeStringMethod"
+  },
+  {
+    "name": "deferError",
+    "newName": "deferErrorMethod"
+  },
+  {
+    "name": "endsWith",
+    "newName": "endsWithMethod"
+  },
+  {
+    "name": "isEmptyOrWhitespace",
+    "newName": "isEmptyOrWhitespaceMethod"
+  },
+  {
+    "name": "trimString",
+    "newName": "trimStringMethod"
+  },
+  {
+    "name": "includesString",
+    "newName": "includesStringMethod"
+  },
+  {
+    "name": "includesIgnoreCase",
+    "newName": "includesIgnoreCaseMethod"
+  },
+  {
+    "name": "compareVersions",
+    "newName": "compareVersionsMethod"
+  },
+  {
+    "name": "compareValues",
+    "newName": "compareValuesMethod"
+  },
+  {
+    "name": "hasNavigatorUserAgentData",
+    "newName": "hasNavigatorUserAgentDataCheck"
+  },
+  {
+    "name": "unknownVariable",
+    "newName": "unknownVariableCheck"
+  },
+  {
+    "name": "getUserAgent",
+    "newName": "getUserAgentMethod"
+  },
+  {
+    "name": "userAgentData",
+    "newName": "userAgentDataVariable"
+  },
+  {
+    "name": "navigatorReference",
+    "newName": "navigatorReferenceVariable"
+  },
+  {
+    "name": "includesBrand",
+    "newName": "includesBrandMethod"
+  },
+  {
+    "name": "handleAsync",
+    "newName": "handleAsyncMethod"
+  },
+  {
+    "name": "hasBrands",
+    "newName": "hasBrandsMethod"
+  },
+  {
+    "name": "isOperaBrowser",
+    "newName": "isOperaBrowserMethod"
+  },
+  {
+    "name": "isInternetExplorer",
+    "newName": "isInternetExplorerMethod"
+  },
+  {
+    "name": "isFirefox",
+    "newName": "isFirefoxMethod"
+  },
+  {
+    "name": "isSafari",
+    "newName": "isSafariMethod"
+  },
+  {
+    "name": "isChromiumBased",
+    "newName": "isChromiumBasedMethod"
+  },
+  {
+    "name": "hasPlatform",
+    "newName": "hasPlatformMethod"
+  },
+  {
+    "name": "isAndroid",
+    "newName": "isAndroidMethod"
+  },
+  {
+    "name": "isIphone",
+    "newName": "isIphoneMethod"
+  },
+  {
+    "name": "isMacOS",
+    "newName": "isMacOSMethod"
+  },
+  {
+    "name": "indexOfChar",
+    "newName": "indexOfCharMethod"
+  },
+  {
+    "name": "forEachElement",
+    "newName": "forEachElementMethod"
+  },
+  {
+    "name": "forEachElementReverse",
+    "newName": "forEachElementReverseMethod"
+  },
+  {
+    "name": "filterElements",
+    "newName": "filterElementsMethod"
+  },
+  {
+    "name": "mapElements",
+    "newName": "mapElementsMethod"
+  },
+  {
+    "name": "reduceElements",
+    "newName": "reduceElementsMethod"
+  },
+  {
+    "name": "someElement",
+    "newName": "someElementMethod"
+  },
+  {
+    "name": "findElement",
+    "newName": "findElementMethod"
+  },
+  {
+    "name": "findElementIndex",
+    "newName": "findElementIndexMethod"
+  },
+  {
+    "name": "findLastElement",
+    "newName": "findLastElementMethod"
+  },
+  {
+    "name": "findLastElementIndex",
+    "newName": "findLastElementIndexMethod"
+  },
+  {
+    "name": "containsElement",
+    "newName": "containsElementMethod"
+  },
+  {
+    "name": "removeElement",
+    "newName": "removeElementMethod"
+  },
+  {
+    "name": "removeElementAtIndex",
+    "newName": "removeElementAtIndexMethod"
+  },
+  {
+    "name": "removeElementsByCondition",
+    "newName": "removeElementsByConditionMethod"
+  },
+  {
+    "name": "concatArrays",
+    "newName": "concatArraysMethod"
+  },
+  {
+    "name": "copyArray",
+    "newName": "copyArrayMethod"
+  },
+  {
+    "name": "uniqueElements",
+    "newName": "uniqueElementsMethod"
+  },
+  {
+    "name": "sortArray",
+    "newName": "sortArrayMethod"
+  },
+  {
+    "name": "defaultSort",
+    "newName": "defaultSortMethod"
+  },
+  {
+    "name": "createEmptyStringsArray",
+    "newName": "createEmptyStringsArrayMethod"
+  },
+  {
+    "name": "noopFunction",
+    "newName": "noopFunctionMethod"
+  },
+  {
+    "name": "tryNoopFunction",
+    "newName": "tryNoopFunctionMethod"
+  },
+  {
+    "name": "getCachedValue",
+    "newName": "getCachedValueMethod"
+  },
+  {
+    "name": "userAgentVersion",
+    "newName": "userAgentVersionVariable"
+  },
+  {
+    "name": "isOpera",
+    "newName": "isOperaCheck"
+  },
+  {
+    "name": "isIE",
+    "newName": "isIECheck"
+  },
+  {
+    "name": "isEdge",
+    "newName": "isEdgeCheck"
+  },
+  {
+    "name": "isGecko",
+    "newName": "isGeckoCheck"
+  },
+  {
+    "name": "isWebKit",
+    "newName": "isWebKitCheck"
+  },
+  {
+    "name": "isMacOS",
+    "newName": "isMacOSCheck"
+  },
+  {
+    "name": "isAndroid",
+    "newName": "isAndroidCheck"
+  },
+  {
+    "name": "isIphone",
+    "newName": "isIphoneCheck"
+  },
+  {
+    "name": "isIpad",
+    "newName": "isIpadCheck"
+  },
+  {
+    "name": "isIpod",
+    "newName": "isIpodCheck"
+  },
+  {
+    "name": "isIphoneIpadIpod",
+    "newName": "isIphoneIpadIpodCheck"
+  },
+  {
+    "name": "browserVersion",
+    "newName": "browserVersionVariable"
+  },
+  {
+    "name": "executeCallbacks",
+    "newName": "executeCallbacksMethod"
+  },
+  {
+    "name": "currentDocument",
+    "newName": "currentDocumentVariable"
+  },
+  {
+    "name": "finalBrowserVersion",
+    "newName": "finalBrowserVersionVariable"
+  },
+  {
+    "name": "browserFeatures",
+    "newName": "browserFeaturesVariable"
+  },
+  {
+    "name": "supportsHtml5",
+    "newName": "supportsHtml5Method"
+  },
+  {
+    "name": "isAndroidBrowser",
+    "newName": "isAndroidBrowserCheck"
+  },
+  {
+    "name": "isAndroidNonChrome",
+    "newName": "isAndroidNonChromeCheck"
+  },
+  {
+    "name": "isIos",
+    "newName": "isIosCheck"
+  },
+  {
+    "name": "base64AlphabetVariants",
+    "newName": "base64AlphabetVariantsVariable"
+  },
+  {
+    "name": "base64AlphabetIndex",
+    "newName": "base64AlphabetIndexVariable"
+  },
+  {
+    "name": "base64Encode",
+    "newName": "base64EncodeMethod"
+  }
+]

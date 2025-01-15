@@ -1,0 +1,230 @@
+[
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "delayedExecution"
+  },
+  {
+    "name": "createIterator",
+    "newName": "createArrayIterator"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "array"
+  },
+  {
+    "name": "value",
+    "newName": "index"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "propertyDescriptor"
+  },
+  {
+    "name": "definePropertyPolyfill",
+    "newName": "defineProperty"
+  },
+  {
+    "name": "findGlobalObject",
+    "newName": "getGlobalObject"
+  },
+  {
+    "name": "globalObject",
+    "newName": "global"
+  },
+  {
+    "name": "definePolyfill",
+    "newName": "defineOrUpdatePolyfill"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "symbolPrefix"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "symbolDescription"
+  },
+  {
+    "name": "findEntry",
+    "newName": "subObject"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "SymbolConstructor"
+  },
+  {
+    "name": "identityFunction",
+    "newName": "identity"
+  },
+  {
+    "name": "getIterator",
+    "newName": "getIterableIterator"
+  },
+  {
+    "name": "toArray",
+    "newName": "convertToArray"
+  },
+  {
+    "name": "hasOwnPropertySafe",
+    "newName": "safeHasOwnProperty"
+  },
+  {
+    "name": "assignPolyfill",
+    "newName": "assignProperties"
+  },
+  {
+    "name": "setPrototypeOfPolyfill",
+    "newName": "setPrototypeOf"
+  },
+  {
+    "name": "createObjectPolyfill",
+    "newName": "createObject"
+  },
+  {
+    "name": "constructReflect",
+    "newName": "reflectConstruct"
+  },
+  {
+    "name": "adData",
+    "newName": "isProtoSupported"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "inheritFrom"
+  },
+  {
+    "name": "Generator",
+    "newName": "AsyncGenerator"
+  },
+  {
+    "name": "resetGeneratorState",
+    "newName": "resetAsyncGeneratorState"
+  },
+  {
+    "name": "handleGeneratorError",
+    "newName": "handleAsyncGeneratorError"
+  },
+  {
+    "name": "generatorYield",
+    "newName": "yieldAsyncGenerator"
+  },
+  {
+    "name": "getGeneratorException",
+    "newName": "getAsyncGeneratorException"
+  },
+  {
+    "name": "GeneratorFunctionConstructor",
+    "newName": "AsyncGeneratorFunction"
+  },
+  {
+    "name": "generatorReturn",
+    "newName": "returnAsyncGenerator"
+  },
+  {
+    "name": "handleIteratorResult",
+    "newName": "handleAsyncIteratorResult"
+  },
+  {
+    "name": "finalizeGenerator",
+    "newName": "finalizeAsyncGenerator"
+  },
+  {
+    "name": "GeneratorExecutor",
+    "newName": "AsyncGeneratorExecutor"
+  },
+  {
+    "name": "executeGeneratorAsPromise",
+    "newName": "executeAsyncGeneratorAsPromise"
+  },
+  {
+    "name": "wrapGeneratorToPromise",
+    "newName": "wrapAsyncGeneratorToPromise"
+  },
+  {
+    "name": "sliceArguments",
+    "newName": "sliceFunctionArguments"
+  },
+  {
+    "name": "value",
+    "newName": "setTimeoutFunction"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "PromiseConstructor"
+  },
+  {
+    "name": "findEntry",
+    "newName": "resolveFunction"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "PromiseExecutor"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "microtaskQueue"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "promiseState"
+  },
+  {
+    "name": "key",
+    "newName": "promiseResult"
+  },
+  {
+    "name": "entry",
+    "newName": "promiseHandler"
+  },
+  {
+    "name": "currentEntry",
+    "newName": "promiseError"
+  },
+  {
+    "name": "foundEntry",
+    "newName": "promiseInstance"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "taskQueue"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "weakMapKey"
+  },
+  {
+    "name": "key",
+    "newName": "weakMapInstance"
+  },
+  {
+    "name": "value",
+    "newName": "mapInstance"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "MapConstructor"
+  },
+  {
+    "name": "findEntry",
+    "newName": "mapEntry"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "mapSentinel"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "mapCounter"
+  },
+  {
+    "name": "key",
+    "newName": "mapKey"
+  },
+  {
+    "name": "currentEntry",
+    "newName": "mapIterator"
+  },
+  {
+    "name": "foundEntry",
+    "newName": "mapResult"
+  }
+]

@@ -1,0 +1,590 @@
+[
+  {
+    "name": "generatorWrapper",
+    "newName": "adManager"
+  },
+  {
+    "name": "value",
+    "newName": "adData"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "adMap"
+  },
+  {
+    "name": "findEntry",
+    "newName": "entryIterator"
+  },
+  {
+    "name": "iterateEntries",
+    "newName": "entry"
+  },
+  {
+    "name": "createCircularNode",
+    "newName": "circularNode"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "adIdCounter"
+  },
+  {
+    "name": "key",
+    "newName": "adKey"
+  },
+  {
+    "name": "entry",
+    "newName": "adEntry"
+  },
+  {
+    "name": "getIterator",
+    "newName": "getIteratorFromMap"
+  },
+  {
+    "name": "parseData",
+    "newName": "parseAdData"
+  },
+  {
+    "name": "AdPreferenceManager",
+    "newName": "AdPreferences"
+  },
+  {
+    "name": "AdIdManager",
+    "newName": "AdIdentifiers"
+  },
+  {
+    "name": "getAdPropertyNumericValue",
+    "newName": "getAdNumericValue"
+  },
+  {
+    "name": "getAdPropertyNumeric",
+    "newName": "getAdNumericProperty"
+  },
+  {
+    "name": "addIdToSet",
+    "newName": "addAdIdToSet"
+  },
+  {
+    "name": "toArray",
+    "newName": "convertToArray"
+  },
+  {
+    "name": "excludedAdTypes",
+    "newName": "excludedAdTypesList"
+  },
+  {
+    "name": "AdManager",
+    "newName": "AdController"
+  },
+  {
+    "name": "sendAdRequest",
+    "newName": "requestAd"
+  },
+  {
+    "name": "SessionStorage",
+    "newName": "SessionStorageSingleton"
+  },
+  {
+    "name": "MessageBody",
+    "newName": "AdMessageBody"
+  },
+  {
+    "name": "verifyCondition",
+    "newName": "validateCondition"
+  },
+  {
+    "name": "fetchData",
+    "newName": "fetchAdData"
+  },
+  {
+    "name": "TagSessionMetadata",
+    "newName": "AdSessionTags"
+  },
+  {
+    "name": "recordAdEvent",
+    "newName": "logAdEvent"
+  },
+  {
+    "name": "modifyAdProperty",
+    "newName": "updateAdProperty"
+  },
+  {
+    "name": "rf",
+    "newName": "checkAdProperty"
+  },
+  {
+    "name": "ConfigField",
+    "newName": "AdConfigField"
+  },
+  {
+    "name": "getAdIds",
+    "newName": "getAdIdentifiersList"
+  },
+  {
+    "name": "markInitializationDone",
+    "newName": "setInitializationComplete"
+  },
+  {
+    "name": "registerAdFunctions",
+    "newName": "initializeAdFunctions"
+  },
+  {
+    "name": "registerDataHandlers",
+    "newName": "initializeDataHandlers"
+  },
+  {
+    "name": "initializeAdChecks",
+    "newName": "runAdChecks"
+  },
+  {
+    "name": "generatePageViewId",
+    "newName": "generatePageViewIdentifier"
+  },
+  {
+    "name": "configFunctions",
+    "newName": "configurationFunctions"
+  },
+  {
+    "name": "secureRandom",
+    "newName": "generateSecureRandom"
+  },
+  {
+    "name": "hashString",
+    "newName": "hashAdString"
+  },
+  {
+    "name": "filterInvalidAdRequests",
+    "newName": "removeInvalidAdRequests"
+  },
+  {
+    "name": "adErrorCodes",
+    "newName": "AdErrorCodes"
+  },
+  {
+    "name": "adWarningCodes",
+    "newName": "AdWarningCodes"
+  },
+  {
+    "name": "AdMediaTypes",
+    "newName": "MediaTypes"
+  },
+  {
+    "name": "AdVisibilityTracker",
+    "newName": "VisibilityTracker"
+  },
+  {
+    "name": "AdOpacityState",
+    "newName": "OpacityState"
+  },
+  {
+    "name": "AdEngagementState",
+    "newName": "EngagementState"
+  },
+  {
+    "name": "AdInteractionState",
+    "newName": "InteractionState"
+  },
+  {
+    "name": "AdErrorState",
+    "newName": "ErrorState"
+  },
+  {
+    "name": "AdResolutionState",
+    "newName": "ResolutionState"
+  },
+  {
+    "name": "activateAdState",
+    "newName": "enableAdState"
+  },
+  {
+    "name": "applyAdEnvironmentVariables",
+    "newName": "setAdEnvironmentVariables"
+  },
+  {
+    "name": "NumericAdStateTracker",
+    "newName": "NumericStateTracker"
+  },
+  {
+    "name": "StringAdStateTracker",
+    "newName": "StringStateTracker"
+  },
+  {
+    "name": "QueryIdAdStateTracker",
+    "newName": "QueryIdStateTracker"
+  },
+  {
+    "name": "AdStateController",
+    "newName": "AdStateManager"
+  },
+  {
+    "name": "getOrCreateAdStateTracker",
+    "newName": "initializeAdStateTracker"
+  },
+  {
+    "name": "ensureQueryIdAdState",
+    "newName": "initializeQueryIdState"
+  },
+  {
+    "name": "updateAdStateValue",
+    "newName": "setAdStateValue"
+  },
+  {
+    "name": "getAdState",
+    "newName": "retrieveAdState"
+  },
+  {
+    "name": "getAllAdStates",
+    "newName": "retrieveAllAdStates"
+  },
+  {
+    "name": "serializeAdStates",
+    "newName": "serializeAdStateData"
+  },
+  {
+    "name": "applyAdEnvironmentConfig",
+    "newName": "configureAdEnvironment"
+  },
+  {
+    "name": "configureAdStateTrackers",
+    "newName": "setupAdStateTrackers"
+  },
+  {
+    "name": "PerformanceMonitor",
+    "newName": "AdPerformanceMonitor"
+  },
+  {
+    "name": "BasicPerformanceMonitor",
+    "newName": "BasicMonitor"
+  },
+  {
+    "name": "AdvancedPerformanceMonitor",
+    "newName": "AdvancedMonitor"
+  },
+  {
+    "name": "isPerformanceMonitoringAvailable",
+    "newName": "isMonitoringAvailable"
+  },
+  {
+    "name": "VisibilityTracker",
+    "newName": "AdVisibilityTracker"
+  },
+  {
+    "name": "AdFrame",
+    "newName": "AdFrameData"
+  },
+  {
+    "name": "getAdFrames",
+    "newName": "retrieveAdFrames"
+  },
+  {
+    "name": "createAdFrameHierarchy",
+    "newName": "buildAdFrameHierarchy"
+  },
+  {
+    "name": "serializeAdFrames",
+    "newName": "serializeAdFrameData"
+  },
+  {
+    "name": "AdUtility",
+    "newName": "AdUtilityManager"
+  },
+  {
+    "name": "isAdUtilityAvailable",
+    "newName": "isUtilityAvailable"
+  },
+  {
+    "name": "getSerializedAdFrames",
+    "newName": "retrieveSerializedAdFrames"
+  },
+  {
+    "name": "noopFunction",
+    "newName": "noop"
+  },
+  {
+    "name": "GetEnvironment",
+    "newName": "getAdEnvironmentManager"
+  },
+  {
+    "name": "AdConfig",
+    "newName": "AdConfiguration"
+  },
+  {
+    "name": "PerformanceMonitor",
+    "newName": "AdPerformanceMonitor"
+  },
+  {
+    "name": "MonitorFunction",
+    "newName": "monitorAdFunction"
+  },
+  {
+    "name": "AdPerformanceMonitor",
+    "newName": "AdMonitor"
+  },
+  {
+    "name": "FlagsContainer",
+    "newName": "AdFlagsContainer"
+  },
+  {
+    "name": "GetFlags",
+    "newName": "retrieveFlags"
+  },
+  {
+    "name": "FlagEnums",
+    "newName": "FlagConstants"
+  },
+  {
+    "name": "AdManager",
+    "newName": "AdManagerInstance"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "retrieveAdEnvironment"
+  },
+  {
+    "name": "SendAdErrorReport",
+    "newName": "sendAdErrorReport"
+  },
+  {
+    "name": "ErrorReporter",
+    "newName": "AdErrorReporter"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "setTimeoutHandler"
+  },
+  {
+    "name": "createSigned64",
+    "newName": "createSignedInt64"
+  },
+  {
+    "name": "parseBooleanOrNumber",
+    "newName": "parseBooleanOrInt"
+  },
+  {
+    "name": "numericStringRegex",
+    "newName": "numericStringPattern"
+  },
+  {
+    "name": "parseIntEnum",
+    "newName": "parseIntegerEnum"
+  },
+  {
+    "name": "hasBrands",
+    "newName": "validateBrands"
+  },
+  {
+    "name": "IteratorWithTransform",
+    "newName": "TransformedIterator"
+  },
+  {
+    "name": "boundFunctionCall",
+    "newName": "boundFunction"
+  },
+  {
+    "name": "computeReferrerUrl",
+    "newName": "getReferrerUrl"
+  },
+  {
+    "name": "sendImageRequestWithRetry",
+    "newName": "retryImageRequest"
+  },
+  {
+    "name": "clearPerformanceMarks",
+    "newName": "resetPerformanceMarks"
+  },
+  {
+    "name": "Ko",
+    "newName": "defaultKo"
+  },
+  {
+    "name": "Lo",
+    "newName": "defaultLo"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "fulfilledCallback"
+  },
+  {
+    "name": "CustomError",
+    "newName": "AdCustomError"
+  },
+  {
+    "name": "isValidError",
+    "newName": "isErrorValid"
+  },
+  {
+    "name": "UrlQueryBuilder",
+    "newName": "QueryBuilder"
+  },
+  {
+    "name": "addParameter",
+    "newName": "addQueryParameter"
+  },
+  {
+    "name": "addKeyValuePair",
+    "newName": "addKeyValue"
+  },
+  {
+    "name": "buildAdUrl",
+    "newName": "constructAdUrl"
+  },
+  {
+    "name": "AdElement",
+    "newName": "AdElementClass"
+  },
+  {
+    "name": "serializeTransformations",
+    "newName": "serializeAdTransformations"
+  },
+  {
+    "name": "float64Transformation",
+    "newName": "float64Transform"
+  },
+  {
+    "name": "stringOrNumberTransformation2",
+    "newName": "stringOrNumberTransform"
+  },
+  {
+    "name": "booleanTransformation2",
+    "newName": "booleanTransform"
+  },
+  {
+    "name": "MonitorFunction",
+    "newName": "createMonitorFunction"
+  },
+  {
+    "name": "MonitorFunction",
+    "newName": "createMonitorFunction"
+  },
+  {
+    "name": "AdPerformanceMonitor",
+    "newName": "AdPerformanceMonitor"
+  },
+  {
+    "name": "FlagsContainer",
+    "newName": "FlagsContainer"
+  },
+  {
+    "name": "GetFlags",
+    "newName": "retrieveFlags"
+  },
+  {
+    "name": "FlagEnums",
+    "newName": "FlagConstants"
+  },
+  {
+    "name": "AdManager",
+    "newName": "AdManagerInstance"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "retrieveAdEnvironment"
+  },
+  {
+    "name": "SendAdErrorReport",
+    "newName": "sendAdErrorReport"
+  },
+  {
+    "name": "ErrorReporter",
+    "newName": "AdErrorReporter"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "setTimeoutHandler"
+  },
+  {
+    "name": "createSigned64",
+    "newName": "createSignedInt64"
+  },
+  {
+    "name": "parseBooleanOrNumber",
+    "newName": "parseBooleanOrInt"
+  },
+  {
+    "name": "numericStringRegex",
+    "newName": "numericStringPattern"
+  },
+  {
+    "name": "parseIntEnum",
+    "newName": "parseIntegerEnum"
+  },
+  {
+    "name": "hasBrands",
+    "newName": "validateBrands"
+  },
+  {
+    "name": "IteratorWithTransform",
+    "newName": "TransformedIterator"
+  },
+  {
+    "name": "boundFunctionCall",
+    "newName": "boundFunction"
+  },
+  {
+    "name": "computeReferrerUrl",
+    "newName": "getReferrerUrl"
+  },
+  {
+    "name": "sendImageRequestWithRetry",
+    "newName": "retryImageRequest"
+  },
+  {
+    "name": "clearPerformanceMarks",
+    "newName": "resetPerformanceMarks"
+  },
+  {
+    "name": "Ko",
+    "newName": "defaultKo"
+  },
+  {
+    "name": "Lo",
+    "newName": "defaultLo"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "fulfilledCallback"
+  },
+  {
+    "name": "CustomError",
+    "newName": "AdCustomError"
+  },
+  {
+    "name": "isValidError",
+    "newName": "isErrorValid"
+  },
+  {
+    "name": "UrlQueryBuilder",
+    "newName": "QueryBuilder"
+  },
+  {
+    "name": "addParameter",
+    "newName": "addQueryParameter"
+  },
+  {
+    "name": "addKeyValuePair",
+    "newName": "addKeyValue"
+  },
+  {
+    "name": "buildAdUrl",
+    "newName": "constructAdUrl"
+  },
+  {
+    "name": "AdElement",
+    "newName": "AdElementClass"
+  },
+  {
+    "name": "serializeTransformations",
+    "newName": "serializeAdTransformations"
+  },
+  {
+    "name": "float64Transformation",
+    "newName": "float64Transform"
+  },
+  {
+    "name": "stringOrNumberTransformation2",
+    "newName": "stringOrNumberTransform"
+  },
+  {
+    "name": "booleanTransformation2",
+    "newName": "booleanTransform"
+  }
+]

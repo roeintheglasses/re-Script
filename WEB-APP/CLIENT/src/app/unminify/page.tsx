@@ -12,7 +12,7 @@ import { toast } from "sonner";
 const LLMs = [
   {
     value: "openAI",
-    label: "GPT-4",
+    label: "gpt-3.5",
   },
   {
     value: "claude",

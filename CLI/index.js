@@ -75,11 +75,11 @@ async function main() {
   const spinner = ora().start("Reading file...");
 
   const code = fs.readFileSync(fileLocation, "utf8");
-
+  console.log("READ DONE");
   spinner.text = "Re-minifying code...";
-
+  console.log("GOING IN");
   const result = await rescript(code, model, apiKey, spinner);
-
+  console.log("AFTER RESCRIPT");
   spinner.text = "Writing output file...";
   const outFileLocation = fileLocation.replace(
     ".js",
@@ -92,7 +92,7 @@ async function main() {
   spinner.succeed();
   spinner.stop();
 
-  process.exit(0);
+  // process.exit(0);
 }
 
 main();

@@ -1,0 +1,382 @@
+[
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "videoPlayerInstance"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "videoPlayerWrapper"
+  },
+  {
+    "name": "entryIdCounter",
+    "newName": "videoElement"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "thenableHandler"
+  },
+  {
+    "name": "cloneIfNotFrozen",
+    "newName": "playIfNotFrozen"
+  },
+  {
+    "name": "year",
+    "newName": "handleError"
+  },
+  {
+    "name": "logError",
+    "newName": "errorOccurred"
+  },
+  {
+    "name": "createIterator",
+    "newName": "isIteratorCreated"
+  },
+  {
+    "name": "getCurrentTime",
+    "newName": "getCurrentPlaybackTime"
+  },
+  {
+    "name": "getDuration",
+    "newName": "getVideoDuration"
+  },
+  {
+    "name": "getRectangleSize",
+    "newName": "getVideoSize"
+  },
+  {
+    "name": "getAdEnvironment",
+    "newName": "initializeAdEnvironment"
+  },
+  {
+    "name": "handleAsync",
+    "newName": "asyncHandler"
+  },
+  {
+    "name": "tasks",
+    "newName": "taskList"
+  },
+  {
+    "name": "loaded",
+    "newName": "isLoaded"
+  },
+  {
+    "name": "dispatchUnhandledRejection",
+    "newName": "isUnhandledRejection"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "isPromiseResolved"
+  },
+  {
+    "name": "onFulfilled",
+    "newName": "fulfilledTime"
+  },
+  {
+    "name": "isDone",
+    "newName": "isCompleted"
+  },
+  {
+    "name": "markAsCompletedWrapper",
+    "newName": "markAsCompleted"
+  },
+  {
+    "name": "isArrayLike",
+    "newName": "dispatchEvent"
+  },
+  {
+    "name": "handleFullscreenStart",
+    "newName": "startFullscreen"
+  },
+  {
+    "name": "handleAutoPlay",
+    "newName": "autoPlayHandler"
+  },
+  {
+    "name": "parseAndValidateArray",
+    "newName": "validateArray"
+  },
+  {
+    "name": "serializeTransformations",
+    "newName": "serializeState"
+  },
+  {
+    "name": "isValidError",
+    "newName": "validateError"
+  },
+  {
+    "name": "once",
+    "newName": "dispatchVolumeChange"
+  },
+  {
+    "name": "ErrorDetails",
+    "newName": "handleErrorDetails"
+  },
+  {
+    "name": "arrayOfIntegersTransformationInstance",
+    "newName": "handleArrayTransformation"
+  },
+  {
+    "name": "AdErrorEvent",
+    "newName": "triggerAdErrorEvent"
+  },
+  {
+    "name": "toArray",
+    "newName": "endFullscreen"
+  },
+  {
+    "name": "assignPolyfill",
+    "newName": "triggerClickEvent"
+  },
+  {
+    "name": "reportVideoSize",
+    "newName": "logVideoSize"
+  },
+  {
+    "name": "sliceArguments",
+    "newName": "handleFullscreenToggle"
+  },
+  {
+    "name": "wrapGeneratorToPromise",
+    "newName": "wrapPlaybackToPromise"
+  },
+  {
+    "name": "calculateBufferedAheadTime",
+    "newName": "calculateBufferedTime"
+  },
+  {
+    "name": "isObjectOrFunction",
+    "newName": "reportAdError"
+  },
+  {
+    "name": "convertToIterator",
+    "newName": "convertToIteratorWrapper"
+  },
+  {
+    "name": "IteratorWrapper",
+    "newName": "IteratorWrapperClass"
+  },
+  {
+    "name": "IteratorResultWrapper",
+    "newName": "IteratorResultWrapperClass"
+  },
+  {
+    "name": "IteratorResult",
+    "newName": "IteratorResultClass"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "CustomMapClass"
+  },
+  {
+    "name": "syncInternalStateWithArray",
+    "newName": "syncStateWithArray"
+  },
+  {
+    "name": "getConfigSettingsInstance",
+    "newName": "getConfigInstance"
+  },
+  {
+    "name": "imaSdkInstanceSingleton",
+    "newName": "imaSdkInstance"
+  },
+  {
+    "name": "getVideoElementFakeDuration",
+    "newName": "getFakeVideoDuration"
+  },
+  {
+    "name": "createFakeVideoElement",
+    "newName": "createFakeVideoElementInstance"
+  },
+  {
+    "name": "createElementWithOptionalClassesAndAttributes",
+    "newName": "createElementWithAttributes"
+  },
+  {
+    "name": "handleHeavyAdIntervention",
+    "newName": "handleAdIntervention"
+  },
+  {
+    "name": "shouldUseLimaVideo",
+    "newName": "shouldUseCustomVideo"
+  },
+  {
+    "name": "CustomVideoElement",
+    "newName": "LimaVideoElement"
+  },
+  {
+    "name": "AdManager",
+    "newName": "AdManagerClass"
+  },
+  {
+    "name": "tryCall",
+    "newName": "CallHandler"
+  },
+  {
+    "name": "createAdPlayError",
+    "newName": "createAdError"
+  },
+  {
+    "name": "isCustomPlaybackAllowed",
+    "newName": "isPlaybackAllowed"
+  },
+  {
+    "name": "isCustomElementSupported",
+    "newName": "isCustomElementEnabled"
+  },
+  {
+    "name": "handleAsync",
+    "newName": "asyncHandler"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "thenableHandler"
+  },
+  {
+    "name": "logError",
+    "newName": "errorOccurred"
+  },
+  {
+    "name": "dispatchUnhandledRejection",
+    "newName": "isUnhandledRejection"
+  },
+  {
+    "name": "resolvePromise",
+    "newName": "isPromiseResolved"
+  },
+  {
+    "name": "Signed64",
+    "newName": "containerElement"
+  },
+  {
+    "name": "imaSdkInstanceSingleton",
+    "newName": "imaSdkInstance"
+  },
+  {
+    "name": "settlePromise",
+    "newName": "isInlinePlaybackAllowed"
+  },
+  {
+    "name": "createDeferred",
+    "newName": "deferredElement"
+  },
+  {
+    "name": "identityFunction",
+    "newName": "primaryVideoPlayer"
+  },
+  {
+    "name": "getGeneratorException",
+    "newName": "secondaryVideoPlayer"
+  },
+  {
+    "name": "size",
+    "newName": "videoSize"
+  },
+  {
+    "name": "executeCallbacks",
+    "newName": "videoSource"
+  },
+  {
+    "name": "convertStringToInt64",
+    "newName": "videoPlayerMap"
+  },
+  {
+    "name": "isMediaElementInvalid",
+    "newName": "isInvalidMediaElement"
+  },
+  {
+    "name": "hasPlaysInlineAttribute",
+    "newName": "hasInlinePlayback"
+  },
+  {
+    "name": "throwIncidentError",
+    "newName": "triggerIncidentError"
+  },
+  {
+    "name": "createWarningError",
+    "newName": "triggerWarningError"
+  },
+  {
+    "name": "initializeMraid",
+    "newName": "initializeMraidAd"
+  },
+  {
+    "name": "destroy",
+    "newName": "destroyAdManager"
+  },
+  {
+    "name": "writeVarint",
+    "newName": "showVideoElement"
+  },
+  {
+    "name": "isIpad",
+    "newName": "switchVideoPlayers"
+  },
+  {
+    "name": "endsWith",
+    "newName": "hideVideoElement"
+  },
+  {
+    "name": "findLastElement",
+    "newName": "getLastElement"
+  },
+  {
+    "name": "initializeMraid",
+    "newName": "initializeMraidAd"
+  },
+  {
+    "name": "destroy",
+    "newName": "destroyAdManager"
+  },
+  {
+    "name": "AdErrorType",
+    "newName": "AdErrorTypes"
+  },
+  {
+    "name": "AdError",
+    "newName": "AdErrorClass"
+  },
+  {
+    "name": "AdEvent",
+    "newName": "AdEventClass"
+  },
+  {
+    "name": "AdMetadataEvent",
+    "newName": "AdMetadataEventClass"
+  },
+  {
+    "name": "AdBreakData",
+    "newName": "AdBreakDataClass"
+  },
+  {
+    "name": "ContentTimeUpdateTimer",
+    "newName": "ContentTimeUpdateTimerClass"
+  },
+  {
+    "name": "notifyContentTimeUpdate",
+    "newName": "notifyTimeUpdate"
+  },
+  {
+    "name": "supportsSrcdoc",
+    "newName": "isSrcdocSupported"
+  },
+  {
+    "name": "writeDocument",
+    "newName": "writeToDocument"
+  },
+  {
+    "name": "allowedCssFunctions",
+    "newName": "allowedCssProperties"
+  },
+  {
+    "name": "sanitizeCssValue",
+    "newName": "sanitizeCssInput"
+  },
+  {
+    "name": "getPrototypeDescriptor",
+    "newName": "getPropertyDescriptor"
+  },
+  {
+    "name": "getStyleDescriptor",
+    "newName": "getCssPropertyDescriptor"
+  }
+]

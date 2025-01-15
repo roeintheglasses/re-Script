@@ -1,0 +1,410 @@
+[
+  {
+    "name": "r",
+    "newName": "adResource"
+  },
+  {
+    "name": "generatorWrapper",
+    "newName": "adInstance"
+  },
+  {
+    "name": "value",
+    "newName": "adValue"
+  },
+  {
+    "name": "CustomMap",
+    "newName": "customMap"
+  },
+  {
+    "name": "findEntry",
+    "newName": "adEntry"
+  },
+  {
+    "name": "bp",
+    "newName": "getTimeoutDuration"
+  },
+  {
+    "name": "calculateViewportSize",
+    "newName": "calculateAdViewportSize"
+  },
+  {
+    "name": "updateViewportSize",
+    "newName": "updateAdViewportSize"
+  },
+  {
+    "name": "updateScreenSize",
+    "newName": "updateAdScreenSize"
+  },
+  {
+    "name": "isAdPlayingOrMuted",
+    "newName": "checkAdPlayingOrMuted"
+  },
+  {
+    "name": "getAdEnvironmentInstance",
+    "newName": "getAdEnvironment"
+  },
+  {
+    "name": "GetEnvironment",
+    "newName": "getAdEnvironmentDetails"
+  },
+  {
+    "name": "getVisibilityStateCode",
+    "newName": "getDocumentVisibilityState"
+  },
+  {
+    "name": "AdSampling",
+    "newName": "AdSamplingController"
+  },
+  {
+    "name": "startAdSampling",
+    "newName": "initializeAdSampling"
+  },
+  {
+    "name": "AdController",
+    "newName": "AdPlaybackController"
+  },
+  {
+    "name": "handleThenable",
+    "newName": "PromiseHandler"
+  },
+  {
+    "name": "AdEvent",
+    "newName": "AdEventTracker"
+  },
+  {
+    "name": "registerAdComponent",
+    "newName": "registerAdElement"
+  },
+  {
+    "name": "containsElement",
+    "newName": "elementExistsInArray"
+  },
+  {
+    "name": "updateAdComponents",
+    "newName": "refreshAdElements"
+  },
+  {
+    "name": "copyArray",
+    "newName": "duplicateArray"
+  },
+  {
+    "name": "forEachElement",
+    "newName": "iterateArray"
+  },
+  {
+    "name": "AdComponent",
+    "newName": "AdElement"
+  },
+  {
+    "name": "removeElement",
+    "newName": "removeAdElement"
+  },
+  {
+    "name": "checkAdComponentsActive",
+    "newName": "validateAdElementsActive"
+  },
+  {
+    "name": "notifyAdComponents",
+    "newName": "notifyAdElements"
+  },
+  {
+    "name": "setTimeoutWrapper",
+    "newName": "adTimeoutHandler"
+  },
+  {
+    "name": "AdCreator",
+    "newName": "AdElementCreator"
+  },
+  {
+    "name": "isPositiveInt64",
+    "newName": "validatePositiveInt64"
+  },
+  {
+    "name": "AdParameters",
+    "newName": "AdParameter"
+  },
+  {
+    "name": "normalizePriority",
+    "newName": "normalizeAdPriority"
+  },
+  {
+    "name": "isPriorityLower",
+    "newName": "compareAdPriority"
+  },
+  {
+    "name": "QueryStringBuilder",
+    "newName": "AdQueryStringBuilder"
+  },
+  {
+    "name": "addParameter",
+    "newName": "appendAdParameter"
+  },
+  {
+    "name": "mergeParameters",
+    "newName": "mergeAdParameters"
+  },
+  {
+    "name": "addParametersFromObject",
+    "newName": "appendAdParametersFromObject"
+  },
+  {
+    "name": "buildQueryString",
+    "newName": "generateAdQueryString"
+  },
+  {
+    "name": "parameterToString",
+    "newName": "convertParameterToString"
+  },
+  {
+    "name": "UrlBuilder",
+    "newName": "AdUrlBuilder"
+  },
+  {
+    "name": "buildAdRequestParams",
+    "newName": "generateAdRequestParams"
+  },
+  {
+    "name": "sendAdRequest",
+    "newName": "sendAdRequestToServer"
+  },
+  {
+    "name": "AdRequestCounter",
+    "newName": "AdRequestCounterController"
+  },
+  {
+    "name": "markAsCompletedWrapper",
+    "newName": "markAdAsCompleted"
+  },
+  {
+    "name": "tryCall",
+    "newName": "AdPromiseHandler"
+  },
+  {
+    "name": "registerDisposable",
+    "newName": "registerAdDisposable"
+  },
+  {
+    "name": "executeOrDelayUntilDisposed",
+    "newName": "executeOrDelayAd"
+  },
+  {
+    "name": "processVerificationRequests",
+    "newName": "processAdVerificationRequests"
+  },
+  {
+    "name": "MetricsTracker",
+    "newName": "AdMetricsTracker"
+  },
+  {
+    "name": "updateMetrics",
+    "newName": "refreshAdMetrics"
+  },
+  {
+    "name": "visibilityThresholds",
+    "newName": "adVisibilityThresholds"
+  },
+  {
+    "name": "VisibilityMetricsCalculator",
+    "newName": "AdVisibilityMetricsCalculator"
+  },
+  {
+    "name": "calculateTotalVisibility",
+    "newName": "calculateTotalAdVisibility"
+  },
+  {
+    "name": "calculateVisibilityAtThreshold",
+    "newName": "calculateAdVisibilityAtThreshold"
+  },
+  {
+    "name": "calculateMaxVisibility",
+    "newName": "calculateMaxAdVisibility"
+  },
+  {
+    "name": "calculateMaxVisibilityAtThreshold",
+    "newName": "calculateMaxAdVisibilityAtThreshold"
+  },
+  {
+    "name": "calculateAverageVisibility",
+    "newName": "calculateAverageAdVisibility"
+  },
+  {
+    "name": "resetVisibilityMetrics",
+    "newName": "resetAdVisibilityMetrics"
+  },
+  {
+    "name": "updateVisibilityMetrics",
+    "newName": "refreshAdVisibilityMetrics"
+  },
+  {
+    "name": "aggregateMetrics",
+    "newName": "aggregateAdMetrics"
+  },
+  {
+    "name": "getMetricAtThreshold",
+    "newName": "getAdMetricAtThreshold"
+  },
+  {
+    "name": "calculateDifferentialMetrics",
+    "newName": "calculateAdDifferentialMetrics"
+  },
+  {
+    "name": "AdVisibilityTracker",
+    "newName": "AdVisibilityTrackerController"
+  },
+  {
+    "name": "getMaxVisibility",
+    "newName": "getMaxAdVisibility"
+  },
+  {
+    "name": "getMaxVisibility",
+    "newName": "getMaxAdVisibility"
+  },
+  {
+    "name": "removeUniqueId",
+    "newName": "removeAdUniqueId"
+  },
+  {
+    "name": "addEventListenerWithCapture",
+    "newName": "addAdEventListenerWithCapture"
+  },
+  {
+    "name": "emptyRect",
+    "newName": "emptyRectangle"
+  },
+  {
+    "name": "calculateVisibilityRatio",
+    "newName": "calculateAdVisibilityRatio"
+  },
+  {
+    "name": "calculateArea",
+    "newName": "calculateRectangleArea"
+  },
+  {
+    "name": "isAncestorOrSelf",
+    "newName": "checkAncestorOrSelf"
+  },
+  {
+    "name": "isElementFullyInView",
+    "newName": "isAdElementFullyInView"
+  },
+  {
+    "name": "isElementInvisibleOrOutOfView",
+    "newName": "isAdElementInvisibleOrOutOfView"
+  },
+  {
+    "name": "initialRect",
+    "newName": "initialRectangle"
+  },
+  {
+    "name": "AdContainer",
+    "newName": "AdContainerController"
+  },
+  {
+    "name": "inheritPrototype",
+    "newName": "inheritAdPrototype"
+  },
+  {
+    "name": "checkDataAttributes",
+    "newName": "validateAdDataAttributes"
+  },
+  {
+    "name": "updateVisibilityState",
+    "newName": "refreshAdVisibilityState"
+  },
+  {
+    "name": "replaceAdContainerContent",
+    "newName": "replaceAdContainerContent"
+  },
+  {
+    "name": "calculateTimeDifference",
+    "newName": "calculateAdTimeDifference"
+  },
+  {
+    "name": "processAdContainerMetrics",
+    "newName": "processAdContainerMetrics"
+  },
+  {
+    "name": "configureAdStateHandlers",
+    "newName": "configureAdStateHandlers"
+  },
+  {
+    "name": "IteratorPrototype",
+    "newName": "AdIteratorPrototype"
+  },
+  {
+    "name": "iteratorDoneValue",
+    "newName": "adIteratorDoneValue"
+  },
+  {
+    "name": "PerformanceData",
+    "newName": "AdPerformanceData"
+  },
+  {
+    "name": "getPerformanceData",
+    "newName": "retrieveAdPerformanceData"
+  },
+  {
+    "name": "AdPlaybackData",
+    "newName": "AdPlaybackDataController"
+  },
+  {
+    "name": "isVolumeNonZero",
+    "newName": "checkVolumeNonZero"
+  },
+  {
+    "name": "filterAndTransform",
+    "newName": "filterAndTransformAdData"
+  },
+  {
+    "name": "getPropertyIfCondition",
+    "newName": "getAdPropertyIfCondition"
+  },
+  {
+    "name": "checkConditionInArray",
+    "newName": "checkAdConditionInArray"
+  },
+  {
+    "name": "transformArray",
+    "newName": "transformAdArray"
+  },
+  {
+    "name": "defaultConditionChecker",
+    "newName": "defaultAdConditionChecker"
+  },
+  {
+    "name": "specificConditionChecker",
+    "newName": "specificAdConditionChecker"
+  },
+  {
+    "name": "adDataMapping",
+    "newName": "adDataMapping"
+  },
+  {
+    "name": "extendedAdDataMapping",
+    "newName": "extendedAdDataMapping"
+  },
+  {
+    "name": "additionalDataMapping",
+    "newName": "additionalAdDataMapping"
+  },
+  {
+    "name": "nullResetter",
+    "newName": "adNullResetter"
+  },
+  {
+    "name": "emptyFunction",
+    "newName": "emptyAdFunction"
+  },
+  {
+    "name": "processResources",
+    "newName": "processAdResources"
+  },
+  {
+    "name": "queryReporter",
+    "newName": "AdQueryReporter"
+  },
+  {
+    "name": "reportRetriever",
+    "newName": "AdReportRetriever"
+  }
+]
