@@ -1,98 +1,121 @@
 #!/usr/bin/env node
 import { Agent } from "undici";
-
-// This is a hack increase the fetch timeout for local ollama instances
-// https://github.com/langchain-ai/langchainjs/issues/1856
-globalThis[Symbol.for("undici.globalDispatcher.1")] = new Agent({
-  headersTimeout: 1000 * 60 * 60 * 24,
-});
-import { input, password } from "@inquirer/prompts";
+import { input } from "@inquirer/prompts";
 import select, { Separator } from "@inquirer/select";
 import ora from "ora";
-import fs from "fs";
+import fs from "fs/promises";
 import chalk from "chalk";
 import rescript from "./lib/rescript.js";
 
-const log = console.log;
+// Configure undici agent for extended timeout
+globalThis[Symbol.for("undici.globalDispatcher.1")] = new Agent({
+  headersTimeout: 1000 * 60 * 60 * 24,
+});
 
-async function main() {
-  log(chalk.hex("#0d0d0d").bgWhite.bold("re-Script CLI"));
-  log(chalk.gray("A CLI to unminify your JS code using AI models."));
+// Model choices configuration
+const MODEL_CHOICES = [
+  {
+    name: "Claude-3",
+    value: "claude",
+    description: "Anthropic's latest Claude-3 model",
+  },
+  {
+    name: "GPT-4",
+    value: "openAI",
+    description: "OpenAI's latest GPT-4 model",
+  },
+  {
+    name: "Ollama - Mistral",
+    value: "ollamaMistral",
+    description: "Mistral LLM, Served locally using Ollama",
+  },
+  new Separator(),
+  {
+    name: "More Local LLMs",
+    value: "local",
+    disabled: "(Support for more local LLMs is coming soon!)",
+  },
+];
 
-  const fileLocation = await input({
-    type: "input",
-    name: "file location",
-    message: "Enter your minified JS file location",
-  });
+// Helper functions
+const displayHeader = () => {
+  console.log(chalk.hex("#0d0d0d").bgWhite.bold("re-Script CLI"));
+  console.log(chalk.gray("A CLI to unminify your JS code using AI models."));
+};
 
-  const model = await select({
-    type: "select",
-    name: "model",
-    message: "Select the AI model to use",
-    choices: [
-      {
-        name: "Claude-3",
-        value: "claude",
-        description: "Anthropic's latest Claude-3 model",
-      },
-
-      {
-        name: "GPT-4",
-        value: "openAI",
-        description: "OpenAI's latest GPT-4 model",
-      },
-      {
-        name: "Ollama - Mistral",
-        value: "ollamaMistral",
-        description: "Mistral LLM, Served locally using Ollama",
-      },
-      new Separator(),
-      {
-        name: "More Local LLMs",
-        value: "local",
-        disabled: "(Support for more local LLMs is coming soon!)",
-      },
-    ],
-  });
-
-  let apiKey = null;
-
-  //TODO: Add a check to validate first if ollama server is running locally or not
-
-  if (model !== "ollamaMistral") {
-    apiKey = await input({
-      type: "input",
-      name: "apiKey",
-      message: "Enter your model API key",
-    });
-  }
-
-  if (!fs.existsSync(fileLocation)) {
-    log(chalk.red.bold("File not found at the specified location"));
-    return;
-  }
-
-  const spinner = ora().start("Reading file...");
-
-  const code = fs.readFileSync(fileLocation, "utf8");
-
-  spinner.text = "Re-minifying code...";
-
-  const result = await rescript(code, model, apiKey, spinner);
-
-  spinner.text = "Writing output file...";
-  const outFileLocation = fileLocation.replace(
+const generateOutputFilename = (inputFile) => {
+  return inputFile.replace(
     ".js",
     `_reScript${Date.now().toString().slice(0, 4)}.js`
   );
-  fs.writeFileSync(outFileLocation, result);
+};
 
-  spinner.color = "cyan";
-  spinner.text = "Code unminified successfully!";
-  spinner.succeed();
-  spinner.stop();
+async function getApiKey(model) {
+  if (model === "ollamaMistral") return null;
 
-  process.exit(0);
+  return await input({
+    type: "input",
+    name: "apiKey",
+    message: "Enter your model API key",
+  });
+}
+
+async function processFile(fileLocation, model, apiKey) {
+  const spinner = ora("Reading file...").start();
+
+  try {
+    const code = await fs.readFile(fileLocation, "utf8");
+
+    spinner.text = "Unminifying code...";
+    const result = await rescript(code, model, apiKey, spinner);
+
+    spinner.text = "Writing output file...";
+    const outFileLocation = generateOutputFilename(fileLocation);
+    await fs.writeFile(outFileLocation, result);
+
+    spinner.succeed("Code unminified successfully!");
+    return true;
+  } catch (error) {
+    spinner.fail(chalk.red(`Error: ${error.message}`));
+    return false;
+  } finally {
+    spinner.stop();
+  }
+}
+
+async function main() {
+  try {
+    displayHeader();
+
+    const fileLocation = await input({
+      message: "Enter your minified JS file location",
+    });
+
+    // Verify file exists
+    try {
+      await fs.access(fileLocation);
+    } catch {
+      throw new Error("File not found at the specified location");
+    }
+
+    const model = await select({
+      message: "Select the AI model to use",
+      choices: MODEL_CHOICES,
+    });
+
+    const apiKey = await getApiKey(model);
+
+    // TODO: Add Ollama server check here
+    // if (model === "ollamaMistral") {
+    //   await checkOllamaServer();
+    // }
+
+    const success = await processFile(fileLocation, model, apiKey);
+    process.exit(success ? 0 : 1);
+  } catch (error) {
+    console.error(chalk.red.bold(error.message));
+    process.exit(1);
+  }
 }
 
 main();

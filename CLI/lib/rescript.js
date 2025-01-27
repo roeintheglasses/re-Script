@@ -1,43 +1,58 @@
-import babelTransform from "./modifiers/bableTransform.js";
+import babelTransform from "./modifiers/babelTransform.js";
 import prettier from "./modifiers/prettier.js";
 import webcrack from "./modifiers/webcrack.js";
 import AnthropicLLMModifier from "./llms/anthropic.js";
 import OpenAILLMModifier from "./llms/openai.js";
-import OllamaMistralLLMModifier from "./llms/ollama/mistral.js";
+
+const MODEL_TYPES = {
+  CLAUDE: 'claude',
+  OPENAI: 'openAI',
+}
+
+const LLM_PROVIDERS = {
+  [MODEL_TYPES.CLAUDE]: AnthropicLLMModifier,
+  [MODEL_TYPES.OPENAI]: OpenAILLMModifier,
+}
 
 /**
- *
- * @param {string} code
- * @param {string} model
- * @param {string} apiKey
- * @param {import("ora").Ora} spinner
- * @returns
+ * Process and enhance code using various transformations and AI models
+ * @param {string} code - The source code to process
+ * @param {string} model - The AI model to use (claude, openAI, gemini, ollamaMistral)
+ * @param {string} apiKey - API key for the AI service
+ * @param {import("ora").Ora} spinner - Progress spinner instance
+ * @returns {Promise<string>} The processed code
+ * @throws {Error} If an invalid model is specified or processing fails
  */
 export default async function rescript(code, model, apiKey, spinner) {
-  spinner.color = "orange";
-  spinner.text = "Reversing Bundling process...";
-  const crackedCodeInstance = await webcrack(code);
-  const crackedCode = crackedCodeInstance.code;
+  try {
+    // Step 1: Reverse bundling
+    spinner.color = "orange";
+    spinner.text = "Reversing Bundling process...";
+    const { code: crackedCode } = await webcrack(code);
 
-  spinner.text = "Injecting Babel plugins...";
-  const babelifiedCode = await babelTransform(crackedCode);
+    // Step 2: Apply Babel transformations
+    spinner.text = "Injecting Babel plugins...";
+    const babelifiedCode = await babelTransform(crackedCode);
 
-  let llmUpdatedCode = babelifiedCode;
+    // Step 3: Apply AI model transformations
+    spinner.color = "yellow";
+    spinner.text = "Using AI model to decode logic...";
 
-  spinner.color = "yellow";
-  spinner.text = "Using AI model to decode logic...";
-  if (model === "claude") {
-    llmUpdatedCode = await AnthropicLLMModifier(babelifiedCode, apiKey);
-  } else if (model === "openAI") {
-    llmUpdatedCode = await OpenAILLMModifier(babelifiedCode, apiKey);
-  } else if (model === "gemini") {
-  } else if (model === "ollamaMistral") {
-    llmUpdatedCode = await OllamaMistralLLMModifier(babelifiedCode);
+    const llmModifier = LLM_PROVIDERS[model];
+    if (!llmModifier) {
+      throw new Error(`Unsupported AI model: ${model}`);
+    }
+
+    const llmUpdatedCode = await llmModifier(babelifiedCode, apiKey);
+
+    // Step 4: Format the final code
+    spinner.color = "green";
+    spinner.text = "Formatting code...";
+    const formattedCode = await prettier(llmUpdatedCode);
+
+    return formattedCode;
+  } catch (error) {
+    spinner.fail(`Error processing code: ${error.message}`);
+    throw error;
   }
-
-  spinner.color = "green";
-  spinner.text = "Formatting code...";
-  const formattedCode = await prettier(llmUpdatedCode);
-
-  return formattedCode;
 }

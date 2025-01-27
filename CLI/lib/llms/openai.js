@@ -1,78 +1,42 @@
 import { ChatOpenAI } from "@langchain/openai";
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
-import LLMCodeInitialiser from "../utils/llmCodeInitialiser.js";
+import processCodeWithLLM from "../utils/llmCodeInitialiser.js";
+import { MODEL_CONFIGS, SYSTEM_PROMPT, RENAME_FUNCTION_SCHEMA } from "../config/config.js";
+import { sanitizeJsonOutput } from "./renameUtils.js";
 
-async function OpenAiRenameUtility(code, apiKey) {
+async function OpenAiRenameUtility(code, apiKey, modelName = "GPT4") {
   if (!code || !apiKey) {
     return null;
   }
-  // https://platform.openai.com/docs/guides/gpt/function-calling
 
-  const modelForFunctionCalling = new ChatOpenAI({
-    modelName: "gpt-4-0125-preview",
-    temperature: 0.5,
+  const model = new ChatOpenAI({
+    modelName: MODEL_CONFIGS[modelName].name,
+    temperature: MODEL_CONFIGS[modelName].temperature,
     openAIApiKey: apiKey,
   });
 
-  const result = await modelForFunctionCalling.invoke(
+  const result = await model.invoke(
     [
-      new SystemMessage(
-        "You are a senior javascript programmer with experience in unminifying and deobfuscating code. Understand given code and rename all Javascript variables and functions to have descriptive names based on their usage in the code."
-      ),
+      new SystemMessage(SYSTEM_PROMPT),
       new HumanMessage(code),
     ],
     {
-      functions: [
-        {
-          name: "rebuild_minified_script",
-          description: "Rename variables and function names in Javascript code",
-          parameters: {
-            type: "object",
-            properties: {
-              variablesAndFunctionsToRename: {
-                type: "array",
-                items: {
-                  type: "object",
-                  properties: {
-                    name: {
-                      type: "string",
-                      description:
-                        "The name of the variable or function name to rename",
-                    },
-                    newName: {
-                      type: "string",
-                      description:
-                        "The new name of the variable or function name based on the context of the code",
-                    },
-                  },
-                  required: ["name", "newName"],
-                },
-              },
-            },
-            required: ["variablesAndFunctionsToRename"],
-          },
-        },
-      ],
-      // You can set the `function_call` arg to force the model to use a function
+      functions: [RENAME_FUNCTION_SCHEMA],
       function_call: {
-        name: "rebuild_minified_script",
+        name: RENAME_FUNCTION_SCHEMA.name,
       },
     }
   );
 
   const initialOutput = result.additional_kwargs.function_call.arguments;
-
-  const cleanOutput = SanatiseOpenAiOutput(initialOutput);
-
+  const cleanOutput = sanitizeJsonOutput(initialOutput);
   const { variablesAndFunctionsToRename } = JSON.parse(cleanOutput);
 
   return variablesAndFunctionsToRename;
 }
 
-function SanatiseOpenAiOutput(jsonResponse) {
-  return jsonResponse.replace(/},\s*]/im, "}]");
-}
-
-export default async function OpenAILLMModifier(code, apiKey) {
-  return await LLMCodeInitialiser(code, apiKey, OpenAiRenameUtility);
+export default async function OpenAILLMModifier(code, apiKey, modelName) {
+  return await processCodeWithLLM(code, apiKey, (code, apiKey) =>
+    OpenAiRenameUtility(code, apiKey, modelName)
+  );
 }
