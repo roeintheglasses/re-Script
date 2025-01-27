@@ -1,86 +1,50 @@
 import { ChatAnthropicTools } from "@langchain/anthropic/experimental";
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
 
-import LLMCodeInitialiser from "../utils/llmCodeInitialiser.js";
 
-async function AnthropicRenameUtility(code, apiKey) {
-  const anthropicModel = new ChatAnthropicTools({
-    modelName: "claude-3-opus-20240229",
+import { MODEL_CONFIGS, SYSTEM_PROMPT, RENAME_FUNCTION_SCHEMA } from "../config/config.js";
+
+import processCodeWithLLM from "../utils/llmCodeInitialiser.js";
+import { sanitizeJsonOutput, restructureVariables } from "../utils/renameHandler.js";
+
+async function AnthropicRenameUtility(code, apiKey, modelName = "CLAUDE3_OPUS") {
+  if (!code || !apiKey) {
+    return null;
+  }
+
+  const model = new ChatAnthropicTools({
+    modelName: MODEL_CONFIGS[modelName].name,
     anthropicApiKey: apiKey,
-    maxTokens: 4096,
+    maxTokens: MODEL_CONFIGS[modelName].maxTokens,
   }).bind({
     tools: [
       {
         type: "function",
-        function: {
-          name: "rebuild_minified_script",
-          description: "Rename variables and function names in Javascript code",
-          parameters: {
-            type: "object",
-            properties: {
-              variablesAndFunctionsToRename: {
-                type: "array",
-                items: {
-                  type: "object",
-                  properties: {
-                    name: {
-                      type: "string",
-                      description:
-                        "The name of the variable or function name to rename",
-                    },
-                    newName: {
-                      type: "string",
-                      description:
-                        "The new name of the variable or function name based on the context of the code",
-                    },
-                  },
-                  required: ["name", "newName"],
-                },
-              },
-            },
-            required: ["variablesAndFunctionsToRename"],
-          },
-        },
+        function: RENAME_FUNCTION_SCHEMA,
       },
     ],
-    // You can set the `function_call` arg to force the model to use a function
     tool_choice: {
       type: "function",
       function: {
-        name: "rebuild_minified_script",
+        name: RENAME_FUNCTION_SCHEMA.name,
       },
     },
   });
 
-  let initialOutput = (
-    await anthropicModel.invoke([
-      new SystemMessage(
-        "You are a senior javascript programmer with experience in unminifying and deobfuscating code. Understand given code and rename all Javascript variables and functions to have descriptive names based on their usage in the code."
-      ),
-      new HumanMessage(code),
-    ])
-  ).additional_kwargs.tool_calls[0].function.arguments;
-  const cleanOutput = SanatiseOpenAiOutput(initialOutput);
+  const result = await model.invoke([
+    new SystemMessage(SYSTEM_PROMPT),
+    new HumanMessage(code),
+  ]);
 
+  const initialOutput = result.additional_kwargs.tool_calls[0].function.arguments;
+  const cleanOutput = sanitizeJsonOutput(initialOutput);
   const { variablesAndFunctionsToRename } = JSON.parse(cleanOutput);
 
-  const { name, newName } = variablesAndFunctionsToRename[0];
-
-  const reStructuredVariablesAndFunctionsToRename = [];
-
-  for (let i = 0; i < Math.min(name.length, newName.length); i++) {
-    reStructuredVariablesAndFunctionsToRename.push({
-      name: name[i],
-      newName: newName[i],
-    });
-  }
-
-  return reStructuredVariablesAndFunctionsToRename;
-}
-function SanatiseOpenAiOutput(jsonResponse) {
-  return jsonResponse.replace(/},\s*]/im, "}]");
+  return restructureVariables(variablesAndFunctionsToRename);
 }
 
-export default async function AnthropicLLMModifier(code, apiKey) {
-  return await LLMCodeInitialiser(code, apiKey, AnthropicRenameUtility);
+export default async function AnthropicLLMModifier(code, apiKey, modelName) {
+  return await processCodeWithLLM(code, apiKey, (code, apiKey) =>
+    AnthropicRenameUtility(code, apiKey, modelName)
+  );
 }
