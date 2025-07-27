@@ -13,6 +13,13 @@ import { dirname, join } from 'path';
 import { processCommand } from './commands/process.js';
 import { configCommand } from './commands/config.js';
 import { validateCommand } from './commands/validate.js';
+import { 
+  listJobsCommand, 
+  resumeJobCommand, 
+  cancelJobCommand, 
+  deleteJobCommand, 
+  getJobStatusCommand 
+} from './commands/jobs.js';
 import { ReScriptError, formatErrorMessage } from '../utils/errors.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -136,6 +143,78 @@ async function main(): Promise<void> {
     .description('Validate files and configuration')
     .addCommand(validateCommand);
 
+  // Job management
+  const jobsCommand = program
+    .command('jobs')
+    .description('Manage processing jobs');
+
+  jobsCommand
+    .command('list')
+    .description('List all jobs')
+    .option('-c, --config <path>', 'path to configuration file')
+    .option('-s, --status <status>', 'filter by status (pending,running,completed,failed,cancelled)')
+    .option('-l, --limit <number>', 'limit number of results', parseInt)
+    .option('-f, --format <format>', 'output format (table, json)', 'table')
+    .option('-v, --verbose', 'show detailed information')
+    .action(async (options) => {
+      try {
+        await listJobsCommand(options);
+      } catch (error) {
+        handleError(error);
+      }
+    });
+
+  jobsCommand
+    .command('status <jobId>')
+    .description('Get job status and details')
+    .option('-v, --verbose', 'show detailed information')
+    .action(async (jobId, options) => {
+      try {
+        await getJobStatusCommand(jobId, options);
+      } catch (error) {
+        handleError(error);
+      }
+    });
+
+  jobsCommand
+    .command('resume <jobId>')
+    .description('Resume a paused or failed job')
+    .option('-c, --config <path>', 'path to configuration file')
+    .option('-f, --force', 'force resume even if job was cancelled')
+    .option('-v, --verbose', 'show detailed information')
+    .action(async (jobId, options) => {
+      try {
+        await resumeJobCommand(jobId, options);
+      } catch (error) {
+        handleError(error);
+      }
+    });
+
+  jobsCommand
+    .command('cancel <jobId>')
+    .description('Cancel a running job')
+    .option('-f, --force', 'force cancellation')
+    .option('-v, --verbose', 'show detailed information')
+    .action(async (jobId, options) => {
+      try {
+        await cancelJobCommand(jobId, options);
+      } catch (error) {
+        handleError(error);
+      }
+    });
+
+  jobsCommand
+    .command('delete <jobId>')
+    .description('Delete a job and its data')
+    .option('-f, --force', 'force deletion (cancels running job)')
+    .action(async (jobId, options) => {
+      try {
+        await deleteJobCommand(jobId, options);
+      } catch (error) {
+        handleError(error);
+      }
+    });
+
   // Example usage command
   program
     .command('examples')
@@ -163,6 +242,13 @@ async function main(): Promise<void> {
       console.log(chalk.cyan('Local models:'));
       console.log('  re-script app.min.js --provider ollama --model llama3:8b');
       console.log('  OLLAMA_BASE_URL=http://localhost:11434 re-script app.min.js\n');
+      
+      console.log(chalk.cyan('Job management:'));
+      console.log('  re-script jobs list --status running');
+      console.log('  re-script jobs status job_abc123');
+      console.log('  re-script jobs resume job_abc123');
+      console.log('  re-script jobs cancel job_abc123');
+      console.log('  re-script jobs delete job_abc123\n');
     });
 
   // Help command enhancement
