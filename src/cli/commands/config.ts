@@ -4,55 +4,14 @@
 
 import { Command } from 'commander';
 import chalk from 'chalk';
-import { readFile, writeFile, access } from 'fs/promises';
+import { readFile, access } from 'fs/promises';
 import { resolve } from 'path';
 import { configLoader } from '../../config/loader.js';
-import { defaultConfig } from '../../config/schema.js';
-import { ReScriptError } from '../../utils/errors.js';
 
 export const configCommand = new Command('config')
   .description('Manage re-Script configuration');
 
-// Initialize configuration file
-configCommand
-  .command('init')
-  .description('Create a new configuration file')
-  .option('-f, --force', 'overwrite existing configuration file')
-  .option('-p, --path <path>', 'configuration file path', '.rescriptrc.json')
-  .action(async (options) => {
-    try {
-      const configPath = resolve(options.path);
-      
-      // Check if file already exists
-      try {
-        await access(configPath);
-        if (!options.force) {
-          console.log(chalk.yellow(`⚠️  Configuration file already exists: ${configPath}`));
-          console.log(chalk.gray('   Use --force to overwrite'));
-          return;
-        }
-      } catch {
-        // File doesn't exist, which is what we want
-      }
-
-      // Create default configuration
-      const config = configLoader.getDefaultConfig();
-      await configLoader.saveConfig(config, configPath);
-      
-      console.log(chalk.green(`✅ Configuration file created: ${configPath}`));
-      console.log(chalk.gray('\n📝 Edit this file to customize your settings'));
-      
-      // Show next steps
-      console.log(chalk.bold('\n🚀 Next steps:'));
-      console.log(`   1. Add your API key: ${chalk.cyan('provider.apiKey')}`);
-      console.log(`   2. Choose your model: ${chalk.cyan('provider.model')}`);
-      console.log(`   3. Run: ${chalk.cyan(`re-script input.js --config ${options.path}`)}`);
-      
-    } catch (error) {
-      console.error(chalk.red(`❌ Failed to create configuration file: ${error instanceof Error ? error.message : String(error)}`));
-      process.exit(1);
-    }
-  });
+// Note: init command is now a top-level command (see init.ts)
 
 // Show current configuration
 configCommand

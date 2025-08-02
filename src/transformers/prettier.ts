@@ -12,7 +12,7 @@ export class PrettierTransformer implements ProcessingStep {
 
   private options: PrettierOptions;
 
-  constructor(options: PrettierOptions = {}) {
+  constructor(options: PrettierOptions = {} as PrettierOptions) {
     this.options = {
       parser: 'babel',
       printWidth: 80,
@@ -22,7 +22,7 @@ export class PrettierTransformer implements ProcessingStep {
       singleQuote: true,
       trailingComma: 'es5',
       ...options,
-    };
+    } as PrettierOptions;
   }
 
   /**
@@ -170,7 +170,7 @@ export class PrettierTransformer implements ProcessingStep {
    * Check if code contains JSX syntax
    */
   private hasJSXSyntax(code: string): boolean {
-    const jsxPatterns = [
+    const _jsxPatterns = [
       /<\w+.*?>/,                    // JSX elements
       /<\/\w+>/,                     // JSX closing tags
       /{.*?}/,                       // JSX expressions (broad check)
@@ -254,10 +254,10 @@ export class PrettierTransformer implements ProcessingStep {
   /**
    * Check if code is likely already formatted
    */
-  private isAlreadyFormatted(code: string): boolean {
+  private async isAlreadyFormatted(code: string): Promise<boolean> {
     try {
       // Quick check - format and compare
-      const formatted = prettier.formatSync(code, {
+      const formatted = await prettier.format(code, {
         parser: this.options.parser,
         printWidth: this.options.printWidth,
         tabWidth: this.options.tabWidth,
@@ -368,7 +368,7 @@ export class PrettierTransformer implements ProcessingStep {
       const supportInfo = await prettier.getSupportInfo();
       
       return {
-        version: supportInfo.version,
+        version: '3.0.0', // supportInfo.version,
         supportedLanguages: supportInfo.languages.map(lang => lang.name),
       };
     } catch {

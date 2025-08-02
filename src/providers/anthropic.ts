@@ -16,6 +16,9 @@ export class AnthropicProvider extends BaseLLMProvider {
     'claude-3-sonnet-20240229',
     'claude-3-haiku-20240307'
   ];
+
+  private availableModels: string[] = [];
+  private modelsLoaded = false;
   public readonly maxTokens = 200000; // Claude 3.5 Sonnet context window
   public readonly supportsStreaming = true;
   public readonly supportsFunctionCalling = true;
@@ -144,7 +147,7 @@ export class AnthropicProvider extends BaseLLMProvider {
   /**
    * Create enhanced user prompt for Claude
    */
-  protected createUserPrompt(code: string): string {
+  protected override createUserPrompt(code: string): string {
     const basePrompt = super.createUserPrompt(code);
     
     return `${basePrompt}
@@ -170,7 +173,7 @@ Prioritize high-confidence suggestions for variables/functions that are clearly 
   /**
    * Check if Anthropic error is retryable
    */
-  private isRetryableAnthropicError(error: Anthropic.APIError): boolean {
+  private isRetryableAnthropicError(error: any): boolean {
     // Rate limit errors
     if (error.status === 429) return true;
     
@@ -231,6 +234,46 @@ Prioritize high-confidence suggestions for variables/functions that are clearly 
     
     return (inputTokens / 1000) * modelPricing.input + 
            (outputTokens / 1000) * modelPricing.output;
+  }
+
+  /**
+   * Load available models from Anthropic
+   * Note: Anthropic doesn't have a public models API, so we use a curated list
+   */
+  async loadAvailableModels(): Promise<string[]> {
+    if (this.modelsLoaded && this.availableModels.length > 0) {
+      return this.availableModels;
+    }
+
+    try {
+      // Anthropic doesn't provide a models list API, so we'll use an updated curated list
+      // These are the models known to be available as of the latest update
+      const curatedModels = [
+        'claude-3-5-sonnet-20241022',
+        'claude-3-5-haiku-20241022',
+        'claude-3-opus-20240229',
+        'claude-3-sonnet-20240229', 
+        'claude-3-haiku-20240307'
+      ];
+
+      // We could potentially test model availability by making a small request
+      // but that would require API credits, so we'll stick with the curated list
+      this.availableModels = curatedModels;
+      this.modelsLoaded = true;
+      
+      return this.availableModels;
+    } catch (error) {
+      // Fallback to hardcoded models if anything fails
+      console.warn(`⚠️  Could not load Anthropic models: ${error instanceof Error ? error.message : String(error)}`);
+      return this.models;
+    }
+  }
+
+  /**
+   * Get available models (public interface)
+   */
+  async getAvailableModels(): Promise<string[]> {
+    return this.loadAvailableModels();
   }
 }
 

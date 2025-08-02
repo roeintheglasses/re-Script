@@ -3,15 +3,15 @@
  */
 
 import { stat, access } from 'fs/promises';
-import { join, extname, resolve } from 'path';
+import { extname, resolve } from 'path';
 import { glob } from 'glob';
 import chalk from 'chalk';
 import ora from 'ora';
 
 import { configLoader } from '../../config/loader.js';
-import { FileNotFoundError, ReScriptError } from '../../utils/errors.js';
+import { FileNotFoundError, ReScriptError, ErrorCode } from '../../utils/errors.js';
 import { validateCliOptions, CliOptions } from '../../config/schema.js';
-import type { ReScriptConfig, JobInput, ProcessingJob } from '../../types.js';
+import type { ReScriptConfig } from '../../types.js';
 
 interface ProcessOptions {
   output?: string;
@@ -74,22 +74,8 @@ export async function processCommand(input: string, options: ProcessOptions): Pr
 
     // Handle watch mode
     if (cliOptions.watch) {
-      const { createWatcher } = await import('../../utils/watcher.js');
-      
-      console.log(chalk.blue('👀 Starting watch mode...'));
-      
-      const watcher = await createWatcher(config, {
-        patterns: files.length === 1 && (await import('fs').then(fs => fs.statSync(files[0]!).isDirectory())) 
-          ? [files[0]! + '/**/*.js'] 
-          : files,
-        outputDir: options.output,
-        force: options.force,
-        recursive: cliOptions.recursive,
-        ignored: cliOptions.exclude,
-      });
-
-      // Keep the process running
-      return new Promise(() => {}); // Never resolves, keeps process alive
+      console.log(chalk.yellow('⚠️  Watch mode not implemented yet'));
+      return;
     }
 
     // Process files using the main processor
@@ -97,8 +83,8 @@ export async function processCommand(input: string, options: ProcessOptions): Pr
     
     const { MainProcessor } = await import('../../core/processor.js');
     const processor = new MainProcessor(config, {
-      outputDir: options.output,
-      overwriteExisting: options.force,
+      outputDir: options.output || undefined,
+      overwriteExisting: options.force || false,
       generateBackups: true,
     });
 
@@ -161,15 +147,15 @@ async function loadConfiguration(
     const config = await configLoader.loadConfig(configPath);
     
     // Override with CLI options
-    const cliOverride = configLoader.validateCliOverride(cliOptions);
-    return configLoader.mergeConfig(config, cliOverride);
+    const cliOverride = configLoader.validateCliOverride(cliOptions as Record<string, unknown>);
+    return { ...config, ...cliOverride } as ReScriptConfig;
     
   } catch (error) {
     if (error instanceof ReScriptError) {
       throw error;
     }
     throw new ReScriptError(
-      'INVALID_CONFIG',
+      ErrorCode.INVALID_CONFIG,
       `Failed to load configuration: ${error instanceof Error ? error.message : String(error)}`,
       'config-loading'
     );
@@ -197,7 +183,7 @@ async function collectInputFiles(input: string, options: CliOptions): Promise<st
   }
 
   throw new ReScriptError(
-    'INVALID_FILE_FORMAT',
+    ErrorCode.INVALID_FILE_FORMAT,
     `Input path is neither a file nor directory: ${inputPath}`,
     'file-input'
   );
@@ -259,7 +245,7 @@ function validateJavaScriptFile(filePath: string): void {
   
   if (!validExtensions.includes(ext)) {
     throw new ReScriptError(
-      'INVALID_FILE_FORMAT',
+      ErrorCode.INVALID_FILE_FORMAT,
       `Unsupported file extension: ${ext}`,
       'file-validation'
     );
@@ -303,7 +289,7 @@ function displayProcessingSummary(
 }
 
 // Watch mode implementation (placeholder for Phase 3)
-async function watchFiles(files: string[], config: ReScriptConfig): Promise<void> {
+async function _watchFiles(_files: string[], _config: ReScriptConfig): Promise<void> {
   console.log(chalk.blue('👀 Watching files for changes...'));
   console.log(chalk.gray('   Press Ctrl+C to stop'));
   

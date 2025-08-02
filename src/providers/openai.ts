@@ -16,6 +16,9 @@ export class OpenAIProvider extends BaseLLMProvider {
     'gpt-4',
     'gpt-3.5-turbo'
   ];
+
+  private availableModels: string[] = [];
+  private modelsLoaded = false;
   public readonly maxTokens = 128000; // GPT-4 Turbo context window
   public readonly supportsStreaming = true;
   public readonly supportsFunctionCalling = true;
@@ -162,7 +165,7 @@ export class OpenAIProvider extends BaseLLMProvider {
   /**
    * Create enhanced user prompt for GPT
    */
-  protected createUserPrompt(code: string): string {
+  protected override createUserPrompt(code: string): string {
     const basePrompt = super.createUserPrompt(code);
     
     return `${basePrompt}
@@ -188,7 +191,7 @@ Prioritize suggestions where you have high confidence based on clear context clu
   /**
    * Check if OpenAI error is retryable
    */
-  private isRetryableOpenAIError(error: OpenAI.APIError): boolean {
+  private isRetryableOpenAIError(error: any): boolean {
     // Rate limit errors
     if (error.status === 429) return true;
     
@@ -279,6 +282,130 @@ Prioritize suggestions where you have high confidence based on clear context clu
     });
 
     return provider;
+  }
+
+  /**
+   * Load available models from OpenAI API
+   */
+  async loadAvailableModels(): Promise<string[]> {
+    if (this.modelsLoaded && this.availableModels.length > 0) {
+      return this.availableModels;
+    }
+
+    try {
+      if (!this.config.apiKey) {
+        console.log(`   No OpenAI API key provided, using curated models`);
+        this.availableModels = this.models;
+        this.modelsLoaded = true;
+        return this.availableModels;
+      }
+
+      console.log(`   Fetching available models from OpenAI...`);
+
+      const response = await this.client.models.list();
+      
+      // The OpenAI SDK response has the data directly accessible
+      const modelsData = response.data;
+      
+      if (!modelsData || !Array.isArray(modelsData)) {
+        console.log(`   Invalid response from OpenAI API, using curated models`);
+        this.availableModels = this.models;
+        this.modelsLoaded = true;
+        return this.availableModels;
+      }
+
+      // Safely extract model IDs
+      const validModelIds: string[] = [];
+      
+      for (const model of modelsData) {
+        try {
+          if (model && 
+              typeof model === 'object' && 
+              'id' in model && 
+              typeof model.id === 'string' && 
+              model.id.length > 0) {
+            validModelIds.push(model.id);
+          }
+        } catch {
+          continue;
+        }
+      }
+
+      // Filter for useful chat models (exclude specialized models)
+      const chatModels = validModelIds
+        .filter(modelId => {
+          try {
+            // Extra safety check for modelId
+            if (!modelId || typeof modelId !== 'string' || modelId.length === 0) {
+              return false;
+            }
+            
+            return (
+              !modelId.includes('instruct') &&
+              !modelId.includes('audio') &&
+              !modelId.includes('realtime') &&
+              !modelId.includes('search') &&
+              !modelId.includes('transcribe') &&
+              !modelId.includes('tts') &&
+              !modelId.includes('whisper') &&
+              !modelId.includes('dall-e') &&
+              !modelId.includes('davinci') &&
+              !modelId.includes('babbage') &&
+              !modelId.includes('embedding') &&
+              !modelId.includes('moderation') &&
+              !modelId.includes('0301') && 
+              !modelId.includes('0314') && 
+              !modelId.includes('0613')
+            );
+          } catch {
+            return false;
+          }
+        })
+        .sort((a, b) => {
+          // Prioritize: o4 > o3 > o1 > gpt-4o > gpt-4.1 > gpt-4 > gpt-3.5
+          const getScore = (model: string) => {
+            try {
+              if (!model || typeof model !== 'string') return 0;
+              if (model.startsWith('o4')) return 7;
+              if (model.startsWith('o3')) return 6;
+              if (model.startsWith('o1')) return 5;
+              if (model.startsWith('gpt-4o')) return 4;
+              if (model.startsWith('gpt-4.1')) return 3;
+              if (model.startsWith('gpt-4')) return 2;
+              if (model.startsWith('gpt-3.5')) return 1;
+              return 0;
+            } catch {
+              return 0;
+            }
+          };
+          return getScore(b) - getScore(a);
+        });
+
+      if (chatModels.length > 0) {
+        this.availableModels = chatModels;
+        console.log(`   Found ${chatModels.length} OpenAI models from API`);
+      } else {
+        this.availableModels = this.models;
+        console.log(`   No suitable models found via API, using curated models`);
+      }
+
+      this.modelsLoaded = true;
+      return this.availableModels;
+
+    } catch (error) {
+      console.log(`   Could not fetch OpenAI models: ${error instanceof Error ? error.message : String(error)}`);
+      console.log(`   Using curated OpenAI models`);
+      this.availableModels = this.models;
+      this.modelsLoaded = true;
+      return this.availableModels;
+    }
+  }
+
+  /**
+   * Get available models (public interface)
+   */
+  async getAvailableModels(): Promise<string[]> {
+    return this.loadAvailableModels();
   }
 }
 

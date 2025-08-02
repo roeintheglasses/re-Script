@@ -34,7 +34,7 @@ export class CodeProcessingStream extends Transform {
     this.chunkSize = options.chunkSize || 1024 * 1024; // 1MB chunks
   }
 
-  async _transform(
+  override async _transform(
     chunk: Buffer,
     encoding: BufferEncoding,
     callback: (error?: Error | null, data?: unknown) => void
@@ -69,7 +69,7 @@ export class CodeProcessingStream extends Transform {
     }
   }
 
-  async _flush(callback: (error?: Error | null, data?: unknown) => void): Promise<void> {
+  override async _flush(callback: (error?: Error | null, data?: unknown) => void): Promise<void> {
     try {
       // Process remaining buffer
       if (this.buffer.length > 0) {
@@ -121,7 +121,7 @@ export class ProgressStream extends Transform {
     this.onProgress = onProgress;
   }
 
-  _transform(
+  override _transform(
     chunk: Buffer,
     encoding: BufferEncoding,
     callback: (error?: Error | null, data?: unknown) => void

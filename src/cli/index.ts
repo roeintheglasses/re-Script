@@ -12,14 +12,7 @@ import { dirname, join } from 'path';
 
 import { processCommand } from './commands/process.js';
 import { configCommand } from './commands/config.js';
-import { validateCommand } from './commands/validate.js';
-import { 
-  listJobsCommand, 
-  resumeJobCommand, 
-  cancelJobCommand, 
-  deleteJobCommand, 
-  getJobStatusCommand 
-} from './commands/jobs.js';
+import { initCommand } from './commands/init.js';
 import { ReScriptError, formatErrorMessage } from '../utils/errors.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -131,89 +124,21 @@ async function main(): Promise<void> {
       }
     });
 
+  // Interactive initialization
+  program
+    .command('init')
+    .description('Interactive setup wizard')
+    .action(async () => {
+      try {
+        await initCommand();
+      } catch (error) {
+        handleError(error);
+      }
+    });
+
   // Configuration management
-  program
-    .command('config')
-    .description('Manage configuration')
-    .addCommand(configCommand);
+  program.addCommand(configCommand);
 
-  // Validation utilities
-  program
-    .command('validate')
-    .description('Validate files and configuration')
-    .addCommand(validateCommand);
-
-  // Job management
-  const jobsCommand = program
-    .command('jobs')
-    .description('Manage processing jobs');
-
-  jobsCommand
-    .command('list')
-    .description('List all jobs')
-    .option('-c, --config <path>', 'path to configuration file')
-    .option('-s, --status <status>', 'filter by status (pending,running,completed,failed,cancelled)')
-    .option('-l, --limit <number>', 'limit number of results', parseInt)
-    .option('-f, --format <format>', 'output format (table, json)', 'table')
-    .option('-v, --verbose', 'show detailed information')
-    .action(async (options) => {
-      try {
-        await listJobsCommand(options);
-      } catch (error) {
-        handleError(error);
-      }
-    });
-
-  jobsCommand
-    .command('status <jobId>')
-    .description('Get job status and details')
-    .option('-v, --verbose', 'show detailed information')
-    .action(async (jobId, options) => {
-      try {
-        await getJobStatusCommand(jobId, options);
-      } catch (error) {
-        handleError(error);
-      }
-    });
-
-  jobsCommand
-    .command('resume <jobId>')
-    .description('Resume a paused or failed job')
-    .option('-c, --config <path>', 'path to configuration file')
-    .option('-f, --force', 'force resume even if job was cancelled')
-    .option('-v, --verbose', 'show detailed information')
-    .action(async (jobId, options) => {
-      try {
-        await resumeJobCommand(jobId, options);
-      } catch (error) {
-        handleError(error);
-      }
-    });
-
-  jobsCommand
-    .command('cancel <jobId>')
-    .description('Cancel a running job')
-    .option('-f, --force', 'force cancellation')
-    .option('-v, --verbose', 'show detailed information')
-    .action(async (jobId, options) => {
-      try {
-        await cancelJobCommand(jobId, options);
-      } catch (error) {
-        handleError(error);
-      }
-    });
-
-  jobsCommand
-    .command('delete <jobId>')
-    .description('Delete a job and its data')
-    .option('-f, --force', 'force deletion (cancels running job)')
-    .action(async (jobId, options) => {
-      try {
-        await deleteJobCommand(jobId, options);
-      } catch (error) {
-        handleError(error);
-      }
-    });
 
   // Example usage command
   program
@@ -221,6 +146,12 @@ async function main(): Promise<void> {
     .description('Show usage examples')
     .action(() => {
       console.log(chalk.bold('📚 re-Script Usage Examples:\n'));
+      
+      console.log(chalk.bold.blue('🚀 Getting Started (Interactive Setup):'));
+      console.log(chalk.cyan('   node dist/cli/index.js init'));
+      console.log(chalk.gray('   • Interactive wizard to set up your provider, model, and API key'));
+      console.log(chalk.gray('   • Choose from OpenAI, Anthropic, or local Ollama'));
+      console.log(chalk.gray('   • Guided setup with smart defaults\n'));
       
       console.log(chalk.cyan('Basic usage:'));
       console.log('  re-script app.min.js');

@@ -52,7 +52,7 @@ export class OllamaProvider extends BaseLLMProvider {
   /**
    * Check if API key is required (Ollama typically doesn't need one)
    */
-  protected requiresApiKey(): boolean {
+  protected override requiresApiKey(): boolean {
     return false;
   }
 
@@ -101,7 +101,7 @@ export class OllamaProvider extends BaseLLMProvider {
       throw new LLMRequestError(
         this.name,
         error instanceof Error ? error.message : String(error),
-        this.isRetryableError(error),
+        this.isNonRetryableError(error),
         error instanceof Error ? error : undefined
       );
     }
@@ -393,6 +393,7 @@ JSON Response:`;
     }
 
     try {
+      // eslint-disable-next-line no-constant-condition
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
@@ -485,6 +486,14 @@ JSON Response:`;
     } else {
       return 'llama3.1:8b'; // Better for complex code
     }
+  }
+
+  /**
+   * Get available models (public interface)
+   */
+  async getAvailableModels(): Promise<string[]> {
+    await this.loadAvailableModels();
+    return this.availableModels.map(model => model.name);
   }
 }
 

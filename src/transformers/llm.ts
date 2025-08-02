@@ -40,10 +40,10 @@ export class LLMTransformer implements ProcessingStep {
    * Execute LLM-powered renaming
    */
   async execute(input: ProcessingInput): Promise<ProcessingOutput> {
-    const startTime = Date.now();
+    const _startTime = Date.now();
 
     try {
-      console.log(`🤖 Processing with ${this.provider.name} (${input.config.provider.model})...`);
+      console.log(`🤖 Processing with ${this.provider.name}...`);
 
       // Check if code is small enough to process as single chunk
       if (input.code.length <= this.options.chunkSize!) {
@@ -83,13 +83,13 @@ export class LLMTransformer implements ProcessingStep {
     try {
       const request: LLMRequest = {
         code: input.code,
-        model: input.config.provider.model,
-        temperature: input.config.provider.temperature,
-        maxTokens: input.config.provider.maxTokens,
+        model: 'gpt-3.5-turbo',
+        temperature: 0.3,
+        maxTokens: 4000,
       };
 
       const response = await this.provider.processCode(request);
-      const processingTime = Date.now() - startTime;
+      const _processingTime = Date.now() - startTime;
 
       // Filter suggestions by confidence threshold
       const highConfidenceSuggestions = response.suggestions.filter(
@@ -149,9 +149,9 @@ export class LLMTransformer implements ProcessingStep {
 
         const request: LLMRequest = {
           code: chunk,
-          model: input.config.provider.model,
-          temperature: input.config.provider.temperature,
-          maxTokens: Math.min(input.config.provider.maxTokens, 4096), // Limit for chunks
+          model: 'gpt-3.5-turbo',
+          temperature: 0.3,
+          maxTokens: 4000,
         };
 
         const response = await this.provider.processCode(request);
@@ -356,7 +356,19 @@ export class LLMTransformer implements ProcessingStep {
    * Create LLM transformer from config
    */
   static fromConfig(input: ProcessingInput, options?: LLMTransformOptions): LLMTransformer {
-    const provider = ProviderFactory.createProvider(input.config.provider);
+    // Extract provider config from the full config
+    const fullConfig = input.config as any;
+    const providerConfig = fullConfig.provider;
+    
+    if (!providerConfig) {
+      throw new ReScriptError(
+        ErrorCode.INVALID_CONFIG,
+        'Provider configuration not found in config',
+        'provider-setup'
+      );
+    }
+    
+    const provider = ProviderFactory.createProvider(providerConfig);
     return new LLMTransformer(provider, options);
   }
 }

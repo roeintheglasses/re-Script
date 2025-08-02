@@ -47,7 +47,7 @@ export abstract class BaseLLMProvider implements LLMProvider {
       );
     }
 
-    if (!this.models.includes(this.config.model)) {
+    if (this.models && Array.isArray(this.models) && !this.models.includes(this.config.model)) {
       throw new ReScriptError(
         ErrorCode.INVALID_MODEL,
         `Model '${this.config.model}' not supported by ${this.name}. Available models: ${this.models.join(', ')}`,

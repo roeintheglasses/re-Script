@@ -6,6 +6,10 @@
 # testing
 /coverage
 
+# build
+/dist
+test.*.js
+
 # misc
 .DS_Store
 *.pem

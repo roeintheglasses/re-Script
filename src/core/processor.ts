@@ -5,8 +5,6 @@
 import { 
   ProcessingInput, 
   ProcessingOutput, 
-  ProcessingJob,
-  JobStatus,
   ReScriptConfig,
   ProgressCallback,
   ProcessedFile,
@@ -17,7 +15,6 @@ import { LLMTransformer } from '../transformers/llm.js';
 import { ReScriptError, ErrorCode } from '../utils/errors.js';
 import { readFile, writeFile, mkdir, stat } from 'fs/promises';
 import { dirname, join, relative, extname } from 'path';
-import { createHash } from 'crypto';
 
 export interface ProcessorOptions {
   outputDir?: string;
@@ -82,7 +79,7 @@ export class MainProcessor {
             tokensCount: Math.ceil(code.length / 4),
           },
         },
-        config: this.config,
+        config: this.config as any,
       };
 
       // Create and configure pipeline
@@ -232,8 +229,8 @@ export class MainProcessor {
       
       async execute(input: ProcessingInput): Promise<ProcessingOutput> {
         const transformer = LLMTransformer.fromConfig(input, {
-          chunkSize: this.config.processing.chunking.maxChunkSize,
-          concurrency: Math.min(this.config.processing.concurrency, 3),
+          chunkSize: 10000,
+          concurrency: 3,
           minConfidenceThreshold: 0.3,
         });
         

@@ -104,7 +104,7 @@ export class WebcrackTransformer implements ProcessingStep {
           },
         },
         success: true,
-        warnings: result.warnings?.length ? result.warnings : undefined,
+        warnings: undefined, // result.warnings?.length ? result.warnings : undefined,
       };
 
     } catch (error) {

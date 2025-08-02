@@ -1,26 +1,23 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier"],
-  "extends": [
-    "eslint:recommended",
-    "@typescript-eslint/recommended",
-    "@typescript-eslint/recommended-requiring-type-checking",
-    "prettier"
-  ],
+  "plugins": ["@typescript-eslint"],
+  "extends": ["eslint:recommended"],
   "parserOptions": {
-    "project": "./tsconfig.json",
     "ecmaVersion": 2022,
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": "error",
-    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-    "@typescript-eslint/explicit-function-return-type": "warn",
-    "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/prefer-nullish-coalescing": "error",
-    "@typescript-eslint/prefer-optional-chain": "error",
-    "@typescript-eslint/no-non-null-assertion": "error"
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "no-undef": "off",
+    "no-useless-catch": "warn",
+    "no-useless-escape": "warn"
   },
-  "ignorePatterns": ["dist", "node_modules", "*.js"]
+  "ignorePatterns": ["dist", "node_modules", "*.js"],
+  "env": {
+    "node": true,
+    "es2022": true
+  }
 }

@@ -26,10 +26,8 @@ export class ConfigLoader {
       `.${CONFIG_MODULE_NAME}rc.yaml`,
       `.${CONFIG_MODULE_NAME}rc.yml`,
       `.${CONFIG_MODULE_NAME}rc.js`,
-      `.${CONFIG_MODULE_NAME}rc.mjs`,
       `.${CONFIG_MODULE_NAME}rc.cjs`,
       `${CONFIG_MODULE_NAME}.config.js`,
-      `${CONFIG_MODULE_NAME}.config.mjs`,
       `${CONFIG_MODULE_NAME}.config.cjs`,
     ],
   });
@@ -184,7 +182,7 @@ export class ConfigLoader {
     if (options.concurrency) {
       override.processing = { concurrency: Number(options.concurrency) };
       
-      if (override.processing.concurrency < 1 || override.processing.concurrency > 20) {
+      if (override.processing.concurrency! < 1 || override.processing.concurrency! > 20) {
         throw new InvalidConfigError('Concurrency must be between 1 and 20');
       }
     }
