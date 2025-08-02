@@ -9,6 +9,7 @@
 # build
 /dist
 test.*.js
+.rescriptrc.json
 
 # misc
 .DS_Store
