@@ -320,18 +320,20 @@ export async function initCommand(): Promise<void> {
     console.log(chalk.gray('   1. Create a test minified file:'));
     console.log(chalk.cyan('      echo "function a(b,c){return b+c}console.log(a(1,2))" > test.min.js'));
     console.log(chalk.gray('   2. Process it:'));
-    console.log(chalk.cyan('      node dist/cli/index.js test.min.js -o test.readable.js'));
+    console.log(chalk.cyan('      re-script test.min.js -o test.readable.js'));
     console.log(chalk.gray('   3. Check the results:'));
-    console.log(chalk.cyan('      cat test.readable.js\n'));
+    console.log(chalk.cyan('      cat test.readable.js'));
+    console.log(); // Add newline
 
     if (!apiKey && selectedProvider.requiresApiKey) {
       console.log(chalk.yellow('⚠️  Don\'t forget to add your API key:'));
-      console.log(chalk.cyan(`   node dist/cli/index.js config set provider.apiKey "your-key"\n`));
+      console.log(chalk.cyan(`   re-script config set provider.apiKey "your-key"`));
+      console.log(); // Add newline
     }
 
     console.log(chalk.bold('📚 For more options:'));
-    console.log(chalk.cyan('   node dist/cli/index.js --help'));
-    console.log(chalk.cyan('   node dist/cli/index.js examples\n'));
+    console.log(chalk.cyan('   re-script --help'));
+    console.log(chalk.cyan('   re-script examples'));
 
   } catch (error) {
     console.error(chalk.red('\n❌ Setup failed:'));
@@ -339,6 +341,8 @@ export async function initCommand(): Promise<void> {
     process.exit(1);
   } finally {
     rl.close();
+    // Ensure clean terminal state
+    process.stdout.write('\n');
   }
 }
 

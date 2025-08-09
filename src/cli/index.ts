@@ -148,7 +148,7 @@ async function main(): Promise<void> {
       console.log(chalk.bold('📚 re-Script Usage Examples:\n'));
       
       console.log(chalk.bold.blue('🚀 Getting Started (Interactive Setup):'));
-      console.log(chalk.cyan('   node dist/cli/index.js init'));
+      console.log(chalk.cyan('   re-script init'));
       console.log(chalk.gray('   • Interactive wizard to set up your provider, model, and API key'));
       console.log(chalk.gray('   • Choose from OpenAI, Anthropic, or local Ollama'));
       console.log(chalk.gray('   • Guided setup with smart defaults\n'));
@@ -161,9 +161,9 @@ async function main(): Promise<void> {
       console.log('  re-script app.min.js --provider anthropic --model claude-3-5-sonnet-20241022');
       console.log('  re-script app.min.js --provider openai --model gpt-4\n');
       
-      console.log(chalk.cyan('Configuration file:'));
-      console.log('  re-script config init');
-      console.log('  re-script app.min.js --config custom.config.js\n');
+      console.log(chalk.cyan('Configuration:'));
+      console.log('  re-script config show');
+      console.log('  re-script app.min.js --config .rescriptrc.json\n');
       
       console.log(chalk.cyan('Advanced options:'));
       console.log('  re-script src/ --recursive --pattern "*.min.js" --exclude "node_modules/**"');
