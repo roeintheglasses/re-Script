@@ -1,79 +1,63 @@
-# re-Script v2
+# re-Script
 
-> Advanced JavaScript unminifier and deobfuscator powered by AI
+Advanced JavaScript unminifier and deobfuscator powered by AI.
 
-re-Script v2 is a complete rewrite of the original re-Script tool, featuring modern architecture, robust error handling, and support for multiple AI providers.
+re-Script transforms minified and obfuscated JavaScript into readable code using AI models like Claude, GPT-4, or local LLMs. It combines traditional tools like webcrack and Babel with intelligent variable renaming for optimal results.
 
-## ✨ Features
+## Features
 
-- 🤖 **Multi-LLM Support**: OpenAI, Anthropic, Ollama, Azure, Bedrock
-- 🔄 **Resumable Processing**: Save progress and resume large jobs
-- 📦 **Batch Processing**: Process multiple files/directories
-- 🎯 **Smart Chunking**: AST-aware code splitting for optimal results
-- 💾 **Intelligent Caching**: Reduce costs with smart response caching
-- 🛡️ **Error Recovery**: Graceful degradation when steps fail
-- ⚙️ **Flexible Configuration**: File-based config with CLI overrides
-- 📊 **Progress Tracking**: Real-time progress with ETA
-- 🧪 **Dry Run Mode**: Preview changes before applying
-- 👀 **Watch Mode**: Real-time processing during development
-
-## 🚀 Quick Start
-
-### Installation
+- **Multi-LLM Support** - OpenAI, Anthropic, Ollama, Azure, Bedrock
+- **Batch Processing** - Process multiple files or entire directories
+- **Smart Chunking** - AST-aware code splitting for better results
+- **Intelligent Caching** - Reduce costs with response caching
+- **Error Recovery** - Graceful handling when steps fail
+- **Flexible Config** - File-based configuration with CLI overrides
+- **Progress Tracking** - Real-time progress with time estimates
+- **Dry Run Mode** - Preview changes before applying
+- **Watch Mode** - Process files as they change
 
 ```bash
-npm install -g re-script@2.0.0-alpha.1
+npm install -g @roeintheglasses/re-script
 ```
 
-### Basic Usage
+## Usage
+
+### Quick Start
 
 ```bash
+# Interactive setup (recommended for first time)
+re-script init
+
 # Process a single file
 re-script app.min.js
 
 # Process directory recursively
 re-script src/ --recursive --output dist/
-
-# Use specific provider and model
-re-script app.min.js --provider anthropic --model claude-3-5-sonnet-20241022
 ```
 
 ### Configuration
 
-Create a configuration file:
+Create config with interactive setup:
 
 ```bash
-re-script config init
+re-script init
 ```
 
-Edit `.rescriptrc.json`:
+Or manage config manually:
 
-```json
-{
-  "provider": {
-    "name": "anthropic",
-    "model": "claude-3-5-sonnet-20241022",
-    "apiKey": "your-api-key-here",
-    "temperature": 0.3,
-    "maxTokens": 8192
-  },
-  "processing": {
-    "concurrency": 5,
-    "chunking": {
-      "strategy": "ast-aware",
-      "maxChunkSize": 4000
-    },
-    "caching": {
-      "enabled": true,
-      "ttl": 86400
-    }
-  }
-}
+```bash
+# Show current config
+re-script config show
+
+# Set values
+re-script config set provider.name anthropic
+re-script config set provider.apiKey "your-key"
+
+# Validate config
+re-script config validate
 ```
 
-## 📖 Usage Examples
-
-### Basic Processing
+## Examples
 
 ```bash
 # Single file
@@ -84,11 +68,7 @@ re-script file1.min.js file2.min.js
 
 # Directory with pattern
 re-script src/ --pattern "*.min.js" --recursive
-```
 
-### Advanced Options
-
-```bash
 # Dry run to preview changes
 re-script app.min.js --dry-run
 
@@ -98,32 +78,31 @@ re-script app.min.js --output app.readable.js
 # Exclude patterns
 re-script src/ --recursive --exclude "node_modules/**" "*.test.js"
 
-# Watch mode for development
-re-script src/ --watch --recursive
-
-# High concurrency for large projects
+# High concurrency
 re-script src/ --recursive --concurrency 10
 ```
 
-### Provider-Specific Usage
+### Providers
 
 ```bash
 # OpenAI
-re-script app.min.js --provider openai --model gpt-4 --api-key sk-...
+re-script app.min.js --provider openai --model gpt-4o
 
-# Anthropic
+# Anthropic  
 re-script app.min.js --provider anthropic --model claude-3-5-sonnet-20241022
 
 # Local Ollama
-re-script app.min.js --provider ollama --model llama3:8b
-OLLAMA_BASE_URL=http://localhost:11434 re-script app.min.js
+re-script app.min.js --provider ollama --model codellama:13b
+
+# Azure OpenAI
+re-script app.min.js --provider azure --model gpt-4o
 ```
 
-## 🔧 Configuration
+## Configuration
 
-### Configuration File
+### Config Files
 
-re-Script looks for configuration in:
+re-Script looks for:
 - `.rescriptrc.json`
 - `.rescriptrc.yaml`
 - `rescript.config.js`
@@ -132,125 +111,69 @@ re-Script looks for configuration in:
 ### Environment Variables
 
 ```bash
-export RESCRIPT_PROVIDER=anthropic
 export ANTHROPIC_API_KEY=your-key-here
-export RESCRIPT_MODEL=claude-3-5-sonnet-20241022
-export RESCRIPT_TEMPERATURE=0.3
-export RESCRIPT_CONCURRENCY=5
+export OPENAI_API_KEY=your-key-here
+export OLLAMA_BASE_URL=http://localhost:11434
 export RESCRIPT_DEBUG=true
 ```
 
-### CLI Configuration Management
+### Config Commands
 
 ```bash
 # Show current config
 re-script config show
 
+# Show with environment variables
+re-script config show --env
+
 # Set values
 re-script config set provider.name openai
-re-script config set provider.model gpt-4
+re-script config set provider.model gpt-4o
 
 # Get values
 re-script config get provider.name
 
-# Validate config
-re-script config validate
-
 # List all available keys
 re-script config list
+
+# Validate configuration
+re-script config validate
 ```
 
-## 🧪 Validation Tools
-
-### Validate JavaScript Files
+## Additional Commands
 
 ```bash
-# Check syntax
-re-script validate js app.min.js src/**/*.js
+# Show usage examples
+re-script examples
 
-# Check if files are minified
-re-script validate minified app.js app.min.js
+# Interactive setup wizard
+re-script init
 
-# Check for obfuscation
-re-script validate obfuscated suspicious.js
-
-# Analyze complexity and estimate processing time/cost
-re-script validate complexity large-file.js
+# Help and version
+re-script --help
+re-script --version
 ```
 
-## 🏗️ Architecture
+## How It Works
 
-re-Script v2 follows a modular pipeline architecture:
+re-Script processes files through a 4-step pipeline:
 
-1. **Input Validation** - File discovery and syntax validation
-2. **Webcrack Processing** - Reverse bundling and deobfuscation  
-3. **Babel Transformations** - AST-based code improvements
-4. **LLM Processing** - AI-powered variable/function renaming
-5. **Code Formatting** - Final prettification and output
+1. **Webcrack Processing** - Reverse bundling and deobfuscation
+2. **Babel Transformations** - AST-based code improvements  
+3. **LLM Processing** - AI-powered variable/function renaming
+4. **Code Formatting** - Final prettification
 
-### Error Handling
+Each step can fail gracefully without breaking the pipeline. Responses are cached to reduce API costs.
 
-- **Graceful Degradation**: Steps can fail without breaking the pipeline
-- **Recovery Strategies**: Automatic fallbacks for common failures
-- **Detailed Reporting**: Clear error messages with actionable suggestions
-- **Resumable Jobs**: Save progress and continue from checkpoints
+## Supported Models
 
-### Caching
+**OpenAI**: `gpt-4o`, `gpt-4o-mini`, `gpt-4-turbo`, `gpt-4`, `gpt-3.5-turbo`
 
-- **Content-based Keys**: Cache responses based on code content
-- **Multiple Backends**: Memory, file system, or Redis
-- **TTL Management**: Configurable expiration times
-- **Cost Optimization**: Reduce API calls and processing time
+**Anthropic**: `claude-3-5-sonnet-20241022`, `claude-3-5-haiku-20241022`, `claude-3-opus-20240229`, `claude-3-sonnet-20240229`, `claude-3-haiku-20240307`
 
-## 🔌 Providers
+**Azure**: Same as OpenAI models but hosted on Azure
 
-### OpenAI
-
-```json
-{
-  "provider": {
-    "name": "openai",
-    "model": "gpt-4",
-    "apiKey": "sk-...",
-    "temperature": 0.3,
-    "maxTokens": 8192
-  }
-}
-```
-
-Supported models: `gpt-4`, `gpt-4-turbo`, `gpt-4o`, `gpt-4o-mini`
-
-### Anthropic
-
-```json
-{
-  "provider": {
-    "name": "anthropic",
-    "model": "claude-3-5-sonnet-20241022",
-    "apiKey": "sk-ant-...",
-    "temperature": 0.3,
-    "maxTokens": 8192
-  }
-}
-```
-
-Supported models: `claude-3-5-sonnet-20241022`, `claude-3-5-haiku-20241022`, `claude-3-opus-20240229`
-
-### Ollama (Local)
-
-```json
-{
-  "provider": {
-    "name": "ollama",
-    "model": "llama3:8b",
-    "baseUrl": "http://localhost:11434",
-    "temperature": 0.3,
-    "maxTokens": 8192
-  }
-}
-```
-
-Popular models: `llama3:8b`, `codellama:13b`, `mistral:7b`, `deepseek-coder:6.7b`
+**Ollama**: `llama3:8b`, `llama3:70b`, `codellama:13b`, `codellama:34b`, `mistral:7b`, `deepseek-coder:6.7b`
 
 ## 🧪 Development
 
@@ -347,23 +270,17 @@ node --max-old-space-size=8192 $(which re-script) large-file.js
 re-script --verbose input.js
 # or
 export RESCRIPT_DEBUG=true
-export RESCRIPT_LOG_LEVEL=debug
 ```
 
-## 📜 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## Contributing
 
-Contributions welcome! Please read our [Contributing Guide](CONTRIBUTING.md) first.
+Contributions welcome! Open an issue or submit a PR.
 
-## 📞 Support
+## Support
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/roeintheglasses/re-Script/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/roeintheglasses/re-Script/discussions)
-- 📖 **Documentation**: [Wiki](https://github.com/roeintheglasses/re-Script/wiki)
-
----
-
-**Made with ❤️ by the re-Script team**
+- **Issues**: [GitHub Issues](https://github.com/roeintheglasses/re-Script/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/roeintheglasses/re-Script/discussions)

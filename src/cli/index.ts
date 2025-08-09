@@ -195,9 +195,7 @@ async function main(): Promise<void> {
   }
 }
 
-// Only run if this file is executed directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch(handleError);
-}
+// Run the CLI
+main().catch(handleError);
 
 export { main };
