@@ -247,7 +247,7 @@ export class LLMTransformer implements ProcessingStep {
   }
 
   /**
-   * Apply renamings to code
+   * Apply renamings to code using AST-aware replacement
    */
   private async applyRenamings(code: string, suggestions: RenameSuggestion[]): Promise<string> {
     if (suggestions.length === 0) {
@@ -256,6 +256,86 @@ export class LLMTransformer implements ProcessingStep {
 
     console.log(`🔄 Applying ${suggestions.length} renamings...`);
 
+    // Try AST-aware renaming first, fall back to safer regex if needed
+    try {
+      return await this.applyRenamingsWithAST(code, suggestions);
+    } catch (error) {
+      console.warn(`⚠️  AST-based renaming failed, using safer regex approach: ${error instanceof Error ? error.message : String(error)}`);
+      return await this.applyRenamingsWithSafeRegex(code, suggestions);
+    }
+  }
+
+  /**
+   * Apply renamings using Babel AST traversal (safer approach)
+   */
+  private async applyRenamingsWithAST(code: string, suggestions: RenameSuggestion[]): Promise<string> {
+    const babel = await import('@babel/core');
+    const t = await import('@babel/types');
+
+    // Create a map of renamings for quick lookup
+    const renameMap = new Map<string, string>();
+    suggestions.forEach(s => renameMap.set(s.originalName, s.suggestedName));
+
+    let appliedCount = 0;
+    const appliedRenamings: Array<{originalName: string, suggestedName: string, count: number}> = [];
+
+    const result = babel.transformSync(code, {
+      plugins: [
+        function() {
+          return {
+            visitor: {
+              Identifier(path: any) {
+                const name = path.node.name;
+                if (renameMap.has(name)) {
+                  // Only rename if this is not a property access (obj.prop)
+                  // and not in a string literal or template literal
+                  const parent = path.parent;
+                  const isProperty = t.isMemberExpression(parent) && parent.property === path.node && !parent.computed;
+                  const isObjectProperty = t.isObjectProperty(parent) && parent.key === path.node && !parent.computed;
+                  const isMethodDefinition = t.isClassMethod(parent) && parent.key === path.node;
+                  
+                  if (!isProperty && !isObjectProperty && !isMethodDefinition) {
+                    const newName = renameMap.get(name)!;
+                    path.node.name = newName;
+                    
+                    // Track the renaming
+                    const existing = appliedRenamings.find(r => r.originalName === name);
+                    if (existing) {
+                      existing.count++;
+                    } else {
+                      appliedRenamings.push({ originalName: name, suggestedName: newName, count: 1 });
+                      appliedCount++;
+                    }
+                  }
+                }
+              }
+            }
+          };
+        }
+      ],
+      compact: false,
+      retainLines: true
+    });
+
+    if (!result || !result.code) {
+      throw new Error('Babel transformation returned no result');
+    }
+
+    // Log applied renamings
+    appliedRenamings.forEach(r => {
+      const suggestion = suggestions.find(s => s.originalName === r.originalName);
+      const confidence = suggestion ? (suggestion.confidence * 100).toFixed(0) : 'unknown';
+      console.log(`    ${r.originalName} → ${r.suggestedName} (${r.count} occurrences, confidence: ${confidence}%)`);
+    });
+
+    console.log(`✓ Applied ${appliedCount}/${suggestions.length} renamings`);
+    return result.code;
+  }
+
+  /**
+   * Fallback: Apply renamings with safer regex that avoids common pitfalls
+   */
+  private async applyRenamingsWithSafeRegex(code: string, suggestions: RenameSuggestion[]): Promise<string> {
     // Sort suggestions by original name length (longest first) to avoid partial replacements
     const sortedSuggestions = [...suggestions].sort((a, b) => b.originalName.length - a.originalName.length);
 
@@ -264,12 +344,27 @@ export class LLMTransformer implements ProcessingStep {
 
     for (const suggestion of sortedSuggestions) {
       try {
+        // Skip single character variables that are likely to cause issues in regex/strings
+        if (suggestion.originalName.length === 1) {
+          console.log(`    Skipping ${suggestion.originalName} → ${suggestion.suggestedName} (single char, high risk)`);
+          continue;
+        }
+
         // Use word boundary regex to ensure we only replace complete identifiers
         const regex = new RegExp(`\\b${this.escapeRegex(suggestion.originalName)}\\b`, 'g');
         const matches = renamedCode.match(regex);
         
         if (matches && matches.length > 0) {
-          renamedCode = renamedCode.replace(regex, suggestion.suggestedName);
+          // Additional safety check: don't replace if it would create invalid syntax
+          const testReplacement = renamedCode.replace(regex, suggestion.suggestedName);
+          
+          // Basic validation - check for obvious syntax errors
+          if (this.hasObviousSyntaxErrors(testReplacement)) {
+            console.log(`    Skipping ${suggestion.originalName} → ${suggestion.suggestedName} (would create syntax errors)`);
+            continue;
+          }
+
+          renamedCode = testReplacement;
           appliedCount++;
           
           console.log(`    ${suggestion.originalName} → ${suggestion.suggestedName} (${matches.length} occurrences, confidence: ${(suggestion.confidence * 100).toFixed(0)}%)`);
@@ -281,6 +376,28 @@ export class LLMTransformer implements ProcessingStep {
 
     console.log(`✓ Applied ${appliedCount}/${suggestions.length} renamings`);
     return renamedCode;
+  }
+
+  /**
+   * Basic check for obvious syntax errors that would be created by renaming
+   */
+  private hasObviousSyntaxErrors(code: string): boolean {
+    // Check for invalid regex escape sequences like \day, \minuteUnit, etc.
+    const invalidEscapePattern = /\\[a-zA-Z][a-zA-Z0-9_]+/g;
+    const matches = code.match(invalidEscapePattern);
+    
+    if (matches) {
+      // Allow known valid escape sequences
+      const validEscapes = /\\(n|r|t|b|f|v|0|x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4}|u\{[0-9a-fA-F]+\}|[\\'"\/]|[.*+?^${}()|[\]\\]|[bBdDfnrstvwWS])/;
+      
+      for (const match of matches) {
+        if (!validEscapes.test(match)) {
+          return true;
+        }
+      }
+    }
+    
+    return false;
   }
 
   /**
