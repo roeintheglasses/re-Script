@@ -1,0 +1,17 @@
+{
+  "name": "@re-script/tsconfig",
+  "version": "1.0.0",
+  "description": "Shared TypeScript configuration for re-script monorepo",
+  "main": "./index.js",
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "node.json"
+  ],
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

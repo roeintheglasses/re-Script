@@ -1,42 +1,25 @@
 {
-  "name": "@roeintheglasses/re-script",
+  "name": "@re-script/cli",
   "version": "2.1.0",
-  "description": "Advanced LLM-powered JavaScript unminifier and deobfuscator",
+  "description": "Advanced LLM-powered JavaScript unminifier and deobfuscator CLI",
   "main": "dist/index.js",
   "bin": {
     "re-script": "dist/cli/index.js"
   },
   "type": "module",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "engines": {
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "test": "turbo test",
-    "test:coverage": "turbo test:coverage",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
-    "type-check": "turbo type-check",
-    "clean": "turbo clean && rm -rf node_modules/.cache",
-    "cli": "npm run build && node apps/cli/dist/index.js"
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/cli/index.js",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
   },
-  "keywords": [
-    "javascript",
-    "unminify",
-    "deobfuscate",
-    "ai",
-    "llm",
-    "typescript",
-    "cli"
-  ],
-  "author": "roeintheglasses",
-  "license": "MIT",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.3",
     "@babel/core": "^7.25.2",
@@ -63,13 +46,11 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "turbo": "^2.5.6",
     "typescript": "^5.5.4",
     "vitest": "^2.0.5"
   },
   "files": [
     "dist",
-    "README.md",
-    "LICENSE"
+    "README.md"
   ]
 }
