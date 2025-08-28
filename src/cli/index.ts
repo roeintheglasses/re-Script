@@ -13,6 +13,7 @@ import { dirname, join } from 'path';
 import { processCommand } from './commands/process.js';
 import { configCommand } from './commands/config.js';
 import { initCommand } from './commands/init.js';
+import { helpCommand } from './commands/help.js';
 import { ReScriptError, formatErrorMessage } from '../utils/errors.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -139,6 +140,13 @@ async function main(): Promise<void> {
   // Configuration management
   program.addCommand(configCommand);
 
+  // Help command
+  program
+    .command('help')
+    .description('Show detailed help and usage instructions')
+    .action(() => {
+      helpCommand();
+    });
 
   // Example usage command
   program
