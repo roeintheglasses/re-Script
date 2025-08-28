@@ -1,6 +1,6 @@
 {
   "name": "@roeintheglasses/re-script",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "description": "Advanced LLM-powered JavaScript unminifier and deobfuscator",
   "main": "dist/index.js",
   "bin": {
