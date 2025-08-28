@@ -190,7 +190,7 @@ async function collectInputFiles(input: string, options: CliOptions): Promise<st
 }
 
 async function collectDirectoryFiles(dirPath: string, options: CliOptions): Promise<string[]> {
-  const patterns = [];
+  const patterns: string[] = [];
   
   if (options.pattern) {
     patterns.push(options.pattern);
@@ -223,7 +223,7 @@ async function collectDirectoryFiles(dirPath: string, options: CliOptions): Prom
 
   // Remove duplicates and validate files
   const uniqueFiles = [...new Set(files)];
-  const validFiles = [];
+  const validFiles: string[] = [];
 
   for (const file of uniqueFiles) {
     try {

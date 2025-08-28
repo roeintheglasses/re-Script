@@ -431,7 +431,7 @@ export class CodePreprocessor implements ProcessingOptimizer {
     const complexity = cyclomaticComplexity + nestingDepth;
 
     // Detect common patterns
-    const patterns = [];
+    const patterns: string[] = [];
     if (input.includes('jQuery') || input.includes('$')) patterns.push('jquery');
     if (input.includes('React') || input.includes('jsx')) patterns.push('react');
     if (input.includes('Vue')) patterns.push('vue');

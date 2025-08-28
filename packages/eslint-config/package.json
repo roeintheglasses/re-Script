@@ -1,0 +1,30 @@
+{
+  "name": "@re-script/eslint-config",
+  "version": "1.0.0",
+  "description": "Shared ESLint configuration for re-script monorepo",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "next.js",
+    "node.js"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0",
+    "prettier": ">=3.0.0",
+    "typescript": ">=5.0.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

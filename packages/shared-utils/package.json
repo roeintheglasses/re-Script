@@ -1,0 +1,27 @@
+{
+  "name": "@re-script/shared-utils",
+  "version": "1.0.0",
+  "description": "Shared utilities and error classes for re-script monorepo",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "@re-script/shared-types": "*"
+  },
+  "devDependencies": {
+    "@re-script/tsconfig": "*",
+    "typescript": "^5.5.4"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

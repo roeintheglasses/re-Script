@@ -14,13 +14,6 @@ export class PrettierTransformer implements ProcessingStep {
 
   constructor(options: PrettierOptions = {} as PrettierOptions) {
     this.options = {
-      parser: 'babel',
-      printWidth: 80,
-      tabWidth: 2,
-      useTabs: false,
-      semi: true,
-      singleQuote: true,
-      trailingComma: 'es5',
       ...options,
     } as PrettierOptions;
   }

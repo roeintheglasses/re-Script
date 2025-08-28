@@ -1,0 +1,367 @@
+/**
+ * OpenAI GPT provider implementation
+ */
+import OpenAI from 'openai';
+import { BaseLLMProvider } from './base.js';
+import { ReScriptError, LLMRequestError } from '../utils/errors.js';
+export class OpenAIProvider extends BaseLLMProvider {
+    name = 'openai';
+    models = [
+        'gpt-4o',
+        'gpt-4o-mini',
+        'gpt-4-turbo',
+        'gpt-4',
+        'gpt-3.5-turbo'
+    ];
+    availableModels = [];
+    modelsLoaded = false;
+    maxTokens = 128000; // GPT-4 Turbo context window
+    supportsStreaming = true;
+    supportsFunctionCalling = true;
+    client;
+    constructor(config) {
+        super(config);
+        this.client = new OpenAI({
+            apiKey: config.apiKey,
+            timeout: config.timeout || 30000,
+            baseURL: config.baseUrl, // Support for Azure OpenAI
+        });
+    }
+    /**
+     * Process code using OpenAI GPT
+     */
+    async processCode(request) {
+        const startTime = Date.now();
+        try {
+            const response = await this.executeWithRetry(async () => {
+                return await this.client.chat.completions.create({
+                    model: request.model,
+                    max_tokens: Math.min(request.maxTokens || this.config.maxTokens, 4096),
+                    temperature: request.temperature || this.config.temperature,
+                    messages: [
+                        {
+                            role: 'system',
+                            content: request.systemPrompt || this.createSystemPrompt()
+                        },
+                        {
+                            role: 'user',
+                            content: this.createUserPrompt(request.code)
+                        }
+                    ],
+                    tools: [{
+                            type: 'function',
+                            function: {
+                                name: 'suggest_renames',
+                                description: 'Suggest meaningful names for variables and functions in JavaScript code',
+                                parameters: {
+                                    type: 'object',
+                                    properties: {
+                                        suggestions: {
+                                            type: 'array',
+                                            description: 'Array of rename suggestions',
+                                            items: {
+                                                type: 'object',
+                                                properties: {
+                                                    originalName: {
+                                                        type: 'string',
+                                                        description: 'Current variable/function name'
+                                                    },
+                                                    suggestedName: {
+                                                        type: 'string',
+                                                        description: 'Suggested new name'
+                                                    },
+                                                    confidence: {
+                                                        type: 'number',
+                                                        minimum: 0,
+                                                        maximum: 1,
+                                                        description: 'Confidence score for the suggestion'
+                                                    },
+                                                    reasoning: {
+                                                        type: 'string',
+                                                        description: 'Brief explanation for the name choice'
+                                                    },
+                                                    type: {
+                                                        type: 'string',
+                                                        enum: ['variable', 'function', 'class', 'method', 'property'],
+                                                        description: 'Type of identifier being renamed'
+                                                    }
+                                                },
+                                                required: ['originalName', 'suggestedName', 'confidence', 'type']
+                                            }
+                                        }
+                                    },
+                                    required: ['suggestions']
+                                }
+                            }
+                        }],
+                    tool_choice: { type: 'function', function: { name: 'suggest_renames' } }
+                });
+            });
+            const processingTime = Date.now() - startTime;
+            // Extract suggestions from function call
+            const message = response.choices[0]?.message;
+            if (!message?.tool_calls?.[0]) {
+                throw new Error('Expected function call response with suggest_renames');
+            }
+            const functionCall = message.tool_calls[0];
+            if (functionCall.function.name !== 'suggest_renames') {
+                throw new Error(`Expected suggest_renames function, got ${functionCall.function.name}`);
+            }
+            let functionArgs;
+            try {
+                functionArgs = JSON.parse(functionCall.function.arguments);
+            }
+            catch (error) {
+                throw new Error(`Invalid function arguments JSON: ${error instanceof Error ? error.message : String(error)}`);
+            }
+            const suggestions = this.parseRenameSuggestions(functionArgs);
+            const tokensUsed = response.usage?.total_tokens || 0;
+            this.totalTokensUsed += tokensUsed;
+            return {
+                suggestions,
+                confidence: this.calculateOverallConfidence(suggestions),
+                tokensUsed,
+                processingTime,
+            };
+        }
+        catch (error) {
+            if (error instanceof OpenAI.APIError) {
+                throw new LLMRequestError(this.name, `OpenAI API error: ${error.message}`, this.isRetryableOpenAIError(error), error);
+            }
+            if (error instanceof ReScriptError) {
+                throw error;
+            }
+            throw new LLMRequestError(this.name, error instanceof Error ? error.message : String(error), true, error instanceof Error ? error : undefined);
+        }
+    }
+    /**
+     * Create enhanced user prompt for GPT
+     */
+    createUserPrompt(code) {
+        const basePrompt = super.createUserPrompt(code);
+        return `${basePrompt}
+
+Please analyze this code and use the suggest_renames function to provide structured rename suggestions. Focus on:
+
+1. **Pattern Recognition**: Identify common JavaScript patterns and idioms
+2. **Context Clues**: Use variable usage patterns to infer purpose
+3. **Semantic Meaning**: Choose names that clearly express intent and functionality
+4. **Naming Conventions**: Follow JavaScript conventions (camelCase, descriptive names)
+5. **Code Flow**: Consider how variables relate to each other in the program flow
+
+For each suggestion, provide:
+- **originalName**: The current identifier
+- **suggestedName**: Your recommended replacement (use camelCase)
+- **confidence**: Your confidence level (0.0 = uncertain, 1.0 = very confident)
+- **reasoning**: Brief explanation of why this name is appropriate
+- **type**: The type of identifier (variable, function, class, method, property)
+
+Prioritize suggestions where you have high confidence based on clear context clues.`;
+    }
+    /**
+     * Check if OpenAI error is retryable
+     */
+    isRetryableOpenAIError(error) {
+        // Rate limit errors
+        if (error.status === 429)
+            return true;
+        // Server errors
+        if (error.status && error.status >= 500)
+            return true;
+        // Timeout errors
+        if (error.message.toLowerCase().includes('timeout'))
+            return true;
+        // Connection errors
+        if (error.message.toLowerCase().includes('connection'))
+            return true;
+        return false;
+    }
+    /**
+     * Get model-specific token limits
+     */
+    getModelTokenLimit(model) {
+        const limits = {
+            'gpt-4o': 128000,
+            'gpt-4o-mini': 128000,
+            'gpt-4-turbo': 128000,
+            'gpt-4': 8192,
+            'gpt-3.5-turbo': 16385,
+        };
+        return limits[model] || 8192;
+    }
+    /**
+     * Get recommended model for code size
+     */
+    getRecommendedModel(codeSize) {
+        if (codeSize < 5000) {
+            return 'gpt-4o-mini'; // Cost-effective for small files
+        }
+        else if (codeSize < 20000) {
+            return 'gpt-4o'; // Good balance of capability and cost
+        }
+        else if (codeSize < 50000) {
+            return 'gpt-4-turbo'; // Better for larger contexts
+        }
+        else {
+            return 'gpt-4o'; // Best for very large files
+        }
+    }
+    /**
+     * Estimate cost for request
+     */
+    estimateCost(inputTokens, outputTokens, model) {
+        // Approximate pricing as of 2024 (in USD per 1K tokens)
+        const pricing = {
+            'gpt-4o': { input: 0.005, output: 0.015 },
+            'gpt-4o-mini': { input: 0.00015, output: 0.0006 },
+            'gpt-4-turbo': { input: 0.01, output: 0.03 },
+            'gpt-4': { input: 0.03, output: 0.06 },
+            'gpt-3.5-turbo': { input: 0.0005, output: 0.0015 },
+        };
+        const modelPricing = pricing[model] || pricing['gpt-4o'];
+        return (inputTokens / 1000) * modelPricing.input +
+            (outputTokens / 1000) * modelPricing.output;
+    }
+    /**
+     * Support for Azure OpenAI
+     */
+    static createAzureProvider(config) {
+        const azureConfig = {
+            ...config,
+            baseUrl: `${config.azureEndpoint}/openai/deployments/${config.azureDeployment}`,
+        };
+        const provider = new OpenAIProvider(azureConfig);
+        // Override client for Azure-specific configuration
+        provider.client = new OpenAI({
+            apiKey: config.apiKey,
+            baseURL: azureConfig.baseUrl,
+            defaultQuery: { 'api-version': config.apiVersion || '2024-02-15-preview' },
+            defaultHeaders: {
+                'api-key': config.apiKey,
+            },
+        });
+        return provider;
+    }
+    /**
+     * Load available models from OpenAI API
+     */
+    async loadAvailableModels() {
+        if (this.modelsLoaded && this.availableModels.length > 0) {
+            return this.availableModels;
+        }
+        try {
+            if (!this.config.apiKey) {
+                console.log(`   No OpenAI API key provided, using curated models`);
+                this.availableModels = this.models;
+                this.modelsLoaded = true;
+                return this.availableModels;
+            }
+            console.log(`   Fetching available models from OpenAI...`);
+            const response = await this.client.models.list();
+            // The OpenAI SDK response has the data directly accessible
+            const modelsData = response.data;
+            if (!modelsData || !Array.isArray(modelsData)) {
+                console.log(`   Invalid response from OpenAI API, using curated models`);
+                this.availableModels = this.models;
+                this.modelsLoaded = true;
+                return this.availableModels;
+            }
+            // Safely extract model IDs
+            const validModelIds = [];
+            for (const model of modelsData) {
+                try {
+                    if (model &&
+                        typeof model === 'object' &&
+                        'id' in model &&
+                        typeof model.id === 'string' &&
+                        model.id.length > 0) {
+                        validModelIds.push(model.id);
+                    }
+                }
+                catch {
+                    continue;
+                }
+            }
+            // Filter for useful chat models (exclude specialized models)
+            const chatModels = validModelIds
+                .filter(modelId => {
+                try {
+                    // Extra safety check for modelId
+                    if (!modelId || typeof modelId !== 'string' || modelId.length === 0) {
+                        return false;
+                    }
+                    return (!modelId.includes('instruct') &&
+                        !modelId.includes('audio') &&
+                        !modelId.includes('realtime') &&
+                        !modelId.includes('search') &&
+                        !modelId.includes('transcribe') &&
+                        !modelId.includes('tts') &&
+                        !modelId.includes('whisper') &&
+                        !modelId.includes('dall-e') &&
+                        !modelId.includes('davinci') &&
+                        !modelId.includes('babbage') &&
+                        !modelId.includes('embedding') &&
+                        !modelId.includes('moderation') &&
+                        !modelId.includes('0301') &&
+                        !modelId.includes('0314') &&
+                        !modelId.includes('0613'));
+                }
+                catch {
+                    return false;
+                }
+            })
+                .sort((a, b) => {
+                // Prioritize: o4 > o3 > o1 > gpt-4o > gpt-4.1 > gpt-4 > gpt-3.5
+                const getScore = (model) => {
+                    try {
+                        if (!model || typeof model !== 'string')
+                            return 0;
+                        if (model.startsWith('o4'))
+                            return 7;
+                        if (model.startsWith('o3'))
+                            return 6;
+                        if (model.startsWith('o1'))
+                            return 5;
+                        if (model.startsWith('gpt-4o'))
+                            return 4;
+                        if (model.startsWith('gpt-4.1'))
+                            return 3;
+                        if (model.startsWith('gpt-4'))
+                            return 2;
+                        if (model.startsWith('gpt-3.5'))
+                            return 1;
+                        return 0;
+                    }
+                    catch {
+                        return 0;
+                    }
+                };
+                return getScore(b) - getScore(a);
+            });
+            if (chatModels.length > 0) {
+                this.availableModels = chatModels;
+                console.log(`   Found ${chatModels.length} OpenAI models from API`);
+            }
+            else {
+                this.availableModels = this.models;
+                console.log(`   No suitable models found via API, using curated models`);
+            }
+            this.modelsLoaded = true;
+            return this.availableModels;
+        }
+        catch (error) {
+            console.log(`   Could not fetch OpenAI models: ${error instanceof Error ? error.message : String(error)}`);
+            console.log(`   Using curated OpenAI models`);
+            this.availableModels = this.models;
+            this.modelsLoaded = true;
+            return this.availableModels;
+        }
+    }
+    /**
+     * Get available models (public interface)
+     */
+    async getAvailableModels() {
+        return this.loadAvailableModels();
+    }
+}
+//# sourceMappingURL=openai.js.map

@@ -645,6 +645,49 @@
   resolved "https://registry.npmjs.org/@pkgr/core/-/core-0.2.9.tgz"
   integrity sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==
 
+"@re-script/cli@file:/Users/roe/Dev/re-Script/apps/cli":
+  version "2.1.0"
+  resolved "file:apps/cli"
+  dependencies:
+    "@anthropic-ai/sdk" "^0.24.3"
+    "@babel/core" "^7.25.2"
+    "@babel/types" "^7.25.2"
+    "@langchain/anthropic" "^0.2.18"
+    "@langchain/openai" "^0.2.8"
+    chalk "^5.3.0"
+    commander "^12.1.0"
+    cosmiconfig "^9.0.0"
+    glob "^10.4.5"
+    langchain "^0.2.16"
+    openai "^4.56.0"
+    ora "^8.0.1"
+    prettier "^3.3.3"
+    webcrack "^2.14.1"
+    zod "^3.23.8"
+
+"@re-script/eslint-config@file:/Users/roe/Dev/re-Script/packages/eslint-config":
+  version "1.0.0"
+  resolved "file:packages/eslint-config"
+  dependencies:
+    "@typescript-eslint/eslint-plugin" "^8.38.0"
+    "@typescript-eslint/parser" "^8.38.0"
+    eslint-config-prettier "^9.1.0"
+    eslint-plugin-prettier "^5.2.1"
+
+"@re-script/shared-types@*", "@re-script/shared-types@file:/Users/roe/Dev/re-Script/packages/shared-types":
+  version "1.0.0"
+  resolved "file:packages/shared-types"
+
+"@re-script/shared-utils@*", "@re-script/shared-utils@file:/Users/roe/Dev/re-Script/packages/shared-utils":
+  version "1.0.0"
+  resolved "file:packages/shared-utils"
+  dependencies:
+    "@re-script/shared-types" "*"
+
+"@re-script/tsconfig@*", "@re-script/tsconfig@file:/Users/roe/Dev/re-Script/packages/tsconfig":
+  version "1.0.0"
+  resolved "file:packages/tsconfig"
+
 "@rollup/rollup-darwin-arm64@4.46.0":
   version "4.46.0"
   resolved "https://registry.npmjs.org/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.46.0.tgz"
