@@ -1,20 +1,20 @@
 # re-Script
 
-Advanced JavaScript unminifier and deobfuscator powered by AI.
+JavaScript unminifier and deobfuscator powered by AI.
 
-re-Script transforms minified and obfuscated JavaScript into readable code using AI models like Claude, GPT-4, or local LLMs. It combines traditional tools like webcrack and Babel with intelligent variable renaming for optimal results.
+re-Script transforms minified and obfuscated JavaScript into readable code using AI models like Claude, GPT-4, or local LLMs. It combines traditional tools like webcrack and Babel with intelligent variable renaming.
 
 ## Features
 
-- **Multi-LLM Support** - OpenAI, Anthropic, Ollama, Azure, Bedrock
-- **Batch Processing** - Process multiple files or entire directories
-- **Smart Chunking** - AST-aware code splitting for better results
-- **Intelligent Caching** - Reduce costs with response caching
-- **Error Recovery** - Graceful handling when steps fail
-- **Flexible Config** - File-based configuration with CLI overrides
-- **Progress Tracking** - Real-time progress with time estimates
-- **Dry Run Mode** - Preview changes before applying
-- **Watch Mode** - Process files as they change
+- Multi-LLM support (OpenAI, Anthropic, Ollama, Azure, Bedrock)
+- Batch processing for multiple files or directories
+- AST-aware code splitting
+- Response caching to reduce API costs
+- Error recovery when processing steps fail
+- File-based configuration with CLI overrides
+- Real-time progress tracking
+- Dry run mode
+- Watch mode for automatic processing
 
 ```bash
 npm install -g @roeintheglasses/re-script
@@ -175,7 +175,7 @@ Each step can fail gracefully without breaking the pipeline. Responses are cache
 
 **Ollama**: `llama3:8b`, `llama3:70b`, `codellama:13b`, `codellama:34b`, `mistral:7b`, `deepseek-coder:6.7b`
 
-## 🧪 Development
+## Development
 
 ### Building from Source
 
@@ -200,42 +200,7 @@ npm run test:coverage
 npm run dev  # TypeScript watch mode
 ```
 
-## 🆚 Migration from v1
-
-The v2 CLI maintains backward compatibility with v1 for basic usage:
-
-```bash
-# v1 syntax (still works)
-re-script input.js
-
-# v2 enhancements
-re-script input.js --provider anthropic --config .rescriptrc.json
-```
-
-Key differences:
-- Configuration files replace command-line API key prompts
-- Better error handling and recovery
-- Multiple provider support
-- Batch processing capabilities
-
-## 📊 Performance
-
-### Benchmarks
-
-| File Size | v1 Time | v2 Time | Improvement |
-|-----------|---------|---------|-------------|
-| 50KB      | 45s     | 28s     | 38% faster  |
-| 200KB     | 3m 20s  | 1m 45s  | 48% faster  |
-| 1MB       | 15m+    | 6m 30s  | 57% faster  |
-
-### Optimization Features
-
-- **Parallel Processing**: Multiple files processed concurrently
-- **Smart Chunking**: Optimal code splitting reduces token usage
-- **Response Caching**: Avoid reprocessing identical code blocks
-- **Streaming**: Process large files without loading entirely into memory
-
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
