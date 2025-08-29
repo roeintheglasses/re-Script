@@ -1,0 +1,43 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: re-script
+
+resources:
+- namespace.yaml
+- secrets.yaml
+- redis.yaml
+- web-api.yaml
+- web-ui.yaml
+
+commonLabels:
+  app.kubernetes.io/name: re-script
+  app.kubernetes.io/version: "2.1.0"
+  app.kubernetes.io/managed-by: kustomize
+
+images:
+- name: re-script-web-api
+  newTag: "2.1.0"
+- name: re-script-web-ui  
+  newTag: "2.1.0"
+
+replicas:
+- name: web-api
+  count: 2
+- name: web-ui
+  count: 2
+- name: redis
+  count: 1
+
+configMapGenerator:
+- name: app-config
+  literals:
+  - NODE_ENV=production
+  - LOG_LEVEL=info
+  - ENABLE_SWAGGER=false
+  - RATE_LIMIT_WINDOW_MS=900000
+  - RATE_LIMIT_MAX_REQUESTS=100
+  - MAX_FILE_SIZE=10485760
+  - MAX_FILES_PER_JOB=10
+  - JOB_TIMEOUT=300000
+  - MAX_CONCURRENT_JOBS=5

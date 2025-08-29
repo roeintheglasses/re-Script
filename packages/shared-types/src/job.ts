@@ -7,9 +7,11 @@ import { ProcessingError, ProcessingStatistics } from './processing.js';
 
 export interface ProcessingJob {
   id: string;
+  jobId: string; // Alias for id for backward compatibility
   status: JobStatus;
   input: JobInput;
   output?: JobOutput;
+  result?: import('./processing.js').ProcessingResult;
   config: ReScriptConfig;
   progress: JobProgress;
   createdAt: Date;

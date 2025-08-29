@@ -2,7 +2,7 @@
  * Comprehensive error handling utilities for re-Script
  */
 
-import { ProcessingError } from '@re-script/shared-types';
+import type { ProcessingError } from '@re-script/shared-types';
 
 export enum ErrorCode {
   // Input/Output Errors
@@ -385,4 +385,29 @@ export function getErrorMetrics(errors: ProcessingError[]): {
   });
 
   return metrics;
+}
+
+// Simple ProcessingError class for backward compatibility
+export class ProcessingErrorImpl extends ReScriptError {
+  constructor(message: string, code: string = ErrorCode.UNKNOWN_ERROR) {
+    super(code as ErrorCode, message, 'processing', false);
+  }
+}
+
+// Re-export for convenience
+export { ProcessingErrorImpl as ProcessingError };
+
+// API-specific error class
+export class ApiError extends Error {
+  public statusCode: number;
+  public code: string;
+  public details?: any;
+
+  constructor(statusCode: number, message: string, code = 'API_ERROR', details?: any) {
+    super(message);
+    this.name = 'ApiError';
+    this.statusCode = statusCode;
+    this.code = code;
+    this.details = details;
+  }
 }

@@ -1,19 +1,25 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules
 
 # testing
 /coverage
 
 # build
-/dist
+dist
+**/dist/
 test.*.js
 .rescriptrc.json
+.next
 
 # misc
 .DS_Store
 *.pem
+
+
+# turborepo
+.turbo
 
 # debug
 npm-debug.log*

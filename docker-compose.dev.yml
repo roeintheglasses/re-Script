@@ -1,0 +1,98 @@
+version: '3.8'
+
+services:
+  # Redis - Message queue and caching (development)
+  redis:
+    image: redis:7-alpine
+    container_name: re-script-redis-dev
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_dev_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - re-script-dev-network
+
+  # Development database (optional - for job persistence)
+  postgres:
+    image: postgres:15-alpine
+    container_name: re-script-postgres-dev
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: rescript_dev
+      POSTGRES_USER: rescript
+      POSTGRES_PASSWORD: rescript_dev_password
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    networks:
+      - re-script-dev-network
+    profiles:
+      - with-db
+
+  # Ollama for local LLM development
+  ollama:
+    image: ollama/ollama:latest
+    container_name: re-script-ollama-dev
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_dev_data:/root/.ollama
+    environment:
+      OLLAMA_HOST: "0.0.0.0"
+    networks:
+      - re-script-dev-network
+
+  # Redis Commander - Redis GUI
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: re-script-redis-gui
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    depends_on:
+      - redis
+    networks:
+      - re-script-dev-network
+    profiles:
+      - with-gui
+
+  # pgAdmin - PostgreSQL GUI
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: re-script-pgadmin
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@rescript.dev
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin_dev_data:/var/lib/pgadmin
+    depends_on:
+      - postgres
+    networks:
+      - re-script-dev-network
+    profiles:
+      - with-gui
+      - with-db
+
+volumes:
+  redis_dev_data:
+    driver: local
+  postgres_dev_data:
+    driver: local
+  ollama_dev_data:
+    driver: local
+  pgadmin_dev_data:
+    driver: local
+
+networks:
+  re-script-dev-network:
+    driver: bridge

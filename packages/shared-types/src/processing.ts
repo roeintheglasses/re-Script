@@ -70,3 +70,17 @@ export interface RetryConfig {
   maxDelay: number;
 }
 
+export interface ProcessingResult {
+  success: boolean;
+  inputFile: string;
+  outputFile?: string;
+  processingTime: number;
+  error?: string;
+  statistics?: {
+    totalFiles?: number;
+    successfulFiles?: number;
+    failedFiles?: number;
+    results?: ProcessingResult[];
+  };
+}
+

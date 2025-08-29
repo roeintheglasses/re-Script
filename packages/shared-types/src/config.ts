@@ -85,3 +85,6 @@ export interface PluginSystemConfig {
 // Re-export from processing for convenience
 export type { ProcessingConfig, ChunkingConfig, RetryConfig };
 export type { CachingConfig };
+
+// Alias for backward compatibility
+export type Config = ReScriptConfig;

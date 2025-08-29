@@ -1,20 +1,55 @@
 # re-Script
 
-Advanced JavaScript unminifier and deobfuscator powered by AI.
+Advanced JavaScript unminifier and deobfuscator powered by AI with a comprehensive web dashboard.
 
-re-Script transforms minified and obfuscated JavaScript into readable code using AI models like Claude, GPT-4, or local LLMs. It combines traditional tools like webcrack and Babel with intelligent variable renaming for optimal results.
+re-Script transforms minified and obfuscated JavaScript into readable code using AI models like Claude, GPT-4, or local LLMs. It combines traditional tools like webcrack and Babel with intelligent variable renaming for optimal results. Now includes a modern web interface for managing processing jobs and monitoring progress in real-time.
 
 ## Features
 
+### 🖥️ Web Dashboard
+- **Modern Web Interface** - Intuitive dashboard for managing deobfuscation jobs
+- **Real-time Monitoring** - Live job status updates with Server-Sent Events
+- **File Management** - Drag-and-drop file uploads with preview and validation
+- **Code Comparison** - Side-by-side before/after code display with Monaco Editor
+- **Job History** - Complete processing history with filtering and search
+- **Mobile Responsive** - Optimized for desktop, tablet, and mobile devices
+
+### 🤖 AI Processing
 - **Multi-LLM Support** - OpenAI, Anthropic, Ollama, Azure, Bedrock
 - **Batch Processing** - Process multiple files or entire directories
 - **Smart Chunking** - AST-aware code splitting for better results
 - **Intelligent Caching** - Reduce costs with response caching
 - **Error Recovery** - Graceful handling when steps fail
+
+### ⚙️ Configuration & Control
 - **Flexible Config** - File-based configuration with CLI overrides
 - **Progress Tracking** - Real-time progress with time estimates
+- **Job Management** - Cancel, retry, and delete processing jobs
 - **Dry Run Mode** - Preview changes before applying
 - **Watch Mode** - Process files as they change
+
+## Installation & Quick Start
+
+### Option 1: Web Dashboard (Recommended)
+
+```bash
+# Clone the repository
+git clone https://github.com/roeintheglasses/re-Script.git
+cd re-Script
+
+# Install dependencies
+npm install
+
+# Start the development environment
+npm run dev
+
+# Or use Docker
+docker-compose up -d
+```
+
+Access the web dashboard at `http://localhost:3000`
+
+### Option 2: CLI Installation
 
 ```bash
 npm install -g @roeintheglasses/re-script
@@ -22,7 +57,26 @@ npm install -g @roeintheglasses/re-script
 
 ## Usage
 
-### Quick Start
+### 🌐 Web Dashboard
+
+The web dashboard provides a complete interface for managing JavaScript deobfuscation:
+
+1. **Upload Files**: Drag and drop JavaScript files or click to select
+2. **Configure Processing**: Choose AI provider, model, and processing options
+3. **Monitor Progress**: Watch real-time job status and progress updates
+4. **View Results**: Compare original and deobfuscated code side-by-side
+5. **Manage Jobs**: Cancel, retry, or delete processing jobs
+6. **Browse History**: Search and filter through previous jobs
+
+**Key Features:**
+- 📁 Multi-file upload with validation
+- ⚙️ Provider configuration (OpenAI, Anthropic, Ollama)
+- 📊 Real-time progress tracking
+- 🔍 Advanced code comparison with Monaco Editor
+- 📱 Mobile-responsive design
+- 🔄 Job management (cancel, retry, delete)
+
+### 📟 CLI Usage
 
 ```bash
 # Interactive setup (recommended for first time)
@@ -175,29 +229,198 @@ Each step can fail gracefully without breaking the pipeline. Responses are cache
 
 **Ollama**: `llama3:8b`, `llama3:70b`, `codellama:13b`, `codellama:34b`, `mistral:7b`, `deepseek-coder:6.7b`
 
+## 🚀 Deployment Guide
+
+### Production Deployment with Docker
+
+The easiest way to deploy re-Script in production is using Docker Compose:
+
+```bash
+# Clone the repository
+git clone https://github.com/roeintheglasses/re-Script.git
+cd re-Script
+
+# Copy environment file
+cp .env.example .env
+
+# Edit environment variables
+nano .env
+
+# Start production services
+docker-compose -f docker-compose.prod.yml up -d
+```
+
+**Required Environment Variables:**
+```bash
+# API Keys (at least one required)
+ANTHROPIC_API_KEY=your_anthropic_key
+OPENAI_API_KEY=your_openai_key
+OLLAMA_BASE_URL=http://ollama:11434  # For local Ollama
+
+# Database
+REDIS_URL=redis://redis:6379
+
+# Security
+JWT_SECRET=your_jwt_secret_here
+CORS_ORIGIN=https://yourdomain.com
+
+# Optional: File upload limits
+MAX_FILE_SIZE=10485760  # 10MB
+MAX_FILES_PER_JOB=10
+```
+
+### Kubernetes Deployment
+
+For Kubernetes environments, use the provided manifests:
+
+```bash
+# Apply Kubernetes manifests
+kubectl apply -f k8s/
+
+# Check deployment status
+kubectl get pods -n re-script
+kubectl get services -n re-script
+```
+
+**Key Components:**
+- **web-ui**: Next.js frontend (port 3000)
+- **web-api**: Fastify backend (port 3001)
+- **redis**: Job queue and caching
+- **ollama**: Optional local LLM service
+
+### Environment Configuration
+
+**Development:**
+```bash
+npm run dev  # Starts all services in development mode
+```
+
+**Production Build:**
+```bash
+npm run build  # Build all applications
+npm start      # Start production services
+```
+
+**Individual Services:**
+```bash
+# Frontend only
+cd apps/web-ui && npm run build && npm start
+
+# Backend only  
+cd apps/web-api && npm run build && npm start
+
+# CLI only
+cd apps/cli && npm run build
+```
+
+### Monitoring & Health Checks
+
+**Health Check Endpoints:**
+- Web API: `GET /health`
+- System Info: `GET /api/system/info`
+- Job Queue Status: `GET /api/system/queue-status`
+
+**Logging:**
+- Structured JSON logs
+- Configurable log levels
+- Request/response logging
+- Error tracking with stack traces
+
+### Scaling Considerations
+
+**Horizontal Scaling:**
+- Web UI: Stateless, can scale horizontally
+- Web API: Stateless with Redis for job state
+- Redis: Single instance for job coordination
+
+**Resource Requirements:**
+- **Minimum:** 2GB RAM, 2 CPU cores
+- **Recommended:** 4GB RAM, 4 CPU cores
+- **Storage:** 10GB for temporary files and logs
+
+### Security Best Practices
+
+1. **API Keys**: Store in secure environment variables
+2. **CORS**: Configure appropriate origins for web access
+3. **File Uploads**: Validate file types and sizes
+4. **Rate Limiting**: Configure per-IP request limits
+5. **HTTPS**: Use reverse proxy with SSL termination
+
+### Backup & Recovery
+
+**Database Backup:**
+```bash
+# Redis backup
+redis-cli --rdb /backup/dump.rdb
+```
+
+**Application Data:**
+- Job results are temporary (configurable retention)
+- Configuration stored in environment variables
+- No persistent user data
+
 ## 🧪 Development
 
-### Building from Source
+### Development Environment
 
 ```bash
 git clone https://github.com/roeintheglasses/re-Script.git
 cd re-Script
+
+# Install dependencies
 npm install
-npm run build
-npm link
+
+# Start development services
+npm run dev
+
+# This starts:
+# - Web UI at http://localhost:3000
+# - Web API at http://localhost:3001  
+# - Redis at localhost:6379
+```
+
+### Monorepo Structure
+
+```
+re-Script/
+├── apps/
+│   ├── cli/                 # CLI application
+│   ├── web-api/            # Fastify backend API
+│   └── web-ui/             # Next.js frontend
+├── packages/
+│   ├── shared-types/       # TypeScript interfaces
+│   ├── shared-utils/       # Common utilities
+│   ├── eslint-config/      # Shared ESLint config
+│   └── tsconfig/           # Shared TypeScript config
+└── docker-compose.yml      # Development services
 ```
 
 ### Running Tests
 
 ```bash
+# All tests
 npm test
+
+# Individual packages
+npm run test --workspace=@re-script/web-ui
+npm run test --workspace=@re-script/web-api
+npm run test --workspace=@re-script/cli
+
+# Coverage reports
 npm run test:coverage
 ```
 
-### Development Mode
+### Building from Source
 
 ```bash
-npm run dev  # TypeScript watch mode
+# Build all packages
+npm run build
+
+# Build specific package
+npm run build --workspace=@re-script/cli
+
+# Development watch mode
+npm run dev
 ```
 
 ## 🆚 Migration from v1
