@@ -1,5 +1,6 @@
-# re-Script
+<img width="1568" height="672" alt="openart-image_TxcWiObT_1756467222632_raw" src="https://github.com/user-attachments/assets/0d000779-8259-40cd-84d0-7e730d12db03" />
 
+# re-Script
 JavaScript unminifier and deobfuscator powered by AI.
 
 re-Script transforms minified and obfuscated JavaScript into readable code using AI models like Claude, GPT-4, or local LLMs. It combines traditional tools like webcrack and Babel with intelligent variable renaming.
